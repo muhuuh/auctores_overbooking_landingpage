@@ -26,14 +26,28 @@ const Navbar = () => {
     )}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <h2 className="text-luxury text-xl font-medium">SpiderLayer</h2>
+          <h2 className="text-navy font-playfair text-xl font-bold">
+            Spider<span className="text-champagne">Layer</span>
+          </h2>
         </div>
         <div className="hidden md:flex space-x-8 items-center">
-          <a href="#features" className="text-luxury-muted hover:text-luxury transition-colors">Features</a>
-          <a href="#how-it-works" className="text-luxury-muted hover:text-luxury transition-colors">How It Works</a>
-          <a href="#security" className="text-luxury-muted hover:text-luxury transition-colors">Security</a>
-          <Button variant="default" className="bg-luxury hover:bg-luxury/90 text-white rounded-md">
-            Request Early Access
+          <a href="#why-spiderlayer" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+            Why SpiderLayer
+          </a>
+          <a href="#platform" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+            Platform
+          </a>
+          <a href="#security" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+            Security
+          </a>
+          <a href="#pricing" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+            Pricing
+          </a>
+          <Button 
+            variant="default" 
+            className="bg-navy hover:bg-navy/90 text-white rounded-md px-6 py-3 text-sm font-medium"
+          >
+            Book Demo
           </Button>
         </div>
         <div className="md:hidden">

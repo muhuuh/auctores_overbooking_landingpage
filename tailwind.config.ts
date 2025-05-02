@@ -53,23 +53,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				},
-        luxury: {
-          DEFAULT: '#1A1F2C', // dark purple for main text
-          muted: '#8E9196',  // neutral gray for secondary text
-          accent: '#403E43',  // charcoal gray for accents
-          light: '#F1F0FB',  // soft gray for backgrounds
-          dark: '#221F26',    // dark charcoal for contrast sections
-        }
+				navy: '#0F1B26',      // Dark navy text/CTA backgrounds
+				navyLight: '#131B26', // Slightly lighter navy  
+				offWhite: '#F7F7F5',  // Off-white for section backgrounds
+				champagne: '#C8A266', // Champagne accent for icons/links/hover
+				muted: '#525866',     // Muted text color
+				gray: '#9CA3AF',      // Gray elements
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -119,8 +108,11 @@ export default {
         'slide-up': 'slide-up 0.6s ease-out',
 			},
       fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
+        'playfair': ['"Playfair Display"', 'serif'],
         'sans': ['Inter', 'sans-serif'],
+      },
+      spacing: {
+        '18': '4.5rem',
       }
 		}
 	},

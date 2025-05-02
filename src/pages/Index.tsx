@@ -33,7 +33,31 @@ const Index = () => {
     };
 
     document.addEventListener('click', handleHashLinkClick);
-    return () => document.removeEventListener('click', handleHashLinkClick);
+    
+    // Initialize scroll animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+    
+    return () => {
+      document.removeEventListener('click', handleHashLinkClick);
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -43,9 +67,9 @@ const Index = () => {
         <Hero />
         <ProblemSection />
         <ValueProposition />
-        <SocialProof />
         <HowItWorks />
         <SecuritySection />
+        <SocialProof />
         <CTASection />
       </main>
       <Footer />
