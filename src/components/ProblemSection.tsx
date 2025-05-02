@@ -12,7 +12,7 @@ const ProblemSection = () => {
         </p>
         
         <div className="flex items-center justify-center">
-          <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100 inline-flex flex-col items-center space-y-2">
+          <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 inline-flex flex-col items-center space-y-2">
             <span className="text-5xl md:text-6xl font-bold text-champagne font-playfair">+17%</span>
             <span className="text-muted uppercase tracking-wide text-sm">average RevPAR uplift when upsell tasks trigger automatically</span>
           </div>
