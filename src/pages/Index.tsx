@@ -1,10 +1,8 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ProblemSection from '@/components/ProblemSection';
 import ValueProposition from '@/components/ValueProposition';
-import SocialProof from '@/components/SocialProof';
 import HowItWorks from '@/components/HowItWorks';
 import SecuritySection from '@/components/SecuritySection';
 import CTASection from '@/components/CTASection';

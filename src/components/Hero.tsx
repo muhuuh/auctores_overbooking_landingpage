@@ -8,24 +8,29 @@ const Hero = () => {
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=2000')] bg-center bg-cover opacity-40"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-navy/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-navy/60 to-navy/20"></div>
       </div>
       
       <div className="container max-w-7xl mx-auto z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col space-y-8 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight max-w-lg">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-lg">
               Every guest feels personally known.
             </h1>
-            <p className="text-xl text-muted max-w-lg">
+            <p className="text-xl text-white/90 max-w-lg">
               SpiderLayer unifies your PMS, CRM, spa and housekeeping systems into one intelligent workspace—so staff deliver flawless service without switching tabs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-navy hover:bg-navy/90 text-white px-6 py-3 rounded-md text-lg pulse-on-hover">
+              <Button 
+                className="bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-8 py-6 h-auto rounded-md text-lg shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
+              >
                 Book a 10-min Demo
               </Button>
-              <Button variant="outline" className="border-champagne text-champagne hover:bg-champagne/5 px-6 py-3 rounded-md text-lg">
-              Request Early Access
+              <Button 
+                variant="outline" 
+                className="bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-8 py-6 h-auto rounded-md text-lg font-medium transition-all duration-300"
+              >
+                Request Early Access
               </Button>
             </div>
           </div>
