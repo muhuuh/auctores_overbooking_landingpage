@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -8,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+		"./src/**/*.css",
 	],
 	prefix: "",
 	theme: {
@@ -57,8 +57,10 @@ export default {
 				navyLight: '#131B26', // Slightly lighter navy  
 				offWhite: '#F7F7F5',  // Off-white for section backgrounds
 				champagne: '#C8A266', // Champagne accent for icons/links/hover
-				muted: '#525866',     // Muted text color
-				gray: '#9CA3AF',      // Gray elements
+				gray: {
+					DEFAULT: '#9CA3AF',
+					'200': '#E5E7EB',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
