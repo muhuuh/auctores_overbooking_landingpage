@@ -25,7 +25,7 @@ const Hero = () => {
                 Book a 10-min Demo
               </Button>
               <Button variant="outline" className="border-champagne text-champagne hover:bg-champagne/5 px-6 py-3 rounded-md text-lg">
-                Watch 90-sec Video
+              Request Early Access
               </Button>
             </div>
           </div>

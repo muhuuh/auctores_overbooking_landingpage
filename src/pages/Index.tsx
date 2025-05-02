@@ -69,7 +69,6 @@ const Index = () => {
         <ValueProposition />
         <HowItWorks />
         <SecuritySection />
-        <SocialProof />
         <CTASection />
       </main>
       <Footer />
