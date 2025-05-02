@@ -7,20 +7,20 @@ const HowItWorks = () => {
   const steps = [
     {
       number: "01",
-      title: "Connect your tools",
-      description: "One-click OAuth links all systems.",
+      title: "Plug in and relax",
+      description: "Enter OAuth, API keys or local APIs - no other changes needed to link all sytems.",
       icon: <Plug className="text-champagne w-6 h-6" />
     },
     {
       number: "02",
-      title: "Tell the agent your KPIs",
-      description: "Set goals and detailed rules.",
+      title: "Teach your standards",
+      description: "Set KPIs, tone of voice, privacy policy or any instruction you like to share. All in one interface",
       icon: <Target className="text-champagne w-6 h-6" />
     },
     {
       number: "03",
-      title: "Watch tasks close themselves",
-      description: "Operations run quietly in the background.",
+      title: "Guests feel magic",
+      description: "Agent auto handles tasks, staff get support when needed; and focus on creating memories.",
       icon: <CheckCircle className="text-champagne w-6 h-6" />
     }
   ];
@@ -28,7 +28,7 @@ const HowItWorks = () => {
   return (
     <section id="how-it-works" className="section-padding bg-white">
       <div className="container max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-navy mb-12 text-center">How It Works</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-navy mb-12 text-center">How It Works.</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (

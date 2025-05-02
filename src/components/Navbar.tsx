@@ -47,7 +47,7 @@ const Navbar = () => {
             variant="default" 
             className="bg-navy hover:bg-navy/90 text-white rounded-md px-6 py-3 text-sm font-medium"
           >
-            Book Demo
+            Early Access
           </Button>
         </div>
         <div className="md:hidden">

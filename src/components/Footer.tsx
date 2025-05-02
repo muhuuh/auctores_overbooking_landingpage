@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer = () => {
@@ -8,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <h4 className="font-medium mb-4">Product</h4>
-            <ul className="space-y-2 text-sm text-muted">
+            <ul className="space-y-2 text-sm text-gray-700">
               <li><a href="#platform" className="hover:text-champagne transition-colors">Platform</a></li>
               <li><a href="#pricing" className="hover:text-champagne transition-colors">Pricing</a></li>
               <li><a href="#security" className="hover:text-champagne transition-colors">Security</a></li>
@@ -17,7 +16,7 @@ const Footer = () => {
           
           <div>
             <h4 className="font-medium mb-4">Legal</h4>
-            <ul className="space-y-2 text-sm text-muted">
+            <ul className="space-y-2 text-sm text-gray-700">
               <li><a href="#" className="hover:text-champagne transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-champagne transition-colors">Terms of Service</a></li>
             </ul>
@@ -25,7 +24,7 @@ const Footer = () => {
           
           <div>
             <h4 className="font-medium mb-4">Contact</h4>
-            <p className="text-sm text-muted">hello@spiderlayer.ai</p>
+            <p className="text-sm text-gray-700">Contact@auctores.ai</p>
           </div>
           
           <div className="flex justify-end items-start">
@@ -36,7 +35,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-muted">
-          <p>© 2025 SpiderLayer AI GmbH — built in Amsterdam</p>
+          <p>© 2025 Auctores — built in Munich</p>
         </div>
       </div>
     </footer>

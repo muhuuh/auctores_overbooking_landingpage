@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -94,8 +93,12 @@ const CTASection = () => {
                     id="codesign" 
                     checked={willCodesign} 
                     onCheckedChange={(checked) => setWillCodesign(checked as boolean)} 
+                    className="border-gray-500 data-[state=checked]:bg-champagne data-[state=checked]:border-champagne data-[state=checked]:text-navy"
                   />
-                  <Label htmlFor="codesign" className="text-gray-300">
+                  <Label 
+                    htmlFor="codesign" 
+                    className="text-gray-300"
+                  >
                     I'd like to co-design features as an alpha partner
                   </Label>
                 </div>

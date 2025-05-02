@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Accordion,
@@ -11,7 +10,7 @@ const SecuritySection = () => {
   const faqs = [
     {
       question: "Where is data stored?",
-       answer: "All customer data is stored in EU-based AWS data centers with encryption at rest and in transit. We maintain strict data isolation between clients, and your data never leaves your designated region without explicit consent."
+       answer: "You control where your data resides. Choose between our secure, EU-based AWS data centers (with encryption at rest and in transit) or host everything, including data, on your own on-premise servers. We maintain strict data isolation between clients regardless of your choice."
     },
     {
       question: "How is PII handled?",
@@ -24,6 +23,10 @@ const SecuritySection = () => {
      {
        question: "How do you ensure system reliability?",
        answer: "Our infrastructure is designed for 99.9% uptime with redundancy across multiple availability zones. We maintain real-time monitoring and have established incident response protocols to address any service disruptions swiftly."
+    },
+    {
+      question: "Can we use our own LLMs?",
+      answer: "Yes. For maximum data privacy and control, you can opt to use self-hosted Large Language Models. This ensures that your sensitive data never leaves your own infrastructure during processing."
     }
   ];
 
@@ -31,6 +34,14 @@ const SecuritySection = () => {
     <section id="security" className="section-padding bg-navy text-white">
       <div className="container max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Built for enterprise-grade privacy.</h2>
+
+        <p className="text-lg text-center mb-4">
+          Auctores is engineered for privacy by design, You maintain complete control over your deployment and data. 
+          Run on your own servers or our EU cloud, swap our LLM endpoints with your own self-hosted models - no problem. 
+        </p>
+        <p className="text-lg text-center mb-10">
+          You have the final say on the level of privacy and control that best suits your needs.
+        </p>
         
         <div className="bg-navyLight p-8 rounded-lg">
           <Accordion type="single" collapsible className="w-full">
