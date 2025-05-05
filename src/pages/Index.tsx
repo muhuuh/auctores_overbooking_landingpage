@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ProblemSection from '@/components/ProblemSection';
@@ -8,6 +8,10 @@ import SecuritySection from '@/components/SecuritySection';
 import PricingSection from '@/components/PricingSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
+import ErrorBoundary from '@/components/ErrorBoundary';
+
+// Dynamically import CookieBanner
+const LazyCookieBanner = lazy(() => import('@/components/CookieBanner'));
 
 const Index = () => {
   // Smooth scroll implementation
@@ -74,6 +78,11 @@ const Index = () => {
         <CTASection />
       </main>
       <Footer />
+      <ErrorBoundary fallback={null}>
+        <Suspense fallback={null}>
+          <LazyCookieBanner />
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 };

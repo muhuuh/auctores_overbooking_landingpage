@@ -1,6 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 const Footer = () => {
+
+  const handleRevokeConsent = () => {
+    Cookies.remove('CookieConsent');
+    window.location.reload();
+  };
+
   return (
     <footer className="section-padding-sm bg-offWhite text-navy">
       <div className="container max-w-7xl mx-auto">
@@ -32,6 +40,14 @@ const Footer = () => {
             <h2 className="text-navy font-playfair text-xl font-bold">
               Auctores<span className="text-champagne">.ai</span>
             </h2>
+          </div>
+          <div className="text-sm mt-4 md:mt-0">
+            <button 
+              onClick={handleRevokeConsent}
+              className="text-gray-400 hover:text-white transition-colors duration-200 cursor-pointer bg-transparent border-none p-0"
+            >
+              Cookie Settings
+            </button>
           </div>
         </div>
         
