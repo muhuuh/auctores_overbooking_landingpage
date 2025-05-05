@@ -16,26 +16,49 @@ const LazyCookieBanner = lazy(() => import('@/components/CookieBanner'));
 const Index = () => {
   // Smooth scroll implementation
   useEffect(() => {
-    const handleHashLinkClick = (e: MouseEvent) => {
+    const handleLinkClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (target.tagName === 'A') {
-        const href = target.getAttribute('href');
-        if (href && href.startsWith('#') && href.length > 1) {
-          e.preventDefault();
-          const targetId = href.substring(1);
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80, // Adjust for navbar height
-              behavior: 'smooth'
-            });
-            history.pushState(null, '', href);
-          }
-        }
+      // Find the closest anchor tag
+      const anchor = target.closest('a'); 
+      if (!anchor) return;
+
+      const href = anchor.getAttribute('href');
+      
+      // Handle smooth scroll to top for brand link on home page
+      if (href === '/' && window.location.pathname === '/') {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        // Optional: Update history without page reload if needed, but usually not for top scroll
+        // history.pushState(null, '', '/'); 
+        return; // Stop further processing
       }
+      
+      // Handle smooth scroll for internal hash links (#section)
+      if (href && href.startsWith('/#') && href.length > 2 && window.location.pathname === '/') {
+        e.preventDefault();
+        const targetId = href.substring(2); // Get id after '/#'
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80, // Adjust for navbar height
+            behavior: 'smooth'
+          });
+          // Avoid pushState for same-page scroll to prevent potential issues
+        } else {
+           console.warn(`Target element not found for id: ${targetId}`);
+           // Fallback or do nothing if element not found
+        }
+        return; // Stop further processing
+      }
+      
+      // Allow default navigation for other links (e.g., /privacy-policy, external links, or /#hash from other pages)
     };
 
-    document.addEventListener('click', handleHashLinkClick);
+    document.addEventListener('click', handleLinkClick);
     
     // Initialize scroll animations
     const observerOptions = {
@@ -58,7 +81,7 @@ const Index = () => {
     });
     
     return () => {
-      document.removeEventListener('click', handleHashLinkClick);
+      document.removeEventListener('click', handleLinkClick);
       observer.disconnect();
     };
   }, []);

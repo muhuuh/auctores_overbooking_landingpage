@@ -32,7 +32,7 @@ const HowItWorks = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {steps.map((step, index) => (
-            <div key={index} className="bg-offWhite p-8 rounded-lg h-full flex flex-col">
+            <div key={index} className="bg-offWhite border border-champagne/15 shadow p-8 rounded-lg h-full flex flex-col">
               <div className="flex items-center justify-between w-full mb-6">
                 <span className="text-5xl opacity-25 text-gray font-playfair">{step.number}</span>
                 <div className="h-8 w-8 flex items-center justify-center">{step.icon}</div>

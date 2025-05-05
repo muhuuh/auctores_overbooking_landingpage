@@ -58,9 +58,9 @@ const CTASection = () => {
     setIsSubmitting(false);
   };
   return (
-    <section className="section-padding bg-navy text-white">
+    <section id="cta" className="section-padding bg-navy text-white">
       <div className="container max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Join the private beta.</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Reserve Your Founding‑Partner Seat.</h2>
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
           Founding hotels lock-in lifetime 50% pricing and direct influence on the roadmap.
         </p>

@@ -18,13 +18,15 @@ const Hero = () => {
             Obsess over guests, not software.
             </h1>
             <p className="text-xl text-white/90 max-w-lg">
-            Auctores turns hours of clicking into moments of care. AI Agents merge every tool—PMS, CRM, emails, housekeeping—into one layer and act before guests feel a need.            </p>
+            Auctores turns hours of clicking into moments of care. Our AI Agents merge every tool, be it PMS, CRM, emails or housekeeping, into one layer and act before guests feel a need.            </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                className="bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-8 py-4 h-auto rounded-md text-lg shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
-              >
-                Create Time for Care
-              </Button>
+              <a href="/#cta">
+                 <Button 
+                   className="bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-8 py-4 h-auto rounded-md text-lg shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
+                 >
+                   Create Time for Care
+                 </Button>
+              </a>
               <Button 
                 variant="outline" 
                 className="bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-8 py-4 h-auto rounded-md text-lg font-medium transition-all duration-300"

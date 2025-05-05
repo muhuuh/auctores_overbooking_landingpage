@@ -24,11 +24,11 @@ const Navbar = () => {
       isScrolled ? "bg-white shadow-md" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="flex items-center">
+        <a href="/" className="flex items-center">
           <h2 className="text-navy font-playfair text-xl font-bold">
             Auctores<span className="text-champagne">.ai</span>
           </h2>
-        </div>
+        </a>
         <div className="hidden md:flex space-x-8 items-center">
           <a href="/#why-auctores" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
             Why Auctores
@@ -42,12 +42,14 @@ const Navbar = () => {
           <a href="/#pricing" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
             Pricing
           </a>
-          <Button 
-            variant="default" 
-            className="bg-navy hover:bg-navy/90 text-white rounded-md px-6 py-3 text-sm font-medium"
-          >
-            Early Access
-          </Button>
+          <a href="/#cta">
+            <Button 
+              variant="default" 
+              className="bg-navy hover:bg-navy/90 text-white rounded-md px-6 py-3 text-sm font-medium"
+            >
+              Early Access
+            </Button>
+          </a>
         </div>
         <div className="md:hidden">
           <Button variant="ghost">
