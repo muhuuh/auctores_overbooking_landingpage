@@ -6,6 +6,7 @@ import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { useToast } from './ui/use-toast';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
+import { supabase } from '../lib/supabaseClient';
 
 const CTASection = () => {
   const { toast } = useToast();
@@ -16,28 +17,46 @@ const CTASection = () => {
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    const payload = {
+      email,
+      property,
+      current_pms: pms || null,
+      message: message || null,
+      alpha_partner: willCodesign
+    };
+
+    const { error } = await supabase
+      .from('early_access_requests')
+      .insert([payload]);
+
+    if (error) {
+      console.error('Insert error:', error);
       toast({
-        title: "Thank you!",
-        description: "Check your inbox to pick a demo slot.",
+        title: 'Submission failed',
+        description: error.message,
+        variant: 'destructive',
         duration: 5000,
       });
-      
-      // Reset form
+    } else {
+      toast({
+        title: 'Thank you!',
+        description: 'We\'ve received your request - check your inbox soon.',
+        duration: 5000,
+      });
+      // Reset form on success
       setEmail('');
       setProperty('');
       setPms('');
       setWillCodesign(false);
       setMessage('');
-    }, 1500);
-  };
+    }
 
+    setIsSubmitting(false);
+  };
   return (
     <section className="section-padding bg-navy text-white">
       <div className="container max-w-4xl mx-auto text-center">
