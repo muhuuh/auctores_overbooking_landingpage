@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
@@ -27,20 +26,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <h2 className="text-navy font-playfair text-xl font-bold">
-            Spider<span className="text-champagne">Layer</span>
+            Auctores<span className="text-champagne">.ai</span>
           </h2>
         </div>
         <div className="hidden md:flex space-x-8 items-center">
-          <a href="#why-spiderlayer" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
-            Why SpiderLayer
+          <a href="/#why-auctores" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+            Why Auctores
           </a>
-          <a href="#platform" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
-            Platform
+          <a href="/#features" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+            Features
           </a>
-          <a href="#security" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+          <a href="/#security" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
             Security
           </a>
-          <a href="#pricing" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+          <a href="/#pricing" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
             Pricing
           </a>
           <Button 

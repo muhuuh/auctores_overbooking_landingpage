@@ -3,6 +3,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Checkbox } from './ui/checkbox';
 import { Label } from './ui/label';
+import { Textarea } from './ui/textarea';
 import { useToast } from './ui/use-toast';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 
@@ -12,6 +13,7 @@ const CTASection = () => {
   const [property, setProperty] = useState('');
   const [pms, setPms] = useState('');
   const [willCodesign, setWillCodesign] = useState(false);
+  const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -32,6 +34,7 @@ const CTASection = () => {
       setProperty('');
       setPms('');
       setWillCodesign(false);
+      setMessage('');
     }, 1500);
   };
 
@@ -87,6 +90,17 @@ const CTASection = () => {
                 </Select>
               </div>
               
+              <div className="text-left">
+                <Label htmlFor="message" className="text-gray-300 mb-2 block">Message (Optional)</Label>
+                <Textarea
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Tell us about your goals or specific questions..."
+                  className="bg-navy/50 border-gray/30 text-white placeholder:text-gray-500 min-h-[100px]"
+                />
+              </div>
+              
               <div className="pt-4">
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -110,7 +124,7 @@ const CTASection = () => {
               className="w-full py-6 bg-champagne hover:bg-champagne/90 text-black font-bold text-base"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Processing..." : "Request Early Access"}
+              {isSubmitting ? "Processing..." : "Reserve Early Access"}
             </Button>
           </form>
         </div>
