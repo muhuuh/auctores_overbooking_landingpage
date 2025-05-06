@@ -25,7 +25,7 @@ const Navbar = () => {
     )}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <a href="/" className="flex items-center">
-          <h2 className="text-navy font-playfair text-xl font-bold">
+          <h2 className="text-navy font-playfair text-2xl font-bold">
             Auctores<span className="text-champagne">.ai</span>
           </h2>
         </a>
