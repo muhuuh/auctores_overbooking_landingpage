@@ -94,8 +94,9 @@ const Index = () => {
         <section id="why-auctores">
           <ProblemSection />
         </section>
-        <ValueProposition />
         <HowItWorks />
+        <ValueProposition />
+        
         <SecuritySection />
         <PricingSection />
         <CTASection />

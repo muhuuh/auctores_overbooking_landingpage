@@ -7,27 +7,27 @@ import {
 } from "@/components/ui/accordion";
 
 const SecuritySection = () => {
-  const faqs = [
+const faqs = [
     {
       question: "Where is data stored?",
-       answer: "You control where your data resides. Choose between our secure, EU-based AWS data centers (with encryption at rest and in transit) or host everything, including data, on your own on-premise servers. We maintain strict data isolation between clients regardless of your choice."
-    },
-    {
-      question: "How is PII handled?",
-      answer: "Personal Identifiable Information is handled according to GDPR principles. We employ data minimization, role-based access controls, and tokenization of sensitive fields. You maintain full ownership of your guest data and can export or delete it at any time."
-    },
-    {
-      question: "What is your SOC-2 timeline?",
-       answer: "We are currently in the process of SOC-2 Type 1 certification, expected to be completed by Q3 2025. Our security practices already align with SOC-2 requirements, and we maintain a comprehensive security program overseen by our CISO."
-     },
-     {
-       question: "How do you ensure system reliability?",
-       answer: "Our infrastructure is designed for 99.9% uptime with redundancy across multiple availability zones. We maintain real-time monitoring and have established incident response protocols to address any service disruptions swiftly."
+      answer: "You have full control over where your data resides. Choose our secure, EU-based AWS servers, or host everything entirely on your own premises. We encourage full ownership and control of your data, ensuring maximum privacy and isolation by design."
     },
     {
       question: "Can we use our own LLMs?",
-      answer: "Yes. For maximum data privacy and control, you can opt to use self-hosted Large Language Models. This ensures that your sensitive data never leaves your own infrastructure during processing."
-    }
+      answer: "Absolutely. Auctores empowers you to seamlessly integrate self-hosted Large Language Models, so sensitive data never leaves your infrastructure, ensuring ultimate privacy and compliance."
+    },
+    {
+      question: "How is PII handled?",
+      answer: "Personal Identifiable Information is protected according to GDPR standards. We implement data minimization, strict role-based access controls, and sensitive data tokenization. You're in full control, with the ability to access, export, or delete data anytime."
+    },
+    {
+      question: "Do you store or use our data?",
+      answer: "Auctores is privacy-by-design: we strongly encourage you to retain full control by hosting your data and AI models. Although we offer secure cloud storage, our core recommendation is that you own and manage your infrastructure for maximum privacy. In fact, our team is dedicated to supporting you fully in setting up and running Auctores privately and securely on your own servers."
+    },
+    {
+      question: "How do you ensure system reliability?",
+      answer: "Our infrastructure guarantees 99.9% uptime, with real-time monitoring and robust incident response protocols to swiftly address and resolve any issues."
+    },
   ];
 
   return (
@@ -36,11 +36,11 @@ const SecuritySection = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Built for enterprise-grade privacy.</h2>
 
         <p className="text-lg text-center mb-4">
-          Auctores is engineered for privacy by design, You maintain complete control over your deployment and data. 
-          Run on your own servers or our EU cloud, swap our LLM endpoints with your own self-hosted models - no problem. 
+        Auctores is built with privacy at its core. We actively encourage you to maintain complete control over your data and AI infrastructure.
+        Run on your own servers or use our secure EU-based cloud, swap our LLM endpoints with your own self-hosted models - no problem, the choice is yours. 
         </p>
         <p className="text-lg text-center mb-10">
-          You have the final say on the level of privacy and control that best suits your needs.
+          Our team is committed to supporting you every step of the way in achieving maximum privacy and compliance. You have the final say on the level of privacy and control that best suits your needs.
         </p>
         
         <div className="bg-navyLight p-8 rounded-lg">

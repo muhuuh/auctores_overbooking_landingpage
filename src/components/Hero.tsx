@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="relative flex items-center min-h-screen pt-24 pb-16 px-6 overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-<div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=2000')] bg-center bg-cover opacity-40"></div>        <div className="absolute inset-0 bg-gradient-to-br from-navy/60 to-navy/20"></div>
+      <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=2000')] bg-center bg-cover opacity-40"></div>        <div className="absolute inset-0 bg-gradient-to-br from-navy/60 to-navy/20"></div>
       </div>
       
       <div className="container max-w-7xl mx-auto z-10">
@@ -18,7 +18,7 @@ const Hero = () => {
             Obsess over guests, not software.
             </h1>
             <p className="text-xl text-white/90 max-w-lg">
-            Auctores turns hours of clicking into moments of care. Our AI Agents merge every tool, be it PMS, CRM, emails or housekeeping, into one layer and act before guests feel a need.            </p>
+            Auctores seemlessly merges every hotel tool into a single screen, letting staff finish cross-tool tasks in seconds, while 24/7 AI Agents resolve problems before guests ever feel them.            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="/#cta">
                  <Button 
