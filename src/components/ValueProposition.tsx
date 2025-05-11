@@ -43,9 +43,9 @@ const ValueProposition = () => {
   return (
     <section id="features" className="section-padding bg-offWhite">
       <div className="container max-w-7xl mx-auto">
-        <h2 className="text-center text-3xl font-bold text-navy md:text-4xl mb-4 font-playfair">
+        <h2 className="text-center text-2xl font-bold text-navy md:text-3xl mb-4 font-playfair">
           Customer Obsession Engine.
-        </h2>        <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-navy/70">
+        </h2>        <p className="mx-auto mb-12 max-w-3xl text-center text-base text-navy/70">
           Invisible issue‑solving in the background. Instant, any‑tool commands on demand.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -55,7 +55,7 @@ const ValueProposition = () => {
                 <div className="mb-6 h-12 w-12 flex items-center justify-center">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-3">{feature.title}</h3>
+                <h3 className="text-lg font-bold text-navy mb-3">{feature.title}</h3>
                 <p className="text-navy/70">{feature.description}</p>
               </CardContent>
             </Card>

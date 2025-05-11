@@ -60,8 +60,8 @@ const CTASection = () => {
   return (
     <section id="cta" className="section-padding bg-navy text-white">
       <div className="container max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Reserve Your Founding‑Partner Seat.</h2>
-        <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Reserve Your Founding‑Partner Seat.</h2>
+        <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
           Founding hotels lock-in lifetime 50% pricing and direct influence on the roadmap.
         </p>
         
@@ -140,7 +140,7 @@ const CTASection = () => {
             
             <Button 
               type="submit" 
-              className="w-full py-6 bg-champagne hover:bg-champagne/90 text-black font-bold text-base"
+              className="w-full py-6 bg-champagne hover:bg-champagne/90 text-black font-bold text-sm"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Processing..." : "Reserve Early Access"}

@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <h4 className="font-medium mb-4">Product</h4>
-            <ul className="space-y-2 text-sm text-gray-700">
+            <ul className="space-y-2 text-xs text-gray-700">
               <li><a href="/#features" className="hover:text-champagne transition-colors">Features</a></li>
               <li><a href="/#pricing" className="hover:text-champagne transition-colors">Pricing</a></li>
               <li><a href="/#security" className="hover:text-champagne transition-colors">Security</a></li>
@@ -24,7 +24,7 @@ const Footer = () => {
           
           <div>
             <h4 className="font-medium mb-4">Legal</h4>
-            <ul className="space-y-2 text-sm text-gray-700">
+            <ul className="space-y-2 text-xs text-gray-700">
               <li><a href="/privacy-policy" className="hover:text-champagne transition-colors">Privacy Policy</a></li>
               <li><a href="/terms-of-service" className="hover:text-champagne transition-colors">Terms of Service</a></li>
               <li><a href="/impressum" className="hover:text-champagne transition-colors">Impressum</a></li>
@@ -33,15 +33,15 @@ const Footer = () => {
           
           <div>
             <h4 className="font-medium mb-4">Contact</h4>
-            <p className="text-sm text-gray-700">contact@auctores.ai</p>
+            <p className="text-xs text-gray-700">contact@auctores.ai</p>
           </div>
           
           <div className="flex justify-end items-start">
-            <h2 className="text-navy font-playfair text-xl font-bold">
+            <h2 className="text-navy font-playfair text-lg font-bold">
               Auctores<span className="text-champagne">.ai</span>
             </h2>
           </div>
-          <div className="text-sm mt-4 md:mt-0">
+          <div className="text-xs mt-4 md:mt-0">
             <button 
               onClick={handleRevokeConsent}
               className="text-gray-400 hover:text-white transition-colors duration-200 cursor-pointer bg-transparent border-none p-0"
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-muted">
+        <div className="border-t border-gray-200 mt-8 pt-8 text-center text-xs text-muted">
           <p>© 2025 Auctores — built in Munich</p>
         </div>
       </div>

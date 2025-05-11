@@ -24,8 +24,8 @@ const PricingSection = () => {
   return (
     <section id="pricing" className="section-padding bg-offWhite">
       <div className="container max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6 text-center">Flexible Pricing for Founding Partners.</h2>
-        <p className="text-lg text-navy/80 mb-12 max-w-3xl mx-auto text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6 text-center">Flexible Pricing for Founding Partners.</h2>
+        <p className="text-base text-navy/80 mb-12 max-w-3xl mx-auto text-center">
            We believe in providing maximum value through flexible pricing tailored to your specific needs.
         </p>
         
@@ -36,7 +36,7 @@ const PricingSection = () => {
                 <div className="mb-6 h-12 w-12 flex items-center justify-center">
                    {point.icon}
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-3">{point.title}</h3>
+                <h3 className="text-lg font-bold text-navy mb-3">{point.title}</h3>
                 <p className="text-navy/70">{point.description}</p>
               </CardContent>
             </Card>

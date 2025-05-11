@@ -70,10 +70,10 @@ export default function ProblemSection() {
       <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-8">
         {/* Headline */}
         <header className="mb-16 text-center">
-          <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold tracking-tight text-navy lg:text-5xl">
+          <h2 className="mx-auto max-w-3xl font-display text-3xl font-bold tracking-tight text-navy lg:text-4xl">
             Guests remember&nbsp;<span className="whitespace-nowrap">smiles,</span> not spreadsheets.
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg font-light text-navy/70 md:max-w-2xl lg:text-xl">
+          <p className="mx-auto mt-6 max-w-xl text-base font-light text-navy/70 md:max-w-2xl lg:text-lg">
             Your team loses <span className="font-semibold text-navy">42 minutes</span> per shift juggling disconnected tools.
           </p>
         </header>
@@ -82,7 +82,7 @@ export default function ProblemSection() {
         <div className="grid gap-12 md:grid-cols-2">
           {/* TODAY */}
           <div>
-            <h3 className="mb-5 text-lg font-semibold text-navy">Today's reality</h3>
+            <h3 className="mb-5 text-base font-semibold text-navy">Today's reality</h3>
             <article className="relative h-full rounded-2xl bg-white px-8 pt-8 shadow-lg/10 ring-1 ring-slate-200">
               <span className="absolute inset-y-4 left-0 w-1 rounded-l-2xl bg-champagne/70" />
               <ul className="list-inside list-disc space-y-3 text-navy/80 marker:text-champagne">
@@ -98,7 +98,7 @@ export default function ProblemSection() {
 
           {/* TOMORROW */}
           <div>
-            <h3 className="mb-5 text-lg font-semibold text-navy">Imagine tomorrow</h3>
+            <h3 className="mb-5 text-base font-semibold text-navy">Imagine tomorrow</h3>
             <article className="relative h-full rounded-2xl bg-white px-6 py-2 shadow-lg/10 ring-1 ring-slate-200">
               <span className="absolute inset-y-4 left-0 w-1 rounded-l-2xl bg-champagne/70" />
               <Swiper
@@ -128,19 +128,19 @@ export default function ProblemSection() {
         </div>
 
         {/* CTA Bridge */}
-        <div className="relative mx-auto mt-24 max-w-3xl">
+        <div className="relative mx-auto mt-28 max-w-3xl">
           <div className="animate-bounce-slow absolute left-1/2 -top-6 -translate-x-1/2 rounded-full bg-white p-1 ring-2 ring-champagne">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-champagne text-2xl text-white">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-champagne text-xl text-white">
               ✓
             </span>
           </div>
 
           <div className="rounded-2xl bg-gradient-to-tr from-champagne/70 to-champagne/50 px-10 py-12 text-center text-white shadow-lg/10">
-            <p className="text-xl font-medium leading-relaxed">
-              With <strong>Auctores</strong>, bundle all your tools, be it PMS, POS, housekeeping, or emails, into one interface. Describe the outcome once, whether it’s a nightly routine or a one‑off request, and the agent takes it from there.
+            <p className="text-base font-medium leading-relaxed">
+              With <strong>Auctores</strong>, bundle all your tools, be it PMS, POS, housekeeping, or emails, into one interface. Describe the outcome once, whether it's a nightly routine or a one‑off request, and the agent takes it from there.
             </p>
             <br />
-            <p className="text-xl font-medium leading-relaxed">
+            <p className="text-base font-medium leading-relaxed">
               Most tasks wrap up in <span className="font-semibold">20 seconds</span> - often before anyone even asks.
             </p>
           </div>
@@ -150,7 +150,7 @@ export default function ProblemSection() {
         <div className="mt-14 text-center">
           <a
             href="/#how-it-works"
-            className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest text-navy transition hover:text-champagne"
+            className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-navy transition hover:text-champagne"
           >
             SEE&nbsp;HOW&nbsp;IT&nbsp;WORKS
             <span className="animate-bounce">↓</span>

@@ -33,13 +33,13 @@ const faqs = [
   return (
     <section id="security" className="section-padding bg-navy text-white">
       <div className="container max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Built for enterprise-grade privacy.</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">Built for enterprise-grade privacy.</h2>
 
-        <p className="text-lg text-center mb-4">
+        <p className="text-base text-center mb-4">
         Auctores is built with privacy at its core. We actively encourage you to maintain complete control over your data and AI infrastructure.
         Run on your own servers or use our secure EU-based cloud, swap our LLM endpoints with your own self-hosted models - no problem, the choice is yours. 
         </p>
-        <p className="text-lg text-center mb-10">
+        <p className="text-base text-center mb-10">
           Our team is committed to supporting you every step of the way in achieving maximum privacy and compliance. You have the final say on the level of privacy and control that best suits your needs.
         </p>
         
@@ -47,7 +47,7 @@ const faqs = [
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray/20">
-                <AccordionTrigger className="text-white font-medium text-lg py-4">
+                <AccordionTrigger className="text-white font-medium text-base py-4">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-300">

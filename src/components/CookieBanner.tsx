@@ -76,7 +76,7 @@ const CookieBanner = () => {
       visible={showBanner ? 'visible' : 'hidden'} // Control visibility via state
       style={{
         background: "#1f2937",
-        fontSize: "12px",
+        fontSize: "11px",
         borderTop: "1px solid #374151",
         maxWidth: "380px",
         margin: "0 auto",
@@ -93,7 +93,7 @@ const CookieBanner = () => {
       buttonStyle={{
         background: "#3b82f6",
         color: "#fff",
-        fontSize: "12px",
+        fontSize: "11px",
         borderRadius: "4px",
         padding: "5px 10px",
         margin: "5px",
@@ -104,7 +104,7 @@ const CookieBanner = () => {
         background: "transparent",
         border: "1px solid #6b7280",
         color: "#fff",
-        fontSize: "12px",
+        fontSize: "11px",
         borderRadius: "4px",
         padding: "5px 10px",
         margin: "5px",
@@ -115,7 +115,7 @@ const CookieBanner = () => {
         flex: "1",
         margin: "0 0 8px 0",
         padding: "0",
-        fontSize: "12px",
+        fontSize: "11px",
         lineHeight: "1.3",
       }}
       buttonWrapperClasses="flex justify-end w-full m-0 p-0"

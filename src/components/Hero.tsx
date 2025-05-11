@@ -14,22 +14,22 @@ const Hero = () => {
       <div className="container max-w-7xl mx-auto z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col space-y-8 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-lg">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-lg">
             Obsess over guests, not software.
             </h1>
-            <p className="text-xl text-white/90 max-w-lg">
+            <p className="text-lg text-white/90 max-w-lg">
             Auctores seemlessly merges every hotel tool into a single screen, letting staff finish cross-tool tasks in seconds, while 24/7 AI Agents resolve problems before guests ever feel them.            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="/#cta">
                  <Button 
-                   className="bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-8 py-4 h-auto rounded-md text-lg shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
+                   className="bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-8 py-4 h-auto rounded-md text-base shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
                  >
                    Create Time for Care
                  </Button>
               </a>
               <Button 
                 variant="outline" 
-                className="bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-8 py-4 h-auto rounded-md text-lg font-medium transition-all duration-300"
+                className="bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-8 py-4 h-auto rounded-md text-base font-medium transition-all duration-300"
               >
                 View 2 min Demo
               </Button>
