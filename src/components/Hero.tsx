@@ -5,17 +5,18 @@ const Hero = () => {
   //        <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=2000')] bg-center bg-cover opacity-40"></div>
   // <div className="h-full w-full bg-[url('/images/hero_concierge2.png')] bg-center bg-cover opacity-40"></div>
   return (
-    <section className="relative flex items-center min-h-screen pt-24 pb-16 px-6 overflow-hidden">
+    <section className="relative flex items-center min-h-screen pt-24 pb-16 px-6 md:pl-12 lg:pl-20 xl:pl-24 pr-6 overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-      <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=2000')] bg-center bg-cover opacity-40"></div>        <div className="absolute inset-0 bg-gradient-to-br from-navy/60 to-navy/20"></div>
+      <div className="h-full w-full bg-[url('/images/bg_image.png')] bg-center bg-cover opacity-40"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-navy/60 to-navy/20"></div>
       </div>
       
-      <div className="container max-w-7xl mx-auto z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col space-y-8 animate-fade-in">
+      <div className="max-w-7xl z-10">
+        <div className="flex justify-start">
+          <div className="flex flex-col space-y-8 animate-fade-in max-w-2xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-lg">
-            Obsess over guests, not software.
+            Obsess over guests,<br />not software.
             </h1>
             <p className="text-lg text-white/90 max-w-lg">
             Auctores seemlessly merges every hotel tool into a single screen, letting staff finish cross-tool tasks in seconds, while 24/7 AI Agents resolve problems before guests ever feel them.            </p>
@@ -35,7 +36,6 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          
         </div>
       </div>
     </section>

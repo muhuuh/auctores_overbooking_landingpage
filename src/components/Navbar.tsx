@@ -20,26 +20,42 @@ const Navbar = () => {
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12",
-      isScrolled ? "bg-white shadow-md" : "bg-transparent"
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
+      "px-6 md:px-12 lg:px-20 xl:px-24",
+      isScrolled ? "bg-white shadow-md" : "bg-white/10 backdrop-blur-sm"
     )}>
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <div className="w-full flex justify-between items-center">
         <a href="/" className="flex items-center">
-          <h2 className="text-navy font-playfair text-2xl font-bold">
+          <h2 className={cn(
+            "font-playfair text-2xl font-bold transition-colors",
+            isScrolled ? "text-navy" : "text-white"
+          )}>
             Auctores<span className="text-champagne">.ai</span>
           </h2>
         </a>
         <div className="hidden md:flex space-x-8 items-center">
-          <a href="/#why-auctores" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+          <a href="/#why-auctores" className={cn(
+            "hover:text-champagne transition-colors text-sm font-medium",
+            isScrolled ? "text-gray" : "text-white/90"
+          )}>
             Why Auctores
           </a>
-          <a href="/#features" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+          <a href="/#features" className={cn(
+            "hover:text-champagne transition-colors text-sm font-medium",
+            isScrolled ? "text-gray" : "text-white/90"
+          )}>
             Features
           </a>
-          <a href="/#security" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+          <a href="/#security" className={cn(
+            "hover:text-champagne transition-colors text-sm font-medium",
+            isScrolled ? "text-gray" : "text-white/90"
+          )}>
             Security
           </a>
-          <a href="/#pricing" className="text-gray hover:text-champagne transition-colors text-sm font-medium">
+          <a href="/#pricing" className={cn(
+            "hover:text-champagne transition-colors text-sm font-medium",
+            isScrolled ? "text-gray" : "text-white/90"
+          )}>
             Pricing
           </a>
           <a href="/#cta">
