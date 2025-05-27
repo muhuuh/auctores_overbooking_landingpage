@@ -67,9 +67,9 @@ export default function ProblemSection() {
         className="pointer-events-none absolute inset-x-0 -top-0 z-0 h-96 bg-[radial-gradient(450px_240px_at_top,theme(colors.champagne/5),transparent)]"
       />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-8 overflow-x-hidden">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 md:px-8 overflow-x-hidden">
         {/* Headline */}
-        <header className="mb-20 text-center">
+        <header className="mb-16 sm:mb-20 text-center">
           <h2 className="mx-auto max-w-3xl font-display text-2xl sm:text-3xl font-bold tracking-tight text-navy lg:text-4xl">
             Guests remember&nbsp;<span className="whitespace-nowrap">smiles,</span> not spreadsheets.
           </h2>
@@ -79,22 +79,22 @@ export default function ProblemSection() {
         </header>
 
         {/* Two‑column grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:gap-12 md:items-stretch">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:gap-12 md:items-stretch">
           {/* TODAY'S REALITY */}
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-4 sm:space-y-6">
             <div className="text-center">
               <h3 className="text-xl font-bold text-navy md:text-2xl">Today's reality</h3>
               <div className="mx-auto mt-2 h-0.5 w-16 bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
             </div>
             
-            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 w-full max-w-full">
+            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 w-full">
               {/* Accent border */}
               <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/50 to-navy/10"></div>
               
               {/* Content */}
-              <div className="px-8 py-10">
+              <div className="px-6 sm:px-8 py-8 sm:py-10">
                 {/* Header with icon */}
-                <div className="mb-8 flex items-center gap-4">
+                <div className="mb-6 sm:mb-8 flex items-center gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-champagne/10">
                     <Flame className="h-6 w-6 text-champagne" />
                   </div>
@@ -125,18 +125,18 @@ export default function ProblemSection() {
           </div>
 
           {/* IMAGINE TOMORROW */}
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-4 sm:space-y-6">
             <div className="text-center">
               <h3 className="text-xl font-bold text-navy md:text-2xl">Imagine tomorrow</h3>
               <div className="mx-auto mt-2 h-0.5 w-16 bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
             </div>
             
-            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 w-full max-w-full">
+            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 w-full">
               {/* Accent border */}
               <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/50 to-navy/10"></div>
               
               {/* Content */}
-              <div className="px-8 py-10 flex flex-col flex-1">
+              <div className="px-6 sm:px-8 py-8 sm:py-10 flex flex-col flex-1">
                 {/* Swiper carousel */}
                 <div className="flex-1 flex flex-col w-full overflow-hidden">
                   <Swiper

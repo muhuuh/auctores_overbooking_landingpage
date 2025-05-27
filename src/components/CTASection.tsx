@@ -58,16 +58,16 @@ const CTASection = () => {
     setIsSubmitting(false);
   };
   return (
-    <section id="cta" className="section-padding bg-navy text-white">
-      <div className="container max-w-4xl mx-auto text-center">
+    <section id="cta" className="py-16 sm:py-20 md:py-24 bg-navy text-white">
+      <div className="container max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Reserve Your Founding‑Partner Seat.</h2>
-        <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-300 mb-8 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-0">
           Founding hotels lock-in lifetime 50% pricing and direct influence on the roadmap.
         </p>
         
-        <div className="bg-navyLight p-8 rounded-lg shadow-xl">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 gap-6">
+        <div className="bg-navyLight p-6 sm:p-8 rounded-lg shadow-xl">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6">
               <div className="text-left">
                 <Label htmlFor="email" className="text-gray-300 mb-2 block">Work Email <span className="text-red-400">*</span></Label>
                 <Input
@@ -120,7 +120,7 @@ const CTASection = () => {
                 />
               </div>
               
-              <div className="pt-4">
+              <div className="pt-2 sm:pt-4">
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="codesign" 
@@ -130,7 +130,7 @@ const CTASection = () => {
                   />
                   <Label 
                     htmlFor="codesign" 
-                    className="text-gray-300"
+                    className="text-gray-300 text-sm"
                   >
                     I'd like to co-design features as an alpha partner
                   </Label>
@@ -140,7 +140,7 @@ const CTASection = () => {
             
             <Button 
               type="submit" 
-              className="w-full py-6 bg-champagne hover:bg-champagne/90 text-black font-bold text-sm"
+              className="w-full py-4 sm:py-6 bg-champagne hover:bg-champagne/90 text-black font-bold text-sm"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Processing..." : "Reserve Early Access"}

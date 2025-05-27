@@ -50,12 +50,12 @@ const ValueProposition = () => {
     ];
 
   return (
-    <section id="features" className="section-padding bg-offWhite">
-      <div className="container max-w-7xl mx-auto">
+    <section id="features" className="py-16 sm:py-20 md:py-24 bg-offWhite">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-2xl font-bold text-navy md:text-3xl mb-4 font-playfair">
           Customer Obsession Engine.
         </h2>
-        <p className="mx-auto mb-12 max-w-3xl text-center text-base text-navy/70">
+        <p className="mx-auto mb-8 sm:mb-12 max-w-3xl text-center text-base text-navy/70 px-4 sm:px-0">
           Invisible issue‑solving in the background. Instant, any‑tool commands on demand.
         </p>
 
@@ -65,15 +65,15 @@ const ValueProposition = () => {
               align: "start",
               loop: true,
             }}
-            className="w-full max-w-xs sm:max-w-sm mx-auto"
+            className="w-full max-w-sm sm:max-w-md mx-auto"
           >
             <CarouselContent>
               {features.map((feature, index) => (
                 <CarouselItem key={index} className="basis-full">
                   <div className="p-1">
                     <Card className="luxury-card border border-champagne/10 overflow-hidden hover:shadow-lg transition-all duration-300 bg-white h-full flex flex-col">
-                      <CardContent className="p-8 flex flex-col flex-grow">
-                        <div className="mb-6 h-12 w-12 flex items-center justify-center">
+                      <CardContent className="p-6 sm:p-8 flex flex-col flex-grow">
+                        <div className="mb-4 sm:mb-6 h-12 w-12 flex items-center justify-center">
                           {feature.icon}
                         </div>
                         <h3 className="text-lg font-bold text-navy mb-3">{feature.title}</h3>
@@ -88,11 +88,11 @@ const ValueProposition = () => {
             <CarouselNext className="right-[-16px] sm:right-[-24px] bg-white/80 hover:bg-white border-champagne/50 text-navy hover:text-navy/80" />
           </Carousel>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="luxury-card border border-champagne/10 overflow-hidden hover:shadow-lg transition-all duration-300 bg-white h-full flex flex-col">
-                <CardContent className="p-8 flex flex-col flex-grow">
-                  <div className="mb-6 h-12 w-12 flex items-center justify-center">
+                <CardContent className="p-6 sm:p-8 flex flex-col flex-grow">
+                  <div className="mb-4 sm:mb-6 h-12 w-12 flex items-center justify-center">
                     {feature.icon}
                   </div>
                   <h3 className="text-lg font-bold text-navy mb-3">{feature.title}</h3>

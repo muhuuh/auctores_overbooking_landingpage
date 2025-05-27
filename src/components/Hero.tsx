@@ -21,16 +21,16 @@ const Hero = () => {
             <p className="text-base sm:text-lg text-white/90 max-w-lg">
             Auctores seemlessly merges every hotel tool into a single screen, letting staff finish cross-tool tasks in seconds, while 24/7 AI Agents resolve problems before guests ever feel them.            </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/#cta">
+              <a href="/#cta" className="w-full sm:w-auto">
                  <Button 
-                   className="bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
+                   className="w-full bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
                  >
                    Create Time for Care
                  </Button>
               </a>
               <Button 
                 variant="outline" 
-                className="bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base font-medium transition-all duration-300"
+                className="w-full sm:w-auto bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base font-medium transition-all duration-300"
               >
                 View 2 min Demo
               </Button>
