@@ -37,7 +37,7 @@ const PricingSection = () => {
                    {point.icon}
                 </div>
                 <h3 className="text-lg font-bold text-navy mb-3">{point.title}</h3>
-                <p className="text-navy/70">{point.description}</p>
+                <p className="text-sm text-navy/70">{point.description}</p>
               </CardContent>
             </Card>
           ))}

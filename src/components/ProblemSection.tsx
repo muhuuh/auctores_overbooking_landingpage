@@ -70,7 +70,7 @@ export default function ProblemSection() {
       <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-8">
         {/* Headline */}
         <header className="mb-20 text-center">
-          <h2 className="mx-auto max-w-3xl font-display text-3xl font-bold tracking-tight text-navy lg:text-4xl">
+          <h2 className="mx-auto max-w-3xl font-display text-2xl sm:text-3xl font-bold tracking-tight text-navy lg:text-4xl">
             Guests remember&nbsp;<span className="whitespace-nowrap">smiles,</span> not spreadsheets.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base font-light text-navy/70 md:max-w-2xl lg:text-lg">

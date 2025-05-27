@@ -45,7 +45,7 @@ const HowItWorks = () => {
               className="flex h-full flex-col rounded-lg border border-champagne/15 bg-offWhite p-8 shadow"
             >
               <div className="mb-6 flex w-full items-center justify-between">
-                <span className="font-playfair text-4xl text-gray opacity-25">{step.number}</span>
+                <span className="font-playfair text-3xl sm:text-4xl text-gray opacity-25">{step.number}</span>
                 <div className="flex h-8 w-8 items-center justify-center">{step.icon}</div>
               </div>
               <div className="mt-auto">
@@ -62,7 +62,7 @@ const HowItWorks = () => {
           <Button
             variant="outline"
             className="h-auto rounded-md border border-champagne bg-transparent px-8 py-4 text-base font-medium text-champagne transition-all duration-300 hover:bg-champagne/10"
-            onClick={() => setShowDemo(false)}
+            onClick={() => setShowDemo(true)}
           >
             View 2 min Demo
           </Button>

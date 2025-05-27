@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="section-padding-sm bg-offWhite text-navy">
       <div className="container max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <h4 className="font-medium mb-4">Product</h4>
             <ul className="space-y-2 text-xs text-gray-700">
@@ -36,15 +36,15 @@ const Footer = () => {
             <p className="text-xs text-gray-700">contact@auctores.ai</p>
           </div>
           
-          <div className="flex justify-end items-start">
+          <div className="flex items-start sm:justify-end">
             <h2 className="text-navy font-playfair text-lg font-bold">
               Auctores<span className="text-champagne">.ai</span>
             </h2>
           </div>
-          <div className="text-xs mt-4 md:mt-0">
+          <div className="text-xs mt-4 md:mt-0 sm:col-span-2 md:col-span-1"> {/* Ensure it flows correctly in different grid layouts */}
             <button 
               onClick={handleRevokeConsent}
-              className="text-gray-400 hover:text-white transition-colors duration-200 cursor-pointer bg-transparent border-none p-0"
+              className="text-gray-400 hover:text-champagne transition-colors duration-200 cursor-pointer bg-transparent border-none py-2 px-1" // Added padding
             >
               Cookie Settings
             </button>
