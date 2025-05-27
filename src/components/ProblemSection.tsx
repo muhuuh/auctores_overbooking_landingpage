@@ -89,7 +89,7 @@ export default function ProblemSection() {
             
             <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50">
               {/* Accent border */}
-              <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/50 to-navy/10"></div>
+              <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/40 to-navy/10"></div>
               
               {/* Content */}
               <div className="px-8 py-10">
@@ -133,7 +133,7 @@ export default function ProblemSection() {
             
             <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50">
               {/* Accent border */}
-              <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/50 to-navy/10"></div>
+              <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/40 to-navy/10"></div>
               
               {/* Content */}
               <div className="px-8 py-10 flex flex-col flex-1">
