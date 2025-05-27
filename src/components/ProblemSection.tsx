@@ -67,7 +67,7 @@ export default function ProblemSection() {
         className="pointer-events-none absolute inset-x-0 -top-0 z-0 h-96 bg-[radial-gradient(450px_240px_at_top,theme(colors.champagne/5),transparent)]"
       />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-8">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-8 overflow-x-hidden">
         {/* Headline */}
         <header className="mb-20 text-center">
           <h2 className="mx-auto max-w-3xl font-display text-2xl sm:text-3xl font-bold tracking-tight text-navy lg:text-4xl">
@@ -87,7 +87,7 @@ export default function ProblemSection() {
               <div className="mx-auto mt-2 h-0.5 w-16 bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
             </div>
             
-            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50">
+            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 w-full max-w-full">
               {/* Accent border */}
               <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/50 to-navy/10"></div>
               
@@ -131,14 +131,14 @@ export default function ProblemSection() {
               <div className="mx-auto mt-2 h-0.5 w-16 bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
             </div>
             
-            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50">
+            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 w-full max-w-full">
               {/* Accent border */}
               <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/50 to-navy/10"></div>
               
               {/* Content */}
               <div className="px-8 py-10 flex flex-col flex-1">
                 {/* Swiper carousel */}
-                <div className="flex-1 flex flex-col">
+                <div className="flex-1 flex flex-col w-full overflow-hidden">
                   <Swiper
                     modules={[Autoplay, Pagination]}
                     slidesPerView={1}
