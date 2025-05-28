@@ -24,6 +24,17 @@ const Hero = () => {
               <a href="/#cta" className="w-full sm:w-auto">
                  <Button 
                    className="w-full bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
+                   onClick={() => {
+                     if (window.gtag) {
+                       window.gtag('event', 'primary_cta_click', { 
+                         'event_category': 'LandingPage_MVP', 
+                         'event_label': 'Create Time for Care', 
+                         'value': 1 
+                       });
+                     } else {
+                       console.log("gtag not defined");
+                     }
+                   }}
                  >
                    Create Time for Care
                  </Button>
@@ -31,6 +42,17 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 className="w-full sm:w-auto bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base font-medium transition-all duration-300"
+                onClick={() => {
+                  if (window.gtag) {
+                    window.gtag('event', 'demo_click', { 
+                      'event_category': 'LandingPage_MVP', 
+                      'event_label': 'View 2 min Demo', 
+                      'value': 1 
+                    });
+                  } else {
+                    console.log("gtag not defined");
+                  }
+                }}
               >
                 View 2 min Demo
               </Button>
