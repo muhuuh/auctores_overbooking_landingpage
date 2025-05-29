@@ -17,17 +17,17 @@ const scenarios = [
     Icon: CloudRain,
   },
   {
-    title: 'Inbox triage, minus the triage.',
+    title: 'Inbox empties itself.',
     text: 'Every hour Auctores answers routine e-mails, flags sour sentiment, and escalates only what needs a human touch.',
     Icon: Mail,
   },
   {
-    title: 'Traffic snarl? Guests stay relaxed.',
+    title: 'Traffic jam? It’s handled.',
     text: 'Real‑time traffic data lets Auctores delay airport pickups, push housekeeping, and shift dinner reservations.',
     Icon: MapPin,
   },
   {
-    title: 'Check-in déjà vu — by design.',
+    title: 'Personal déjà-vu at check-in.',
     text: 'Type a name and instant context appears: loves hibiscus spritzers, pine-nut allergy, last-stay upgrade. Welcome drink? Already en-route.',
     Icon: UserCheck,
   },
@@ -74,7 +74,7 @@ export default function ProblemSection() {
             Guests remember&nbsp;<span className="whitespace-nowrap">smiles,</span> not spreadsheets.
           </h2>
           <p className="mx-auto mt-4 sm:mt-6 max-w-xl text-base font-light text-navy/70 md:max-w-2xl lg:text-lg">
-            Your team loses <span className="font-semibold text-navy">42 minutes</span> per shift juggling disconnected tools.
+            Juggling disconnected tools steals <span className="font-semibold text-navy">42 minutes</span> per shift - enough time to turn a stay into a story.
           </p>
         </header>
 
@@ -87,7 +87,7 @@ export default function ProblemSection() {
               <div className="mx-auto mt-2 h-0.5 w-16 bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
             </div>
             
-            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 min-w-0">
+            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 min-w-0 transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
               {/* Accent border */}
               <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/40 to-navy/10"></div>
               
@@ -102,22 +102,23 @@ export default function ProblemSection() {
                 </div>
                 
                 {/* Pain points list */}
-                <ul className="space-y-4 sm:space-y-5">
+                <ul className="space-y-3 sm:space-y-3">
+
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">3 apps, 6 copy-pastes — and one lost VIP upsell.</span>
+                    <span className="text-sm text-navy/80 leading-relaxed">Chatbot promises; staff hunts the right tab and tool.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Housekeeping learns about check-outs an hour too late.</span>
+                    <span className="text-sm text-navy/80 leading-relaxed">Mid-shift handover - 20 sticky notes, zero context.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Complaints surface only after the TripAdvisor review.</span>
+                    <span className="text-sm text-navy/80 leading-relaxed">The 9:30 AM checkout line tests nervs of guests and staff.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">The 9:30 AM checkout line tests every smile.</span>
+                    <span className="text-sm text-navy/80 leading-relaxed">3 tolls, 6 copy-pastes — and one lost VIP upsell.</span>
                   </li>
                 </ul>
               </div>
@@ -131,7 +132,7 @@ export default function ProblemSection() {
               <div className="mx-auto mt-2 h-0.5 w-16 bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
             </div>
             
-            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 min-w-0">
+            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 min-w-0 transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
               {/* Accent border */}
               <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/40 to-navy/10"></div>
               
@@ -185,22 +186,42 @@ export default function ProblemSection() {
           </div>
         </div>
 
+        
+
         {/* CTA Bridge */}
-        <div className="relative mx-auto mt-16 sm:mt-20 md:mt-28 max-w-3xl px-4 sm:px-0">
-          <div className="animate-bounce-slow absolute left-1/2 -top-6 -translate-x-1/2 rounded-full bg-white p-1 ring-2 ring-champagne shadow-lg">
+        <div className="relative mx-auto mt-14 sm:mt-20 md:mt-20 max-w-3xl px-4 sm:px-0">
+          <div className="animate-bounce-slow absolute left-1/2 -top-6 -translate-x-1/2 rounded-full bg-white p-1 ring-2 ring-champagne shadow-lg z-20">
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-champagne text-xl text-white">
               ✓
             </span>
           </div>
 
-          <div className="rounded-2xl bg-gradient-to-tr from-champagne/80 to-champagne/60 px-6 sm:px-8 md:px-10 py-8 sm:py-10 md:py-12 text-center text-white shadow-xl">
-            <p className="text-base sm:text-lg font-medium leading-relaxed">
-              <strong>Auctores</strong> unites PMS, POS, email and bespoke tools under one AI command bar. Describe the outcome once, nightly routine or one-off, and the agent does the rest.
-            </p>
-            <div className="mx-auto my-5 sm:my-6 h-px w-24 bg-white/30"></div>
-            <p className="text-sm sm:text-base font-medium leading-relaxed">
-              Most tasks wrap up in <span className="font-bold">20 seconds</span> - often before anyone even asks.
-            </p>
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white via-slate-50/30 to-champagne/5 px-6 sm:px-8 md:px-10 py-8 sm:py-10 md:py-12 text-center shadow-2xl ring-1 ring-champagne/20 border border-champagne/15 z-10">
+            {/* Subtle background pattern */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(15,27,38,0.02),transparent_50%)]"></div>
+            
+            {/* Content */}
+            <div className="relative">
+              <h2 className='text-base sm:text-lg font-bold'>One command bar. Endless guest moments.</h2>
+              <p className="text-sm sm:text-base f leading-relaxed text-navy mt-6">
+                <span className="inline-block bg-gradient-to-r from-champagne to-champagne/80 bg-clip-text text-transparent font-bold">Auctores</span> stitches PMS, POS, email and custom tools into a single AI cockpit. Describe any outcome, nightly routine or one-off, and the agent does the rest.
+              </p>
+              <p className="text-sm sm:text-base f leading-relaxed text-navy mt-6">
+                Most tasks wrap up in <span className="font-bold text-navy">20 seconds</span> - often before anyone even asks.
+              </p>
+              
+              {/* Elegant divider */}
+              <div className="mx-auto my-6 sm:my-7 flex items-center justify-center">
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-champagne/60 to-transparent"></div>
+                <div className="mx-3 h-1 w-1 rounded-full bg-champagne/40"></div>
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-champagne/60 to-transparent"></div>
+              </div>
+              
+              <p className="text-sm sm:text-base font-medium leading-relaxed text-navy/70">
+              Your teams win back hours; your guests remember <span className="inline-block bg-gradient-to-r from-champagne to-champagne/80 bg-clip-text text-transparent font-bold">magic.</span> 
+              </p>
+              
+            </div>
           </div>
         </div>
         
