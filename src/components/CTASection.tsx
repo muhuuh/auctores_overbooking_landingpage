@@ -7,6 +7,13 @@ import { Textarea } from './ui/textarea';
 import { useToast } from './ui/use-toast';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { supabase } from '../lib/supabaseClient';
+import { Info } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const CTASection = () => {
   const { toast } = useToast();
@@ -62,7 +69,7 @@ const CTASection = () => {
       <div className="container max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Reserve Your Founding‑Partner Seat.</h2>
         <p className="text-lg text-gray-300 mb-8 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-0">
-          Founding hotels lock-in lifetime 50% pricing and direct influence on the roadmap.
+          Founding hotels lock-in <strong className="text-champagne font-semibold">lifetime 50% discount</strong> and direct influence on the roadmap.
         </p>
         
         <div className="bg-navyLight p-6 sm:p-8 rounded-lg shadow-xl">
@@ -130,9 +137,21 @@ const CTASection = () => {
                   />
                   <Label 
                     htmlFor="codesign" 
-                    className="text-gray-300 text-sm"
+                    className="text-gray-300 text-sm flex items-center"
                   >
                     I'd like to co-design features as an alpha partner
+                    <TooltipProvider>
+                      <Tooltip delayDuration={300}>
+                        <TooltipTrigger asChild>
+                          <Info className="ml-1.5 h-4 w-4 text-gray-400 hover:text-champagne cursor-help" />
+                        </TooltipTrigger>
+                        <TooltipContent className="bg-navyLight border-champagne/50 text-white max-w-xs p-3">
+                          <p className="text-sm">
+                            Being an Alpha Partner means collaborating closely with us to finalize features and fine-tune them to precisely meet your needs. It's an opportunity for a close partnership to ensure Auctores perfectly fits your workflows, tools, and processes.
+                          </p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </Label>
                 </div>
               </div>

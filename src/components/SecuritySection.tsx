@@ -22,7 +22,7 @@ const faqs = [
     },
     {
       question: "Do you store or use our data?",
-      answer: "Auctores is privacy-by-design: we strongly encourage you to retain full control by hosting your data and AI models. Although we offer secure cloud storage, our core recommendation is that you own and manage your infrastructure for maximum privacy. In fact, our team is dedicated to supporting you fully in setting up and running Auctores privately and securely on your own servers."
+      answer: "Auctores is privacy-by-design: we strongly encourage you to retain full control by hosting your data and AI models. Although we offer secure cloud storage, our core recommendation is that you own and manage your infrastructure for maximum privacy. We want to be unequivocally clear: we do not use your data for any purpose, including marketing or model training. Our commitment is to uphold the highest level of data privacy, using only the minimal data necessary for the system to function, as directed by you. In fact, our team is dedicated to supporting you fully in setting up and running Auctores privately and securely on your own servers."
     },
     {
       question: "How do you ensure system reliability?",

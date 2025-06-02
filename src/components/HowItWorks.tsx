@@ -1,9 +1,14 @@
 import { useState } from 'react';
 import { Plug, Target, CheckCircle } from 'lucide-react';
 import { Button } from './ui/button';
+import VideoModal from './VideoModal';
 
 const HowItWorks = () => {
-  const [showDemo, setShowDemo] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const demoVideoSrc = "/videos/demo_auctores_v1.mp4";
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const steps = [
     {
@@ -62,34 +67,19 @@ const HowItWorks = () => {
           <Button
             variant="outline"
             className="h-auto rounded-md border border-champagne bg-transparent px-6 sm:px-8 py-3 sm:py-4 text-base font-medium text-champagne transition-all duration-300 hover:bg-champagne/10"
-            onClick={() => setShowDemo(true)}
+            onClick={openModal}
           >
-            View 2 min Demo
+            View 1 min Demo
           </Button>
         </div>
       </div>
 
-      {/* ---------- Demo Modal ---------- */}
-      {showDemo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-navy/70 backdrop-blur-sm">
-          <div className="relative w-full max-w-3xl overflow-hidden rounded-lg bg-white shadow-xl">
-            <button
-              aria-label="Close demo"
-              onClick={() => setShowDemo(false)}
-              className="absolute right-4 top-4 text-navy transition hover:text-champagne focus:outline-none"
-            >
-              <div className="h-6 w-6" />
-            </button>
-            <iframe
-              title="Auctores 2-minute demo video"
-              src="https://player.vimeo.com/video/000000000?autoplay=1&title=0&byline=0&portrait=0"
-              className="aspect-video w-full"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      )}
+      {/* ---------- Demo Modal (using the new VideoModal component) ---------- */}
+      <VideoModal 
+        isOpen={isModalOpen} 
+        onClose={closeModal} 
+        videoSrc={isModalOpen ? demoVideoSrc : ""} 
+      />
     </section>
   );
 };
