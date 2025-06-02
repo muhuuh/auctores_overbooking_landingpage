@@ -118,7 +118,7 @@ export default function ProblemSection() {
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">3 tolls, 6 copy-pastes — and one lost VIP upsell.</span>
+                    <span className="text-sm text-navy/80 leading-relaxed">3 tools, 6 copy-pastes — and one lost VIP upsell.</span>
                   </li>
                 </ul>
               </div>
