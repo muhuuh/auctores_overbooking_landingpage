@@ -68,7 +68,7 @@ const CTASection = () => {
     <section id="cta" className="py-16 sm:py-20 md:py-24 bg-navy text-white">
       <div className="container max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Reserve Your Founding‑Partner Seat.</h2>
-        <p className="text-lg text-gray-300 mb-8 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-0">
+        <p className="text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0">
           Founding hotels lock-in <strong className="text-champagne font-semibold">lifetime 50% discount</strong> and direct influence on the roadmap.
         </p>
         

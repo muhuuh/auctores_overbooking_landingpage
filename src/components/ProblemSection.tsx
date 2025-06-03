@@ -78,8 +78,45 @@ export default function ProblemSection() {
           </p>
         </header>
 
+       {/* CTA Bridge */}
+        <div className="relative mx-auto mt-14 sm:mt-20 md:mt-20 mb-16 sm:mb-20 md:mb-24 max-w-3xl px-4 sm:px-0">
+          <div className="animate-bounce-slow absolute left-1/2 -top-6 -translate-x-1/2 rounded-full bg-white p-1 ring-2 ring-champagne shadow-lg z-20">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-champagne text-xl text-white">
+              ✓
+            </span>
+          </div>
+
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white via-slate-50/30 to-champagne/5 px-6 sm:px-8 md:px-10 py-8 sm:py-10 md:py-12 text-center shadow-2xl ring-1 ring-champagne/20 border border-champagne/15 z-10">
+            {/* Subtle background pattern */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(15,27,38,0.02),transparent_50%)]"></div>
+            
+            {/* Content */}
+            <div className="relative">
+              <h2 className='text-base sm:text-lg font-bold'>One command bar. Endless guest moments.</h2>
+              <p className="text-sm sm:text-base f leading-relaxed text-navy mt-6">
+                <span className="inline-block bg-gradient-to-r from-champagne to-champagne/80 bg-clip-text text-transparent font-bold">Auctores</span> stitches PMS, POS, email and custom tools into a single AI cockpit. Describe any outcome, nightly routine or one-off, and the agent does the rest.
+              </p>
+              <p className="text-sm sm:text-base f leading-relaxed text-navy mt-6">
+                Most tasks wrap up in <span className="font-bold text-navy">20 seconds</span> - often before anyone even asks.
+              </p>
+              
+              {/* Elegant divider */}
+              <div className="mx-auto my-6 sm:my-7 flex items-center justify-center">
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-champagne/60 to-transparent"></div>
+                <div className="mx-3 h-1 w-1 rounded-full bg-champagne/40"></div>
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-champagne/60 to-transparent"></div>
+              </div>
+              
+              <p className="text-sm sm:text-base font-medium leading-relaxed text-navy/70">
+              Your teams win back hours; your guests remember <span className="inline-block bg-gradient-to-r from-champagne to-champagne/80 bg-clip-text text-transparent font-bold">magic.</span> 
+              </p>
+              
+            </div>
+          </div>
+        </div>
+
         {/* Two‑column grid */}
-        <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 lg:gap-12">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 lg:gap-12 mt-8 sm:mt-12 md:mt-16">
           {/* TODAY'S REALITY */}
           <div className="flex flex-col space-y-5 sm:space-y-6 min-w-0">
             <div className="text-center">
@@ -188,45 +225,10 @@ export default function ProblemSection() {
 
         
 
-        {/* CTA Bridge */}
-        <div className="relative mx-auto mt-14 sm:mt-20 md:mt-20 max-w-3xl px-4 sm:px-0">
-          <div className="animate-bounce-slow absolute left-1/2 -top-6 -translate-x-1/2 rounded-full bg-white p-1 ring-2 ring-champagne shadow-lg z-20">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-champagne text-xl text-white">
-              ✓
-            </span>
-          </div>
 
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white via-slate-50/30 to-champagne/5 px-6 sm:px-8 md:px-10 py-8 sm:py-10 md:py-12 text-center shadow-2xl ring-1 ring-champagne/20 border border-champagne/15 z-10">
-            {/* Subtle background pattern */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(15,27,38,0.02),transparent_50%)]"></div>
-            
-            {/* Content */}
-            <div className="relative">
-              <h2 className='text-base sm:text-lg font-bold'>One command bar. Endless guest moments.</h2>
-              <p className="text-sm sm:text-base f leading-relaxed text-navy mt-6">
-                <span className="inline-block bg-gradient-to-r from-champagne to-champagne/80 bg-clip-text text-transparent font-bold">Auctores</span> stitches PMS, POS, email and custom tools into a single AI cockpit. Describe any outcome, nightly routine or one-off, and the agent does the rest.
-              </p>
-              <p className="text-sm sm:text-base f leading-relaxed text-navy mt-6">
-                Most tasks wrap up in <span className="font-bold text-navy">20 seconds</span> - often before anyone even asks.
-              </p>
-              
-              {/* Elegant divider */}
-              <div className="mx-auto my-6 sm:my-7 flex items-center justify-center">
-                <div className="h-px w-16 bg-gradient-to-r from-transparent via-champagne/60 to-transparent"></div>
-                <div className="mx-3 h-1 w-1 rounded-full bg-champagne/40"></div>
-                <div className="h-px w-16 bg-gradient-to-r from-transparent via-champagne/60 to-transparent"></div>
-              </div>
-              
-              <p className="text-sm sm:text-base font-medium leading-relaxed text-navy/70">
-              Your teams win back hours; your guests remember <span className="inline-block bg-gradient-to-r from-champagne to-champagne/80 bg-clip-text text-transparent font-bold">magic.</span> 
-              </p>
-              
-            </div>
-          </div>
-        </div>
         
         {/* Scroll cue */}
-        <div className="mt-12 sm:mt-16 text-center">
+        <div className="mt-16 sm:mt-20 md:mt-24 text-center">
           <a
             href="/#how-it-works"
             className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest text-navy transition hover:text-champagne"

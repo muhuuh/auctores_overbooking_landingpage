@@ -36,11 +36,11 @@ const faqs = [
         <h2 className="text-2xl md:text-3xl font-bold mb-8 sm:mb-12 text-center">Built for enterprise-grade privacy.</h2>
 
         <p className="text-base text-center mb-4 px-4 sm:px-0">
-        Auctores is built with privacy at its core. We actively encourage you to maintain complete control over your data and AI infrastructure.
-        Run on your own servers or use our secure EU-based cloud, swap our LLM endpoints with your own self-hosted models - no problem, the choice is yours. 
+        Auctores prioritizes privacy, encouraging you to control your data and AI.
+        Host on your servers or our secure EU cloud, and use your own self-hosted LLMs — the choice is yours.
         </p>
         <p className="text-base text-center mb-8 sm:mb-10 px-4 sm:px-0">
-          Our team is committed to supporting you every step of the way in achieving maximum privacy and compliance. You have the final say on the level of privacy and control that best suits your needs.
+          Our team fully supports your journey to maximum privacy and compliance, ensuring you decide the ideal level of control.
         </p>
         
         <div className="bg-navyLight p-6 sm:p-8 rounded-lg">
