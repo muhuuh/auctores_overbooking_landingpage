@@ -26,7 +26,7 @@ const Hero = () => {
               Obsess over guests,<br />not software.
               </h1>
               <p className="text-base sm:text-lg text-white/90 max-w-lg">
-              Auctores seemlessly merges every hotel tool into a single screen, letting staff finish cross-tool tasks in seconds, while 24/7 AI Agents resolve problems before guests ever feel them.              </p>
+              Auctores seemlessly merges every hotel tool into a single screen, letting staff finish cross-tool tasks in seconds, freeing up hours for guest-facing time, enabling highly personalised services at scale and improving employee satisfaction. </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="/#cta" className="w-full sm:w-auto">
                    <Button 
