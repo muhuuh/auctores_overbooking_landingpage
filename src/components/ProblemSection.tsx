@@ -74,7 +74,7 @@ export default function ProblemSection() {
             Guests remember&nbsp;<span className="whitespace-nowrap">smiles,</span> not spreadsheets.
           </h2>
           <p className="mx-auto mt-4 sm:mt-6 max-w-xl text-base font-light text-navy/70 md:max-w-2xl lg:text-lg">
-            Juggling disconnected tools steals <span className="font-semibold text-navy">42 minutes</span> per shift - enough time to turn a stay into a story.
+            Admin tasks steal up to <span className="font-semibold text-navy">30%</span> of a shift - time that could be spend turning a stay into a story.
           </p>
         </header>
 
@@ -94,7 +94,7 @@ export default function ProblemSection() {
             <div className="relative">
               <h2 className='text-base sm:text-lg font-bold'>One command bar. Endless guest moments.</h2>
               <p className="text-sm sm:text-base f leading-relaxed text-navy mt-6">
-                <span className="inline-block bg-gradient-to-r from-champagne to-champagne/80 bg-clip-text text-transparent font-bold">Auctores</span> stitches PMS, POS, email and custom tools into a single AI cockpit. Describe any outcome, nightly routine or one-off, and the agent does the rest.
+                <span className="inline-block bg-gradient-to-r from-champagne to-champagne/80 bg-clip-text text-transparent font-bold">Auctores</span> merges PMS, CRM, email and custom tools into a single AI cockpit. Describe any outcome, schedule any task, and the AI agents do the rest.
               </p>
               <p className="text-sm sm:text-base f leading-relaxed text-navy mt-6">
                 Most tasks wrap up in <span className="font-bold text-navy">20 seconds</span> - often before anyone even asks.

@@ -17,34 +17,34 @@ const ValueProposition = () => {
       {
         title: 'Unified Workspace',
         description:
-          'One command bar for every system. Staff type a sentence; Auctores orchestrates PMS, POS, email, and beyond.',
+          'One command bar for every tool and sytsem. Staff type a sentence; Auctores orchestrates PMS, CRM, email, and beyond.',
         icon: <Command className="text-champagne w-6 h-6" />,
       },
       {
         title: 'Proactive Service Agent',
         description:
-          'The agent listens to live data and silently orchestrates and fixes hiccups before guests notice — no tickets, no drama.',
+          'The agent listens to live data and silently orchestrates and fixes hiccups before guests notice, based on your preferences and instructions — no tickets, no drama.',
         icon: <ShieldCheck className="text-champagne w-6 h-6" />,
       },
       {
         title: 'Automated & Scheduled',
         description:
-          'Schedule any workflow — hourly, daily, or on‑demand — and watch it execute across tools right on time.',
+          'Schedule any workflow, even complex ones with multiple tools and logic, and watch it execute across tools right on time.',
         icon: <Repeat className="text-champagne w-6 h-6" />,
       },
       {
         title: 'Intelligent Memory',
-        description: 'Learns preferences and outcomes to craft ever‑more‑personal stays.',
+        description: 'Leverages short and long term memories to build context-rich memories to craft ever‑more‑personal stays.',
         icon: <BrainCircuit className="text-champagne w-6 h-6" />,
       },
       {
         title: 'Privacy Sovereignty',
-        description: 'Deploy on‑prem or EU AWS. Self‑host the LLM so data never leaves your walls.',
+        description: 'You decide: Leverage our EU-based servers or deploy on‑prem. Use our Open source LLM or self‑host your own LLM.',
         icon: <Lock className="text-champagne w-6 h-6" />,
       },
       {
-        title: 'Innovation Engine',
-        description: 'New automations land continuously, so you surprise guests before competitors can copy.',
+        title: 'Learning Agents',
+        description: 'Our tech enables agents to learn over time, and self improve based on their own actions and your hotel specificities.',
         icon: <Lightbulb className="text-champagne w-6 h-6" />,
       },
     ];
