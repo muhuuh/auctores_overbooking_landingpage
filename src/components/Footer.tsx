@@ -33,7 +33,7 @@ const Footer = () => {
           
           <div>
             <h4 className="font-medium mb-4">Contact</h4>
-            <p className="text-xs text-gray-700">contact@auctores.ai</p>
+            <p className="text-xs text-gray-700">valentin@auctores.ai</p>
           </div>
           
           <div className="flex items-start sm:justify-end">
