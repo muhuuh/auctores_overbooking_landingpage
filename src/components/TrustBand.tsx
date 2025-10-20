@@ -11,7 +11,6 @@ const TrustChip = ({ icon, children }: { icon: React.ReactNode; children: React.
 const TrustBand = () => {
   return (
     <div className="flex flex-wrap gap-3 sm:gap-4 items-center justify-center max-w-4xl mx-auto">
-      <TrustChip icon={<Award className="w-4 h-4" />}>Built by ex-Amazon team</TrustChip>
       <TrustChip icon={<Shield className="w-4 h-4" />}>EU privacy first</TrustChip>
       <TrustChip icon={<Rocket className="w-4 h-4" />}>Backed by leading incubator</TrustChip>
       <TrustChip icon={<Users className="w-4 h-4" />}>Pilot hotels onboarding</TrustChip>
