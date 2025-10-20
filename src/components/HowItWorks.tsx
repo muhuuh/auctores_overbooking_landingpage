@@ -9,7 +9,7 @@ const HowItWorks = () => {
     {
       number: "01",
       title: "Connect PMS",
-      description: "Enter API keys and hit \"Save\". Link messaging, housekeeping/task, Slack/Teams, POS as desired.",
+      description: "Simply leverage the secure OAuth connection or enter your own API keys. Only 1-2 clicks, that's it.",
       icon: <Plug className="text-champagne w-7 h-7" />
     },
     {
@@ -21,7 +21,7 @@ const HowItWorks = () => {
     {
       number: "03",
       title: "Activate Smart Overbooking",
-      description: "Daily recommendations apply automatically with full visibility and control.",
+      description: "Activate in 1 click. Daily recommendations apply automatically with full visibility and control.",
       icon: <CheckCircle className="text-champagne w-7 h-7" />
     }
   ];

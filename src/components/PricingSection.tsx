@@ -5,13 +5,13 @@ import { Percent, Gem, MessageSquareQuote } from 'lucide-react';
 const PricingSection = () => {
   const pricingPoints = [
     {
-      title: "Founding Partner Discount",
-      description: "Lock in a lifetime 50% discount as an early adopter during our MVP phase.",
+      title: "Early Partner Discount",
+      description: "Lock in a lifetime 50% discount as an early adopter.",
       icon: <Percent className="text-champagne w-8 h-8" />
     },
     {
       title: "Value-Based Pricing",
-      description: "Pay only for the capabilities you need, from integrations to on-premise LLMs.",
+      description: "Pay only for the capabilities you need, based on your number of rooms.",
       icon: <Gem className="text-champagne w-8 h-8" />
     },
     {
