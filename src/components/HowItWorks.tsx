@@ -1,32 +1,27 @@
 import { useState } from 'react';
 import { Plug, Target, CheckCircle } from 'lucide-react';
-import { Button } from './ui/button';
-import VideoModal from './VideoModal';
+// Demo button and VideoModal removed per plan
 
 const HowItWorks = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const demoVideoSrc = "/videos/demo_auctores_v1.mp4";
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  // no demo modal
 
   const steps = [
     {
       number: "01",
-      title: "Connect in Seconds",
-      description: "Enter API keys and hit \"Save\". Auctores links every system instantly. No other changes needed to link all your tools.",
+      title: "Connect PMS",
+      description: "Enter API keys and hit \"Save\". Link messaging, housekeeping/task, Slack/Teams, POS as desired.",
       icon: <Plug className="text-champagne w-7 h-7" />
     },
     {
       number: "02",
-      title: "Set the Rules",
-      description: "Set goals and tone of voice, create recurring tasks and checks with a single form. All in one interface, in a few clicks.",
+      title: "Set Guardrails",
+      description: "Define upgrade fallback, VIP/family protection, and target occupancy — safe by design.",
       icon: <Target className="text-champagne w-7 h-7" />
     },
     {
       number: "03",
-      title: "Automation 24/7",
-      description: "One command triggers multi‑tool workflows while background jobs watch & notify your team around the clock.",
+      title: "Activate Smart Overbooking",
+      description: "Daily recommendations apply automatically with full visibility and control.",
       icon: <CheckCircle className="text-champagne w-7 h-7" />
     }
   ];
@@ -39,7 +34,7 @@ const HowItWorks = () => {
           How It Works.
         </h2>
         <p className="mx-auto mb-8 sm:mb-12 max-w-4xl text-center text-base text-navy/70 px-4 sm:px-0">
-          Connect. Configure. Automate — Limitless power in under five clicks.
+          Connect. Set guardrails. Automate — limitless power in just a few clicks.
         </p>
 
         {/* ---------- Three‑step grid ---------- */}
@@ -62,24 +57,13 @@ const HowItWorks = () => {
         </div>
 
         {/* ---------- Tagline & CTA ---------- */}
-        <div className="mt-8 sm:mt-12 flex flex-col items-center gap-6 text-center px-4 sm:px-0">
+        <div className="mt-8 sm:mt-12 flex flex-col items-center gap-3 text-center px-4 sm:px-0">
           <p className="max-w-4xl text-lg text-navy/70">Simple. Yet remarkably powerful.</p>
-          <Button
-            variant="outline"
-            className="h-auto rounded-md border border-champagne bg-transparent px-6 sm:px-8 py-3 sm:py-4 text-base font-medium text-champagne transition-all duration-300 hover:bg-champagne/10"
-            onClick={openModal}
-          >
-            View 1 min Demo
-          </Button>
+          <span className="text-sm text-navy/70">Then: <a href="/#features" className="text-champagne underline underline-offset-4">Add Automations</a></span>
         </div>
       </div>
 
-      {/* ---------- Demo Modal (using the new VideoModal component) ---------- */}
-      <VideoModal 
-        isOpen={isModalOpen} 
-        onClose={closeModal} 
-        videoSrc={isModalOpen ? demoVideoSrc : ""} 
-      />
+      {/* Demo modal removed */}
     </section>
   );
 };

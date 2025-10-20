@@ -58,7 +58,7 @@ export default function ProblemSection() {
 
   return (
     <section
-      id="problem"
+      id="why-overbooking"
       className="relative isolate bg-gradient-to-b from-white via-white to-slate-50 py-28 md:py-32"
     >
       {/* Decorative radial blob */}
@@ -71,56 +71,20 @@ export default function ProblemSection() {
         {/* Headline */}
         <header className="mb-12 sm:mb-16 md:mb-20 text-center">
           <h2 className="mx-auto max-w-3xl font-display text-2xl sm:text-3xl font-bold tracking-tight text-navy lg:text-4xl">
-            Guests remember&nbsp;<span className="whitespace-nowrap">smiles,</span> not spreadsheets.
+            Increase occupancy & reduce manual work
           </h2>
           <p className="mx-auto mt-4 sm:mt-6 max-w-xl text-base font-light text-navy/70 md:max-w-2xl lg:text-lg">
-            Admin tasks steal up to <span className="font-semibold text-navy">30%</span> of a shift - time that could be spend turning a stay into a story.
+            Late cancels & no‑shows leave rooms empty; static rules over/undershoot; manual tweaks eat time.
           </p>
         </header>
 
-       {/* CTA Bridge */}
-        <div className="relative mx-auto mt-14 sm:mt-20 md:mt-20 mb-16 sm:mb-20 md:mb-24 max-w-3xl px-4 sm:px-0">
-          <div className="animate-bounce-slow absolute left-1/2 -top-6 -translate-x-1/2 rounded-full bg-white p-1 ring-2 ring-champagne shadow-lg z-20">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-champagne text-xl text-white">
-              ✓
-            </span>
-          </div>
-
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white via-slate-50/30 to-champagne/5 px-6 sm:px-8 md:px-10 py-8 sm:py-10 md:py-12 text-center shadow-2xl ring-1 ring-champagne/20 border border-champagne/15 z-10">
-            {/* Subtle background pattern */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(15,27,38,0.02),transparent_50%)]"></div>
-            
-            {/* Content */}
-            <div className="relative">
-              <h2 className='text-base sm:text-lg font-bold'>One command bar. Endless guest moments.</h2>
-              <p className="text-sm sm:text-base f leading-relaxed text-navy mt-6">
-                <span className="inline-block bg-gradient-to-r from-champagne to-champagne/80 bg-clip-text text-transparent font-bold">Auctores</span> merges PMS, CRM, email and custom tools into a single AI cockpit. Describe any outcome, schedule any task, and the AI agents do the rest.
-              </p>
-              <p className="text-sm sm:text-base f leading-relaxed text-navy mt-6">
-                Most tasks wrap up in <span className="font-bold text-navy">20 seconds</span> - often before anyone even asks.
-              </p>
-              
-              {/* Elegant divider */}
-              <div className="mx-auto my-6 sm:my-7 flex items-center justify-center">
-                <div className="h-px w-16 bg-gradient-to-r from-transparent via-champagne/60 to-transparent"></div>
-                <div className="mx-3 h-1 w-1 rounded-full bg-champagne/40"></div>
-                <div className="h-px w-16 bg-gradient-to-r from-transparent via-champagne/60 to-transparent"></div>
-              </div>
-              
-              <p className="text-sm sm:text-base font-medium leading-relaxed text-navy/70">
-              Your teams win back hours; your guests remember <span className="inline-block bg-gradient-to-r from-champagne to-champagne/80 bg-clip-text text-transparent font-bold">magic.</span> 
-              </p>
-              
-            </div>
-          </div>
-        </div>
 
         {/* Two‑column grid */}
         <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 lg:gap-12 mt-8 sm:mt-12 md:mt-16">
           {/* TODAY'S REALITY */}
           <div className="flex flex-col space-y-5 sm:space-y-6 min-w-0">
             <div className="text-center">
-              <h3 className="text-xl font-bold text-navy md:text-2xl">Today's reality</h3>
+              <h3 className="text-xl font-bold text-navy md:text-2xl">Today's reality — The Overbooking Gap</h3>
               <div className="mx-auto mt-2 h-0.5 w-16 bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
             </div>
             
@@ -130,32 +94,24 @@ export default function ProblemSection() {
               
               {/* Content */}
               <div className="px-5 sm:px-6 md:px-8 py-7 sm:py-8 md:py-10">
-                {/* Header with icon */}
-                <div className="mb-6 sm:mb-7 md:mb-8 flex items-center gap-3 sm:gap-4">
-                  <div className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-champagne/10 flex-shrink-0">
-                    <Flame className="h-5 w-5 sm:h-6 sm:w-6 text-champagne" />
-                  </div>
-                  <h4 className="text-base sm:text-lg font-bold text-navy">The Daily Madness</h4>
+                {/* Header */}
+                <div className="mb-6 sm:mb-7 md:mb-8">
+                  <h4 className="text-base sm:text-lg font-bold text-navy">Today — The Overbooking Gap</h4>
                 </div>
-                
+
                 {/* Pain points list */}
                 <ul className="space-y-3 sm:space-y-3">
-
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Chatbot promises; staff hunts the right tab and tool.</span>
+                    <span className="text-sm text-navy/80 leading-relaxed">Late cancels & no‑shows leave rooms empty.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Mid-shift handover - 20 sticky notes, zero context.</span>
+                    <span className="text-sm text-navy/80 leading-relaxed">Static rules over/undershoot, especially across OTAs.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">The 9:30 AM checkout line tests nervs of guests and staff.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">3 tools, 6 copy-pastes — and one lost VIP upsell.</span>
+                    <span className="text-sm text-navy/80 leading-relaxed">Manual tweaks eat time; risky without guardrails.</span>
                   </li>
                 </ul>
               </div>
@@ -165,7 +121,7 @@ export default function ProblemSection() {
           {/* IMAGINE TOMORROW */}
           <div className="flex flex-col space-y-5 sm:space-y-6 min-w-0">
             <div className="text-center">
-              <h3 className="text-xl font-bold text-navy md:text-2xl">Imagine tomorrow</h3>
+              <h3 className="text-xl font-bold text-navy md:text-2xl">Imagine tomorrow — Set‑and‑Safe Overbooking</h3>
               <div className="mx-auto mt-2 h-0.5 w-16 bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
             </div>
             
@@ -174,50 +130,14 @@ export default function ProblemSection() {
               <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/40 to-navy/10"></div>
               
               {/* Content */}
-              <div className="px-5 sm:px-6 md:px-8 py-7 sm:py-8 md:py-10 flex flex-col flex-1">
-                {/* Swiper carousel */}
-                <div className="flex-1 flex flex-col w-full overflow-hidden min-w-0">
-                  <Swiper
-                    modules={[Autoplay, Pagination]}
-                    slidesPerView={1}
-                    spaceBetween={20}
-                    loop
-                    pagination={{ 
-                      clickable: true,
-                      bulletClass: 'swiper-pagination-bullet',
-                      bulletActiveClass: 'swiper-pagination-bullet-active'
-                    }}
-                    autoplay={
-                      prefersReducedMotion ? false : { delay: 6000, disableOnInteraction: false }
-                    }
-                    className="!pb-12 w-full h-full"
-                    style={{
-                      '--swiper-pagination-color': '#0F1B26',
-                      '--swiper-pagination-bullet-inactive-color': 'rgba(15, 27, 38, 0.3)',
-                      '--swiper-pagination-bullet-inactive-opacity': '1',
-                      '--swiper-pagination-bullet-size': '8px',
-                      '--swiper-pagination-bullet-horizontal-gap': '4px'
-                    } as React.CSSProperties}
-                    aria-label="Future scenarios carousel"
-                  >
-                    {scenarios.map(({ Icon, title, text }, i) => (
-                      <SwiperSlide key={i} className="!w-full !h-auto">
-                        <div className="space-y-4 sm:space-y-5">
-                          {/* Icon and Title on same line */}
-                          <div className="flex items-center gap-3 sm:gap-4">
-                            <div className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-champagne/10 flex-shrink-0">
-                              <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-champagne" />
-                            </div>
-                            <h4 className="text-base font-bold text-navy leading-tight">{title}</h4>
-                          </div>
-                          
-                          {/* Description */}
-                          <p className="text-sm text-navy/70 leading-relaxed">{text}</p>
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
+              <div className="px-5 sm:px-6 md:px-8 py-7 sm:py-8 md:py-10">
+                <div className="space-y-3">
+                  <div className="text-sm text-navy/80 leading-relaxed">Dynamic Levels — per date & room type; learns cancel/no‑show patterns.</div>
+                  <div className="text-sm text-navy/80 leading-relaxed">Guardrails by Design — no‑walk policy, upgrade fallback, VIP/family protection.</div>
+                  <div className="text-sm text-navy/80 leading-relaxed">OTA‑Aware — different cancellation profiles handled safely.</div>
+                  <div className="text-sm text-navy/80 leading-relaxed">Live Monitoring — deviation alerts and full audit log.</div>
                 </div>
+
               </div>
             </article>
           </div>

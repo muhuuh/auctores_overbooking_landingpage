@@ -2,13 +2,17 @@ import React, { useEffect, Suspense, lazy } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ProblemSection from '@/components/ProblemSection';
-import ValueProposition from '@/components/ValueProposition';
+// import ValueProposition from '@/components/ValueProposition';
+import MetricsBand from '@/components/MetricsBand';
+import OverbookingAndAutomations from '@/components/OverbookingAndAutomations';
 import HowItWorks from '@/components/HowItWorks';
 import SecuritySection from '@/components/SecuritySection';
 import PricingSection from '@/components/PricingSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import ErrorBoundary from '@/components/ErrorBoundary';
+import WeatherPlaybook from '@/components/WeatherPlaybook';
+import SafetyBand from '@/components/SafetyBand';
 
 // Dynamically import CookieBanner
 const LazyCookieBanner = lazy(() => import('@/components/CookieBanner'));
@@ -39,7 +43,8 @@ const Index = () => {
       // Handle smooth scroll for internal hash links (#section)
       if (href && href.startsWith('/#') && href.length > 2 && window.location.pathname === '/') {
         e.preventDefault();
-        const targetId = href.substring(2); // Get id after '/#'
+        const targetIdRaw = href.substring(2);
+        const targetId = targetIdRaw.split('?')[0]; // support query params like /#features?tab=automations
         const targetElement = document.getElementById(targetId);
         
         if (targetElement) {
@@ -47,7 +52,8 @@ const Index = () => {
             top: targetElement.offsetTop - 80, // Adjust for navbar height
             behavior: 'smooth'
           });
-          // Avoid pushState for same-page scroll to prevent potential issues
+          // Persist hash (with optional query) so tabs can read it
+          try { window.history.replaceState(null, '', href); } catch {}
         } else {
            console.warn(`Target element not found for id: ${targetId}`);
            // Fallback or do nothing if element not found
@@ -91,11 +97,18 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
-        <section id="why-auctores">
+        
+        <section id="why-overbooking">
           <ProblemSection />
         </section>
-        <ValueProposition />
+        <MetricsBand />
+        {/* Replace legacy features grid with split tabs */}
+        <OverbookingAndAutomations />
+        <SafetyBand />
         <HowItWorks />
+        <WeatherPlaybook />
+        
+        
         
         
         <SecuritySection />

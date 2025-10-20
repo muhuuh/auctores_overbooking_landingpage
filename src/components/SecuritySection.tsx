@@ -21,12 +21,20 @@ const faqs = [
       answer: "Personal Identifiable Information is protected according to GDPR standards. We implement data minimization, strict role-based access controls, and sensitive data tokenization. You're in full control, with the ability to access, export, or delete data anytime."
     },
     {
+      question: "Is guest messaging GDPR‑compliant?",
+      answer: "Yes. We respect opt‑in status for each channel and allow you to choose which channels and templates are used per automation. Data processing agreements and access logs are available."
+    },
+    {
       question: "Do you store or use our data?",
       answer: "Auctores is privacy-by-design: we strongly encourage you to retain full control by hosting your data and AI models. Although we offer secure cloud storage, our core recommendation is that you own and manage your infrastructure for maximum privacy. We want to be unequivocally clear: we do not use your data for any purpose, including marketing or model training. Our commitment is to uphold the highest level of data privacy, using only the minimal data necessary for the system to function, as directed by you. In fact, our team is dedicated to supporting you fully in setting up and running Auctores privately and securely on your own servers."
     },
     {
       question: "How do you ensure system reliability?",
       answer: "Our infrastructure guarantees 99.9% uptime, with real-time monitoring and robust incident response protocols to swiftly address and resolve any issues."
+    },
+    {
+      question: "How fast is setup?",
+      answer: "Minutes. Connect PMS and optional tools, set guardrails, and you can start seeing impact with the next booking wave."
     },
   ];
 

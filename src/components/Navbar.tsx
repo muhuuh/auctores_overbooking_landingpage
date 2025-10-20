@@ -40,17 +40,17 @@ const Navbar = () => {
           </h2>
         </a>
         <div className="hidden md:flex space-x-8 items-center">
-          <a href="/#why-auctores" className={cn(
+          <a href="/#why-overbooking" className={cn(
             "hover:text-champagne transition-colors text-sm font-medium",
             isScrolled ? "text-gray" : "text-white/90"
           )}>
-            Why Auctores
+            Why Overbooking
           </a>
           <a href="/#features" className={cn(
             "hover:text-champagne transition-colors text-sm font-medium",
             isScrolled ? "text-gray" : "text-white/90"
           )}>
-            Features
+            Overbooking + Automations
           </a>
           <a href="/#security" className={cn(
             "hover:text-champagne transition-colors text-sm font-medium",
@@ -84,18 +84,18 @@ const Navbar = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 px-6">
           <div className="flex flex-col space-y-4">
             <a 
-              href="/#why-auctores" 
+              href="/#why-overbooking" 
               className="text-gray hover:text-champagne transition-colors text-sm font-medium"
               onClick={toggleMobileMenu}
             >
-              Why Auctores
+              Why Overbooking
             </a>
             <a 
               href="/#features" 
               className="text-gray hover:text-champagne transition-colors text-sm font-medium"
               onClick={toggleMobileMenu}
             >
-              Features
+              Overbooking + Automations
             </a>
             <a 
               href="/#security" 

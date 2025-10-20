@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from './ui/button';
-import VideoModal from './VideoModal';
 
 const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const demoVideoSrc = "/videos/demo_auctores_v1.mp4";
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  // demo/video modal removed per overbooking-first plan
   //        <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=2000')] bg-center bg-cover opacity-40"></div>
   // <div className="h-full w-full bg-[url('/images/hero_concierge2.png')] bg-center bg-cover opacity-40"></div>
   return (
@@ -23,19 +18,20 @@ const Hero = () => {
           <div className="flex justify-start">
             <div className="flex flex-col space-y-8 animate-fade-in max-w-2xl">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-lg">
-              Obsess over guests,<br />not software.
+                Overbook smarter. Fill more rooms. No chaos.
               </h1>
               <p className="text-base sm:text-lg text-white/90 max-w-lg">
-              Auctores seemlessly merges every hotel tool into a single screen, letting staff finish cross-tool tasks in seconds, freeing up hours for guest-facing time, enabling highly personalised services at scale and improving employee satisfaction. </p>
+                Switch on <span className="font-semibold">Smart Overbooking</span> in 2–3 clicks to stop losing revenue to last-minute cancellations and no-shows. Enable ready‑made admin automations to free staff time and lift guest satisfaction.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="/#cta" className="w-full sm:w-auto">
                    <Button 
                      className="w-full bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
                      onClick={() => {
                        if (window.gtag) {
-                         window.gtag('event', 'primary_cta_click', { 
+                        window.gtag('event', 'primary_cta_overbooking', { 
                            'event_category': 'LandingPage_MVP', 
-                           'event_label': 'Create Time for Care', 
+                          'event_label': 'Activate Smart Overbooking', 
                            'value': 1 
                          });
                        } else {
@@ -43,37 +39,29 @@ const Hero = () => {
                        }
                      }}
                    >
-                     Create Time for Care
+                    Activate Smart Overbooking
                    </Button>
                 </a>
-                <Button 
-                  variant="outline" 
-                  className="w-full sm:w-auto bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base font-medium transition-all duration-300"
-                  onClick={() => {
-                    openModal();
-                    if (window.gtag) {
-                      window.gtag('event', 'demo_click', { 
-                        'event_category': 'LandingPage_MVP', 
-                        'event_label': 'View 1 min Demo', 
-                        'value': 1 
-                      });
-                    } else {
-                      console.log("gtag not defined");
-                    }
-                  }}
-                >
-                  View 1 min Demo
-                </Button>
+              </div>
+
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-2xl pt-2">
+                {[
+                  { n: '35%', label: 'OTB revenue lost to cancels' },
+                  { n: '42% vs 18%', label: 'OTA vs direct cancels' },
+                  { n: '30%', label: 'of shift is admin work' },
+                ].map((item, idx) => (
+                  <div key={idx} className="rounded-full border border-champagne/40 bg-white/5 text-white/90 px-3 py-2 text-center text-xs backdrop-blur-sm">
+                    <span className="block font-semibold">{item.n}</span>
+                    <span className="opacity-80">{item.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
-      <VideoModal 
-        isOpen={isModalOpen} 
-        onClose={closeModal} 
-        videoSrc={isModalOpen ? demoVideoSrc : ""}
-      />
+      {/* Demo modal removed */}
     </>
   );
 };
