@@ -17,8 +17,10 @@ const Hero = () => {
         <div className="max-w-7xl z-10">
           <div className="flex justify-start">
             <div className="flex flex-col space-y-8 animate-fade-in max-w-2xl">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-lg">
-                Overbook smarter. Fill more rooms. No chaos.
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-lg">
+                <span className="block sm:inline">Overbook smarter.</span>{' '}
+                <span className="block sm:inline">Fill more rooms.</span>{' '}
+                <span className="block sm:inline">No chaos.</span>
               </h1>
               <p className="text-base sm:text-lg text-white/90 max-w-lg">
                 Switch on <span className="font-semibold">Smart Overbooking</span> in 2–3 clicks to stop losing revenue to last-minute cancellations and no-shows. Enable ready‑made admin automations to free staff time and lift guest satisfaction.
@@ -47,24 +49,25 @@ const Hero = () => {
                     variant="outline"
                     className="w-full bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base font-medium transition-all duration-300"
                   >
-                    See Automations Library
+                    See Automations Example
                   </Button>
                 </a>
               </div>
 
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-2xl pt-2">
+              <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl pt-2">
                 {[
                   { n: '35%', label: 'OTB revenue lost to cancels' },
                   { n: '42% vs 18%', label: 'OTA vs direct cancels' },
                   { n: '30%', label: 'of shift is admin work' },
                 ].map((item, idx) => (
-                  <div key={idx} className="rounded-full border border-champagne/40 bg-white/5 text-white/90 px-3 py-2 text-center text-xs backdrop-blur-sm">
+                  <div key={idx} className="rounded-full border border-champagne/40 bg-white/5 text-white/90 px-3 py-2 text-center text-xs backdrop-blur-sm transition-all hover:bg-white/10">
                     <span className="block font-semibold">{item.n}</span>
                     <span className="opacity-80">{item.label}</span>
                   </div>
                 ))}
               </div>
+
             </div>
           </div>
         </div>

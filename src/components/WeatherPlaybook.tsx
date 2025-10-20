@@ -45,10 +45,12 @@ const WeatherPlaybook = () => {
     },
   ];
   return (
-    <section id="automation-recipes" className="py-16 sm:py-20 md:py-24 bg-white">
+    <section id="automation-recipes" className="py-16 sm:py-20 md:py-24 bg-offWhite">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-playfair text-2xl font-bold text-navy md:text-3xl mb-6">Turn weather into memorable service — automatically.</h2>
-
+        <h2 className="text-center font-playfair text-2xl font-bold text-navy md:text-3xl mb-6">Automate Complex Workflows — No Coding Required.</h2>
+        <p className="text-center text-base md:text-lg text-navy/80 mb-8">
+          Example: Monitor the weather and instantly automate warnings to guests, raise tasks for staff, and keep every team ahead of the forecast.
+        </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 justify-items-center">
           <Step icon={<CloudSun className="w-6 h-6" />} title="Forecast" desc="07:00 check next 24–48h for each property/city." />
           <Step icon={<Users className="w-6 h-6" />} title="Segments" desc="Query arrivals; build VIP, family, leisure groups." />

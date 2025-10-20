@@ -17,7 +17,7 @@ const MetricsBand = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
           {/* Efficiency drag */}
-          <div className="rounded-2xl border border-champagne/20 bg-offWhite p-6 sm:p-8 shadow">
+          <div className="rounded-2xl border border-champagne/20 bg-white p-6 sm:p-8 shadow">
             <h4 className="text-base font-bold text-navy mb-4">Efficiency drag</h4>
             <div className="space-y-3">
               <MetricItem value="~30%" label="of the shift is admin work." />
@@ -27,7 +27,7 @@ const MetricsBand = () => {
           </div>
 
           {/* OTA & overbooking reality */}
-          <div className="rounded-2xl border border-champagne/20 bg-offWhite p-6 sm:p-8 shadow">
+          <div className="rounded-2xl border border-champagne/20 bg-white p-6 sm:p-8 shadow">
             <h4 className="text-base font-bold text-navy mb-4">OTA & overbooking reality</h4>
             <div className="space-y-3">
               <MetricItem value="42% vs 18%" label="cancellation rate: OTA vs direct." />

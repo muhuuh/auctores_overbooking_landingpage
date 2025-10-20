@@ -31,7 +31,10 @@ const OverbookingAndAutomations = () => {
                 <Bullet>OTA‑Aware — different cancellation profiles handled safely.</Bullet>
                 <Bullet>Live Monitoring — deviation alerts, quick nudges, full audit log.</Bullet>
               </ul>
-
+              
+              <div className="mt-6">
+                <a href="/#safety" className="text-sm text-champagne underline underline-offset-4">See Safety & Guardrails</a>
+              </div>
             </CardContent>
           </Card>
 

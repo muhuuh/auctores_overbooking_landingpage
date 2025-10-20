@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { CloudRain, Mail, MapPin, UserCheck, Flame, Sparkles } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import TrustBand from './TrustBand';
 /* -------------------------------------------------------------------------- */
 /*                                   DATA                                     */
 /* -------------------------------------------------------------------------- */
@@ -59,7 +60,7 @@ export default function ProblemSection() {
   return (
     <section
       id="why-overbooking"
-      className="relative isolate bg-gradient-to-b from-white via-white to-slate-50 py-28 md:py-32"
+      className="relative isolate bg-offWhite py-28 md:py-32"
     >
       {/* Decorative radial blob */}
       <div
@@ -80,27 +81,35 @@ export default function ProblemSection() {
 
 
         {/* Two‑column grid */}
-        <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 lg:gap-12 mt-8 sm:mt-12 md:mt-16">
-          {/* TODAY'S REALITY */}
-          <div className="flex flex-col space-y-5 sm:space-y-6 min-w-0">
+        <div className="mt-8 sm:mt-12 md:mt-16">
+          {/* Section titles - separate row */}
+          <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:gap-12 mb-6">
             <div className="text-center">
-              <h3 className="text-xl font-bold text-navy md:text-2xl">Today's reality — The Overbooking Gap</h3>
+              <h3 className="text-xl font-bold text-navy md:text-2xl min-h-[3.5rem] flex items-center justify-center">Today's reality — The Overbooking Gap</h3>
               <div className="mx-auto mt-2 h-0.5 w-16 bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
             </div>
-            
-            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 min-w-0 transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-navy md:text-2xl min-h-[3.5rem] flex items-center justify-center">Imagine tomorrow — Set‑and‑Safe Overbooking</h3>
+              <div className="mx-auto mt-2 h-0.5 w-16 bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
+            </div>
+          </div>
+
+          {/* Equal height cards - same row */}
+          <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 lg:gap-12">
+            {/* TODAY'S REALITY */}
+            <article className="relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1 h-full">
               {/* Accent border */}
               <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/40 to-navy/10"></div>
               
               {/* Content */}
-              <div className="px-5 sm:px-6 md:px-8 py-7 sm:py-8 md:py-10">
+              <div className="px-5 sm:px-6 md:px-8 py-7 sm:py-8 md:py-10 flex flex-col h-full">
                 {/* Header */}
                 <div className="mb-6 sm:mb-7 md:mb-8">
                   <h4 className="text-base sm:text-lg font-bold text-navy">Today — The Overbooking Gap</h4>
                 </div>
 
                 {/* Pain points list */}
-                <ul className="space-y-3 sm:space-y-3">
+                <ul className="space-y-3 sm:space-y-3 flex-1">
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
                     <span className="text-sm text-navy/80 leading-relaxed">Late cancels & no‑shows leave rooms empty.</span>
@@ -116,36 +125,52 @@ export default function ProblemSection() {
                 </ul>
               </div>
             </article>
-          </div>
 
-          {/* IMAGINE TOMORROW */}
-          <div className="flex flex-col space-y-5 sm:space-y-6 min-w-0">
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-navy md:text-2xl">Imagine tomorrow — Set‑and‑Safe Overbooking</h3>
-              <div className="mx-auto mt-2 h-0.5 w-16 bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
-            </div>
-            
-            <article className="relative flex flex-col flex-1 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 min-w-0 transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
+            {/* IMAGINE TOMORROW */}
+            <article className="relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/50 transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1 h-full">
               {/* Accent border */}
               <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-navy/40 to-navy/10"></div>
               
               {/* Content */}
-              <div className="px-5 sm:px-6 md:px-8 py-7 sm:py-8 md:py-10">
-                <div className="space-y-3">
-                  <div className="text-sm text-navy/80 leading-relaxed">Dynamic Levels — per date & room type; learns cancel/no‑show patterns.</div>
-                  <div className="text-sm text-navy/80 leading-relaxed">Guardrails by Design — no‑walk policy, upgrade fallback, VIP/family protection.</div>
-                  <div className="text-sm text-navy/80 leading-relaxed">OTA‑Aware — different cancellation profiles handled safely.</div>
-                  <div className="text-sm text-navy/80 leading-relaxed">Live Monitoring — deviation alerts and full audit log.</div>
-                </div>
-                <div className="mt-6">
-                  <a href="/#safety" className="text-sm text-champagne underline underline-offset-4">Safe by design with guardrails — see below.</a>
+              <div className="px-5 sm:px-6 md:px-8 py-7 sm:py-8 md:py-10 flex flex-col h-full">
+                {/* Header */}
+                <div className="mb-6 sm:mb-7 md:mb-8">
+                  <h4 className="text-base sm:text-lg font-bold text-navy">Imagine tomorrow — Set‑and‑Safe Overbooking</h4>
                 </div>
 
+                {/* Benefits list */}
+                <ul className="space-y-3 sm:space-y-3 flex-1">
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
+                    <span className="text-sm text-navy/80 leading-relaxed">Dynamic Levels — per date & room type; learns cancel/no‑show patterns.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
+                    <span className="text-sm text-navy/80 leading-relaxed">Guardrails by Design — no‑walk policy, upgrade fallback, VIP/family protection.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
+                    <span className="text-sm text-navy/80 leading-relaxed">OTA‑Aware — different cancellation profiles handled safely.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
+                    <span className="text-sm text-navy/80 leading-relaxed">Live Monitoring — deviation alerts and full audit log.</span>
+                  </li>
+                </ul>
               </div>
             </article>
           </div>
         </div>
-Automation possibilites don't stop here.
+
+        {/* Automation Examples Introduction */}
+        <div className="mt-16 sm:mt-20 md:mt-24 text-center">
+          <h3 className="text-xl sm:text-2xl font-bold text-navy mb-4">
+            Top Automation Examples Beyond Overbooking
+          </h3>
+          <p className="text-center text-base text-navy/70 mb-8 max-w-2xl mx-auto">
+            Automation possibilities don't stop here.
+          </p>
+        </div>
         
         {/* Scenarios carousel */}
         <div className="mt-10">
@@ -162,8 +187,8 @@ Automation possibilites don't stop here.
             autoplay={prefersReducedMotion ? false : { delay: 6000, disableOnInteraction: false }}
             className="!pb-10 max-w-3xl mx-auto"
             style={{
-              '--swiper-pagination-color': '#0F1B26',
-              '--swiper-pagination-bullet-inactive-color': 'rgba(15, 27, 38, 0.3)',
+              '--swiper-pagination-color': '#C5A572',
+              '--swiper-pagination-bullet-inactive-color': 'rgba(197, 165, 114, 0.3)',
               '--swiper-pagination-bullet-inactive-opacity': '1',
               '--swiper-pagination-bullet-size': '8px',
               '--swiper-pagination-bullet-horizontal-gap': '4px'
@@ -194,6 +219,11 @@ Automation possibilites don't stop here.
             SEE&nbsp;HOW&nbsp;IT&nbsp;WORKS
             <span className="animate-bounce">↓</span>
           </a>
+        </div>
+
+        {/* Trust/Credential Pills */}
+        <div className="mt-8">
+          <TrustBand />
         </div>
       </div>
     </section>

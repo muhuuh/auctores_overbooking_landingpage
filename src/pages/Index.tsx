@@ -13,6 +13,7 @@ import Footer from '@/components/Footer';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import WeatherPlaybook from '@/components/WeatherPlaybook';
 import SafetyBand from '@/components/SafetyBand';
+import MobileStickyBar from '@/components/MobileStickyBar';
 
 // Dynamically import CookieBanner
 const LazyCookieBanner = lazy(() => import('@/components/CookieBanner'));
@@ -116,6 +117,7 @@ const Index = () => {
         <CTASection />
       </main>
       <Footer />
+      <MobileStickyBar />
       <ErrorBoundary fallback={null}>
         <Suspense fallback={null}>
           <LazyCookieBanner />

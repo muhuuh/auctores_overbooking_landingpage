@@ -59,7 +59,7 @@ const HowItWorks = () => {
         {/* ---------- Tagline & CTA ---------- */}
         <div className="mt-8 sm:mt-12 flex flex-col items-center gap-3 text-center px-4 sm:px-0">
           <p className="max-w-4xl text-lg text-navy/70">Simple. Yet remarkably powerful.</p>
-          <a href="/#features" className="inline-flex items-center rounded-md border border-champagne text-champagne px-4 py-2 text-sm hover:bg-champagne/10">Then: Add Automations</a>
+          <a href="/#automation-recipes" className="inline-flex items-center rounded-md border border-champagne text-champagne px-4 py-2 text-sm hover:bg-champagne/10">Then: Add Automations</a>
         </div>
       </div>
 
