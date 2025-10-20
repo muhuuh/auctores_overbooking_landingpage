@@ -3,7 +3,6 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Checkbox } from './ui/checkbox';
 import { Label } from './ui/label';
-import { Textarea } from './ui/textarea';
 import { useToast } from './ui/use-toast';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { supabase } from '../lib/supabaseClient';
@@ -18,10 +17,8 @@ import {
 const CTASection = () => {
   const { toast } = useToast();
   const [email, setEmail] = useState('');
-  const [property, setProperty] = useState('');
   const [pms, setPms] = useState('');
   const [willCodesign, setWillCodesign] = useState(false);
-  const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -30,9 +27,7 @@ const CTASection = () => {
 
     const payload = {
       email,
-      property,
       current_pms: pms || null,
-      message: message || null,
       alpha_partner: willCodesign
     };
 
@@ -56,10 +51,8 @@ const CTASection = () => {
       });
       // Reset form on success
       setEmail('');
-      setProperty('');
       setPms('');
       setWillCodesign(false);
-      setMessage('');
     }
 
     setIsSubmitting(false);
@@ -67,9 +60,9 @@ const CTASection = () => {
   return (
     <section id="cta" className="py-16 sm:py-20 md:py-24 bg-navy text-white">
       <div className="container max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Reserve Your Founding‑Partner Seat.</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Secure Your Early Access.</h2>
         <p className="text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0">
-          Founding hotels lock-in <strong className="text-champagne font-semibold">lifetime 50% discount</strong> and direct influence on the roadmap.
+          Early access participants lock-in <strong className="text-champagne font-semibold">lifetime 50% discount</strong> and direct influence on the roadmap. Drop your email address and we will reach out to you to set up the privileged early access.
         </p>
         
         <div className="bg-navyLight p-6 sm:p-8 rounded-lg shadow-xl">
@@ -87,20 +80,6 @@ const CTASection = () => {
                   className="bg-navy/50 border-gray/30 text-white placeholder:text-gray-500"
                 />
               </div>
-              
-              <div className="text-left">
-                <Label htmlFor="property" className="text-gray-300 mb-2 block">Property <span className="text-red-400">*</span></Label>
-                <Input
-                  id="property"
-                  type="text"
-                  value={property}
-                  onChange={(e) => setProperty(e.target.value)}
-                  placeholder="Ritz Paris"
-                  required
-                  className="bg-navy/50 border-gray/30 text-white placeholder:text-gray-500"
-                />
-              </div>
-              
               <div className="text-left">
                 <Label htmlFor="pms" className="text-gray-300 mb-2 block">Current PMS (optional)</Label>
                 <Select value={pms} onValueChange={setPms}>
@@ -108,23 +87,12 @@ const CTASection = () => {
                     <SelectValue placeholder="Select your PMS" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="opera">Opera</SelectItem>
+                    <SelectItem value="opera">Apaleo</SelectItem>
                     <SelectItem value="mews">Mews</SelectItem>
-                    <SelectItem value="protel">Protel</SelectItem>
+                    <SelectItem value="protel">Couldbeds</SelectItem>
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
-              </div>
-              
-              <div className="text-left">
-                <Label htmlFor="message" className="text-gray-300 mb-2 block">Message (Optional)</Label>
-                <Textarea
-                  id="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Tell us about your goals or specific questions..."
-                  className="bg-navy/50 border-gray/30 text-white placeholder:text-gray-500 min-h-[100px]"
-                />
               </div>
               
               <div className="pt-2 sm:pt-4">
@@ -157,12 +125,12 @@ const CTASection = () => {
               </div>
             </div>
             
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               className="w-full py-4 sm:py-6 bg-champagne hover:bg-champagne/90 text-black font-bold text-sm"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Processing..." : "Reserve Early Access"}
+              {isSubmitting ? "Processing..." : "Secure Early Access"}
             </Button>
           </form>
         </div>
