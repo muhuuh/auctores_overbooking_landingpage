@@ -50,7 +50,7 @@ const Navbar = () => {
             "hover:text-champagne transition-colors text-sm font-medium",
             isScrolled ? "text-gray" : "text-white/90"
           )}>
-            Overbooking + Automations
+            Overbooking
           </a>
           <a href="/#security" className={cn(
             "hover:text-champagne transition-colors text-sm font-medium",
@@ -90,12 +90,12 @@ const Navbar = () => {
             >
               Why Overbooking
             </a>
-            <a 
-              href="/#features" 
+            <a
+              href="/#features"
               className="text-gray hover:text-champagne transition-colors text-sm font-medium"
               onClick={toggleMobileMenu}
             >
-              Overbooking + Automations
+              Solution
             </a>
             <a 
               href="/#security" 

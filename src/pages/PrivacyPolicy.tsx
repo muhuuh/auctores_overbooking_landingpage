@@ -9,7 +9,7 @@ const PrivacyPolicy = () => (
       <h1 className="text-3xl font-bold text-navy mb-6">Privacy Policy (Pilot)</h1>
       <div className="prose max-w-none text-navy/80 space-y-6">
         <div>
-          <p className="text-sm text-navy/60">This notice explains how the Auctores pilot handles personal data when invited users connect third-party tools (e.g., PMS, email) to run automations. We do <span className="font-semibold">not</span> process guest documents uploaded by hotels in this pilot.</p>
+          <p className="text-sm text-navy/60">This notice explains how the Auctores pilot handles personal data when invited users connect third-party tools (e.g., PMS) to optimize overbooking decisions. We do <span className="font-semibold">not</span> process guest documents uploaded by hotels in this pilot.</p>
         </div>
 
         <section>
@@ -23,14 +23,14 @@ const PrivacyPolicy = () => (
           <h2 className="text-xl font-semibold text-navy mt-4 mb-2">Where We Act as Controller vs Processor</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li><span className="font-medium">Controller:</span> Your pilot account/profile, authentication data, and essential service logs.</li>
-            <li><span className="font-medium">Processor (on your behalf):</span> Data accessed from connected third-party tools (e.g., PMS and email) to execute automations you configure.</li>
+            <li><span className="font-medium">Processor (on your behalf):</span> Data accessed from connected third-party tools (e.g., PMS) to optimize overbooking decisions.</li>
           </ul>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-navy mt-4 mb-2">Purposes & Legal Bases (Art. 6 GDPR)</h2>
           <ul className="list-disc pl-5 space-y-1">
-            <li><span className="font-medium">Provide the service & connectors</span> (operate OAuth connections; run automations you request) — Art. 6(1)(b).</li>
+            <li><span className="font-medium">Provide the service & connectors</span> (operate OAuth connections; optimize overbooking decisions) — Art. 6(1)(b).</li>
             <li><span className="font-medium">Security & abuse prevention</span> (access control, audit logs, incident response) — Art. 6(1)(f).</li>
             <li><span className="font-medium">Support & troubleshooting</span> (handle your requests, fix issues) — Art. 6(1)(b)/(f).</li>
             <li><span className="font-medium">Legal obligations</span> (e.g., accounting or retention duties, if applicable) — Art. 6(1)(c).</li>
@@ -42,7 +42,7 @@ const PrivacyPolicy = () => (
           <ul className="list-disc pl-5 space-y-1">
             <li><span className="font-medium">Account & contact data:</span> name, email, role, authentication identifiers.</li>
             <li><span className="font-medium">Connector data:</span> provider name, scopes/permissions granted, connection metadata, and <span className="font-medium">access tokens stored encrypted</span> (KMS-encrypted; decrypted only to perform authorized API calls).</li>
-            <li><span className="font-medium">Operational data from connected tools (processor role):</span> minimal records needed to execute automations (e.g., reservation IDs/status, booking metadata, message headers/IDs). We do not process guest-uploaded documents in this pilot.</li>
+            <li><span className="font-medium">Operational data from connected tools (processor role):</span> minimal records needed to optimize overbooking decisions (e.g., reservation IDs/status, booking metadata). We do not process guest-uploaded documents in this pilot.</li>
             <li><span className="font-medium">Technical logs:</span> timestamps, request IDs, success/error codes, and event metadata necessary for security and reliability.</li>
           </ul>
           <p className="text-xs text-navy/60">Avoid sending special-category data (Art. 9 GDPR) through connectors unless strictly necessary for your use case.</p>
@@ -96,7 +96,7 @@ const PrivacyPolicy = () => (
         <section>
           <h2 className="text-xl font-semibold text-navy mt-4 mb-2">Automated Decision-Making</h2>
           <p>
-            Our automations act on your configured instructions. We do not make decisions with legal or similarly significant effects about individuals solely by automated means within the meaning of Art. 22 GDPR.
+            Our overbooking optimization acts on your configured parameters. We do not make decisions with legal or similarly significant effects about individuals solely by automated means within the meaning of Art. 22 GDPR.
           </p>
         </section>
 

@@ -22,7 +22,7 @@ const faqs = [
     },
     {
       question: "Is guest messaging GDPR‑compliant?",
-      answer: "Yes. We respect opt‑in status for each channel and allow you to choose which channels and templates are used per automation. Data processing agreements and access logs are available."
+      answer: "Yes. We respect opt‑in status for each channel and allow you to choose which channels and templates are used. Data processing agreements and access logs are available."
     },
     {
       question: "Do you store or use our data?",

@@ -4,14 +4,13 @@ import Hero from '@/components/Hero';
 import ProblemSection from '@/components/ProblemSection';
 // import ValueProposition from '@/components/ValueProposition';
 import MetricsBand from '@/components/MetricsBand';
-import OverbookingAndAutomations from '@/components/OverbookingAndAutomations';
+import SmartOverbooking from '@/components/SmartOverbooking';
 import HowItWorks from '@/components/HowItWorks';
 import SecuritySection from '@/components/SecuritySection';
 import PricingSection from '@/components/PricingSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import ErrorBoundary from '@/components/ErrorBoundary';
-import WeatherPlaybook from '@/components/WeatherPlaybook';
 import SafetyBand from '@/components/SafetyBand';
 import MobileStickyBar from '@/components/MobileStickyBar';
 
@@ -45,7 +44,7 @@ const Index = () => {
       if (href && href.startsWith('/#') && href.length > 2 && window.location.pathname === '/') {
         e.preventDefault();
         const targetIdRaw = href.substring(2);
-        const targetId = targetIdRaw.split('?')[0]; // support query params like /#features?tab=automations
+        const targetId = targetIdRaw.split('?')[0]; // support query params like /#features?tab=overbooking
         const targetElement = document.getElementById(targetId);
         
         if (targetElement) {
@@ -104,14 +103,9 @@ const Index = () => {
         </section>
         <MetricsBand />
         {/* Replace legacy features grid with split tabs */}
-        <OverbookingAndAutomations />
+        <SmartOverbooking />
         <SafetyBand />
         <HowItWorks />
-        <WeatherPlaybook />
-        
-        
-        
-        
         <SecuritySection />
         <PricingSection />
         <CTASection />

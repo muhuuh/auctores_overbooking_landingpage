@@ -16,7 +16,7 @@ const TermsOfService = () => (
           <h2 className="text-xl font-semibold text-navy mt-4 mb-2">1. Eligibility &amp; Scope</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li>You must be at least 18 and use the Service <strong>for business purposes</strong> (B2B). The Service is not intended for consumers.</li>
-            <li>The Service enables you to connect third-party tools (e.g., PMS, email) via secure OAuth and run automations that <strong>you configure</strong>.</li>
+            <li>The Service enables you to connect third-party tools (e.g., PMS) via secure OAuth to optimize overbooking decisions.</li>
           </ul>
         </section>
 
@@ -43,7 +43,7 @@ const TermsOfService = () => (
           <h2 className="text-xl font-semibold text-navy mt-4 mb-2">4. Roles under GDPR</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li><strong>Controller</strong>: your account/profile data and essential service logs.</li>
-            <li><strong>Processor</strong>: data accessed from connected tools and processed to execute your configured automations.</li>
+            <li><strong>Processor</strong>: data accessed from connected tools and processed to optimize overbooking decisions.</li>
           </ul>
           <p>Our Privacy Policy explains personal-data handling. If required, a Data Processing Addendum (DPA) can be provided to govern processing on your behalf (Art. 28 GDPR).</p>
         </section>
@@ -51,7 +51,7 @@ const TermsOfService = () => (
         <section>
           <h2 className="text-xl font-semibold text-navy mt-4 mb-2">5. Your Responsibilities</h2>
           <ul className="list-disc pl-5 space-y-1">
-            <li>Configure automations responsibly and review outputs.</li>
+            <li>Set overbooking parameters responsibly and monitor performance.</li>
             <li>Avoid sending special-category data (Art. 9 GDPR) unless strictly necessary.</li>
             <li><strong>Pilot limitation:</strong> We <strong>do not</strong> process guest-uploaded documents in this pilot; avoid uploading such documents.</li>
             <li>Comply with applicable laws and third-party terms.</li>

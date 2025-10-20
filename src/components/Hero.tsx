@@ -23,7 +23,7 @@ const Hero = () => {
                 <span className="block sm:inline">No chaos.</span>
               </h1>
               <p className="text-base sm:text-lg text-white/90 max-w-lg">
-                Switch on <span className="font-semibold">Smart Overbooking</span> in 2–3 clicks to stop losing revenue to last-minute cancellations and no-shows. Enable ready‑made admin automations to free staff time and lift guest satisfaction.
+                Switch on <span className="font-semibold">Smart Overbooking</span> in 2–3 clicks to stop losing revenue to last-minute cancellations and no-shows. AI learns your patterns and maximizes occupancy safely.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="/#cta" className="w-full sm:w-auto">
@@ -45,11 +45,11 @@ const Hero = () => {
                    </Button>
                 </a>
                 <a href="/#features" className="w-full sm:w-auto">
-                  <Button 
+                  <Button
                     variant="outline"
                     className="w-full bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base font-medium transition-all duration-300"
                   >
-                    See Automations Example
+                    See Overbooking Features
                   </Button>
                 </a>
               </div>
