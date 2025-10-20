@@ -42,6 +42,14 @@ const Hero = () => {
                     Activate Smart Overbooking
                    </Button>
                 </a>
+                <a href="/#features" className="w-full sm:w-auto">
+                  <Button 
+                    variant="outline"
+                    className="w-full bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base font-medium transition-all duration-300"
+                  >
+                    See Automations Library
+                  </Button>
+                </a>
               </div>
 
 

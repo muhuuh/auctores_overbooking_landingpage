@@ -5,7 +5,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { CloudRain, Mail, MapPin, UserCheck, Flame, Sparkles } from 'lucide-react';
-
+import { Card, CardContent } from '@/components/ui/card';
 /* -------------------------------------------------------------------------- */
 /*                                   DATA                                     */
 /* -------------------------------------------------------------------------- */
@@ -71,10 +71,10 @@ export default function ProblemSection() {
         {/* Headline */}
         <header className="mb-12 sm:mb-16 md:mb-20 text-center">
           <h2 className="mx-auto max-w-3xl font-display text-2xl sm:text-3xl font-bold tracking-tight text-navy lg:text-4xl">
-            Increase occupancy & reduce manual work
+          Maximize Revenue with Intelligent Overbooking & Automations
           </h2>
           <p className="mx-auto mt-4 sm:mt-6 max-w-xl text-base font-light text-navy/70 md:max-w-2xl lg:text-lg">
-            Late cancels & no‑shows leave rooms empty; static rules over/undershoot; manual tweaks eat time.
+          Stop losing revenue to last-minute cancellations and no-shows. Enable ready‑made admin automations to free staff time and lift guest satisfaction.
           </p>
         </header>
 
@@ -137,14 +137,52 @@ export default function ProblemSection() {
                   <div className="text-sm text-navy/80 leading-relaxed">OTA‑Aware — different cancellation profiles handled safely.</div>
                   <div className="text-sm text-navy/80 leading-relaxed">Live Monitoring — deviation alerts and full audit log.</div>
                 </div>
+                <div className="mt-6">
+                  <a href="/#safety" className="text-sm text-champagne underline underline-offset-4">Safe by design with guardrails — see below.</a>
+                </div>
 
               </div>
             </article>
           </div>
         </div>
-
+Automation possibilites don't stop here.
         
-
+        {/* Scenarios carousel */}
+        <div className="mt-10">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            slidesPerView={1}
+            spaceBetween={20}
+            loop
+            pagination={{ 
+              clickable: true,
+              bulletClass: 'swiper-pagination-bullet',
+              bulletActiveClass: 'swiper-pagination-bullet-active'
+            }}
+            autoplay={prefersReducedMotion ? false : { delay: 6000, disableOnInteraction: false }}
+            className="!pb-10 max-w-3xl mx-auto"
+            style={{
+              '--swiper-pagination-color': '#0F1B26',
+              '--swiper-pagination-bullet-inactive-color': 'rgba(15, 27, 38, 0.3)',
+              '--swiper-pagination-bullet-inactive-opacity': '1',
+              '--swiper-pagination-bullet-size': '8px',
+              '--swiper-pagination-bullet-horizontal-gap': '4px'
+            } as React.CSSProperties}
+            aria-label="Automation scenarios carousel"
+          >
+            {scenarios.map(({ title, text }, i) => (
+              <SwiperSlide key={i} className="!w-full !h-auto">
+                <Card className="border border-champagne/10 bg-white">
+                  <CardContent className="p-6">
+                    <h3 className="text-base font-bold text-navy mb-2">{title}</h3>
+                    <p className="text-sm text-navy/70">{text}</p>
+                  </CardContent>
+                </Card>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <p className="mt-2 text-center text-xs text-navy/60">Enable in 1 click.</p>
+        </div>
 
         
         {/* Scroll cue */}

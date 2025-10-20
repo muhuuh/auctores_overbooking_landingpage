@@ -48,6 +48,10 @@ const OverbookingAndAutomations = () => {
                 <Bullet>Back‑Office Tasks — housekeeping/maintenance routing from triggers; shift handovers.</Bullet>
                 <Bullet>“Describe it” to add more — enable safely, stack as needed.</Bullet>
               </ul>
+
+              <div className="mt-6">
+                <a href="/#automation-recipes" className="text-sm text-champagne underline underline-offset-4">Browse Automation Recipes</a>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -60,7 +64,7 @@ const OverbookingAndAutomations = () => {
 
         <div className="mt-8 text-center">
           <a href="/#cta" className="inline-flex items-center rounded-md bg-navy text-white px-6 py-3 text-sm border border-champagne/30 hover:border-champagne">
-            Activate smart Overbooking & automation
+            Activate Smart Overbooking & Automations
           </a>
         </div>
       </div>
