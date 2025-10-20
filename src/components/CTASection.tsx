@@ -87,9 +87,9 @@ const CTASection = () => {
                     <SelectValue placeholder="Select your PMS" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="opera">Apaleo</SelectItem>
+                    <SelectItem value="apaleo">Apaleo</SelectItem>
                     <SelectItem value="mews">Mews</SelectItem>
-                    <SelectItem value="protel">Couldbeds</SelectItem>
+                    <SelectItem value="couldbeds">Couldbeds</SelectItem>
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
