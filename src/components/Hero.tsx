@@ -16,14 +16,17 @@ const Hero = () => {
         
         <div className="max-w-7xl z-10">
           <div className="flex justify-start">
-            <div className="flex flex-col space-y-8 animate-fade-in max-w-2xl">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-lg">
+            <div className="flex flex-col animate-fade-in max-w-2xl">
+              <h1 className="mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-lg ">
                 <span className="block sm:inline">Overbook smarter.</span>{' '}
                 <span className="block sm:inline">Fill more rooms.</span>{' '}
-                <span className="block sm:inline">No chaos.</span>
+                <span className="block sm:inline">Stay in control.</span>
               </h1>
-              <p className="text-base sm:text-lg text-white/90 max-w-lg">
-                Switch on <span className="font-semibold">Smart Overbooking</span> in 2–3 clicks to stop losing revenue to last-minute cancellations and no-shows. AI learns your patterns and maximizes occupancy safely.
+              <p className="text-xl sm:text-xl text-white/80 max-w-lg font-medium leading-snug">
+                Stop losing revenue to cancellations and no-shows.
+              </p>
+              <p className="text-base mt-2 mb-8 sm:text-lg text-white/90 max-w-lg">
+                <span className="font-semibold">Auctores Smart Overbooking</span> predicts guest behavior and automatically adjusts your inventory, so you can maximize occupancy without risk.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="/#cta" className="w-full sm:w-auto">
@@ -55,7 +58,7 @@ const Hero = () => {
               </div>
 
 
-              <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl pt-2">
+              {/*<div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl pt-2">
                 {[
                   { n: '35%', label: 'OTB revenue lost to cancels' },
                   { n: '42% vs 18%', label: 'OTA vs direct cancels' },
@@ -66,7 +69,7 @@ const Hero = () => {
                     <span className="opacity-80">{item.label}</span>
                   </div>
                 ))}
-              </div>
+              </div>*/}
 
             </div>
           </div>

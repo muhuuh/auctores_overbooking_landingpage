@@ -101,7 +101,9 @@ const Index = () => {
         <section id="why-overbooking">
           <ProblemSection />
         </section>
+        {/*
         <MetricsBand />
+        */}
         {/* Replace legacy features grid with split tabs */}
         <SmartOverbooking />
         <SafetyBand />
