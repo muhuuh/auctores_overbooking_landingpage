@@ -1,6 +1,7 @@
 // components/ProblemSection.tsx
 import React from 'react';
 import TrustBand from './TrustBand';
+import { AlertTriangle, CheckCircle } from 'lucide-react';
 
 /* -------------------------------------------------------------------------- */
 /*                                 COMPONENT                                  */
@@ -25,8 +26,21 @@ export default function ProblemSection() {
           Turn Cancellations Into Revenue
           </h2>
           <p className="mx-auto mt-4 sm:mt-6 max-w-xl text-base font-light text-navy/70 md:max-w-2xl lg:text-lg">
-          Optimize occupancy, minimize revenue loss, and maintain control — without guesswork or risk.
+          Optimize occupancy, minimize revenue loss, and maintain control without guesswork or risk.
           </p>
+          
+          {/* KPIs */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 mt-8 sm:mt-10">
+            <div className="flex flex-col items-center">
+              <div className="text-2xl sm:text-3xl font-bold text-navy mb-1">35%</div>
+              <div className="text-sm text-navy/70 text-center">Revenue lost on<br />cancellation</div>
+            </div>
+            <div className="hidden sm:block w-px h-12 bg-champagne/30"></div>
+            <div className="flex flex-col items-center">
+              <div className="text-2xl sm:text-3xl font-bold text-navy mb-1">78%</div>
+              <div className="text-sm text-navy/70 text-center">walked guest<br />don't return</div>
+            </div>
+          </div>
         </header>
 
 
@@ -44,7 +58,10 @@ export default function ProblemSection() {
               <div className="px-5 sm:px-6 md:px-8 py-7 sm:py-8 md:py-10 flex flex-col h-full">
                 {/* Header */}
                 <div className="mb-8 sm:mb-7 md:mb-8">
-                  <h3 className="text-center text-xl font-bold text-navy md:text-2xl min-h-[3.5rem] flex items-center justify-center mb-1">Empty Rooms. Lost Revenue.</h3>
+                  <div className="flex items-center justify-center mb-3">
+                    <AlertTriangle className="w-6 h-6 text-champagne/80" />
+                  </div>
+                  <h3 className="text-center text-xl font-bold text-navy md:text-2xl">Empty Rooms. Lost Revenue.</h3>
                 </div>
                 {/* Pain points list */}
                 <ul className="space-y-3 sm:space-y-3 flex-1 justify-between">
@@ -78,7 +95,10 @@ export default function ProblemSection() {
               <div className="px-5 sm:px-6 md:px-8 py-7 sm:py-8 md:py-10 flex flex-col h-full">
                 {/* Header */}
                 <div className="mb-8 sm:mb-7 md:mb-8">
-                  <h3 className="text-center text-xl font-bold text-navy md:text-2xl min-h-[3.5rem] flex items-center justify-center">Advanced Overbooking, Without the Headache</h3>
+                  <div className="flex items-center justify-center mb-3">
+                    <CheckCircle className="w-6 h-6 text-champagne/80" />
+                  </div>
+                  <h3 className="text-center text-xl font-bold text-navy md:text-2xl">Advanced Overbooking, Without the Headache</h3>
                 </div>
 
                 {/* Benefits list */}

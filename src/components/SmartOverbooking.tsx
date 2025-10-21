@@ -17,7 +17,7 @@ const FeatureCard = ({
     <CardContent className="p-6">
       <div className="flex flex-col items-center text-center">
         <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-champagne/10 flex items-center justify-center group-hover:bg-champagne/20 transition-colors duration-300 mx-auto mb-4">
-          <Icon className="w-6 h-6 text-navy" />
+          <Icon className="w-6 h-6 text-champagne" />
         </div>
         <div className="flex-1">
           <h3 className="font-semibold text-navy text-lg mb-2">{title}</h3>
@@ -42,15 +42,14 @@ const SmartOverbooking = () => {
             Auctores Smart Overbooking
           </h2>
           <p className="text-md md:text-lg font-medium text-navy/80 max-w-3xl mx-auto">
-            Get the overbooking strategies airlines and leading hotel chains practice — without the complexity.
-          </p>
+          Activate Smart Overbooking in just a 2 minutes and a few clicks. Start recovering revenue you're already losing.          </p>
         </div>
 
         {/* Main description */}
         <div className="max-w-4xl mx-auto mb-12">
           <div className="text-center">
-            <div className="bg-gray-50 rounded-lg p-6">
-              <p className="text-base text-navy/80">
+            <div className="bg-gradient-to-r from-champagne/5 to-champagne/10 border border-champagne/20 rounded-lg p-6 shadow-sm">
+              <p className="text-base text-navy font-medium">
                 Our system automatically adjusts overbooking levels to match your property's real cancellation patterns, maximizing occupancy while protecting every guest's experience.
               </p>
             </div>
@@ -83,12 +82,7 @@ const SmartOverbooking = () => {
 
         {/* Call to action section */}
         <div className="text-center space-y-6 flex-col">
-          <div className="max-w-2xl mx-auto">
-            <p className="text-base md:text-lg font-medium text-navy/80 mb-6">
-              Activate Smart Overbooking in just a few clicks — and start recovering revenue you're already losing.
-            </p>
-            
-          </div>
+
           
           <a 
             href="/#cta" 

@@ -16,19 +16,19 @@ const Hero = () => {
         
         <div className="max-w-7xl z-10">
           <div className="flex justify-start">
-            <div className="flex flex-col animate-fade-in max-w-2xl">
-              <h1 className="mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-lg ">
-                <span className="block sm:inline">Overbook smarter.</span>{' '}
-                <span className="block sm:inline">Fill more rooms.</span>{' '}
-                <span className="block sm:inline">Stay in control.</span>
+            <div className="flex flex-col animate-fade-in max-w-xl">
+              <h1 className="mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                <span className="block">Overbook smarter.</span>
+                <span className="block">Fill more rooms.</span>
+                <span className="block">Stay in control.</span>
               </h1>
-              <p className="text-xl sm:text-xl text-white/80 max-w-lg font-medium leading-snug">
+              <p className="text-xl sm:text-xl text-white/80 font-semibold leading-snug mb-2">
                 Stop losing revenue to cancellations and no-shows.
               </p>
-              <p className="text-base mt-2 mb-8 sm:text-lg text-white/90 max-w-lg">
-                <span className="font-semibold">Auctores Smart Overbooking</span> predicts guest behavior and automatically adjusts your inventory, so you can maximize occupancy without risk.
+              <p className="text-xl sm:text-xl text-white/80 mb-8 font-semibold">
+                Auctores Smart Overbooking predicts guest behavior and automatically adjusts your inventory, so you can maximize occupancy without risk.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 max-w-lg">
                 <a href="/#cta" className="w-full sm:w-auto">
                    <Button 
                      className="w-full bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
