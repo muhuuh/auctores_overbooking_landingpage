@@ -45,6 +45,16 @@ const CTASection = () => {
         duration: 5000,
       });
     } else {
+      // Track successful conversion for Google Ads
+      if (window.gtag) {
+        window.gtag('event', 'generate_lead', {
+          form_id: 'waitlist',
+          method: 'submit'
+        });
+      } else {
+        console.log("gtag not defined - generate_lead event");
+      }
+
       toast({
         title: 'Thank you!',
         description: 'We\'ve received your request - check your inbox soon.',
