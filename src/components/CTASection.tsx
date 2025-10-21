@@ -20,6 +20,7 @@ const CTASection = () => {
   const [pms, setPms] = useState('');
   const [willCodesign, setWillCodesign] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailFocusTracked, setEmailFocusTracked] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -75,6 +76,20 @@ const CTASection = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  onFocus={() => {
+                    if (!emailFocusTracked) {
+                      setEmailFocusTracked(true);
+                      if (window.gtag) {
+                        window.gtag('event', 'cta_email_input_focus', {
+                          'event_category': 'LandingPage_Engagement',
+                          'event_label': 'CTA Email Input Clicked',
+                          'value': 1
+                        });
+                      } else {
+                        console.log("gtag not defined - cta_email_input_focus event");
+                      }
+                    }
+                  }}
                   placeholder="claire@ritzparis.com"
                   required
                   className="bg-navy/50 border-gray/30 text-white placeholder:text-gray-500"

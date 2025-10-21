@@ -18,6 +18,9 @@ import MobileStickyBar from '@/components/MobileStickyBar';
 const LazyCookieBanner = lazy(() => import('@/components/CookieBanner'));
 
 const Index = () => {
+  // Track if hero scroll event has been sent
+  const [heroScrollTracked, setHeroScrollTracked] = React.useState(false);
+
   // Smooth scroll implementation
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -85,10 +88,43 @@ const Index = () => {
     document.querySelectorAll('section').forEach(section => {
       observer.observe(section);
     });
-    
+
+    // Track when user scrolls past hero section
+    const heroObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting && !heroScrollTracked) {
+            // Hero section is no longer visible - user has scrolled past it
+            setHeroScrollTracked(true);
+            if (window.gtag) {
+              window.gtag('event', 'scroll_past_hero', {
+                'event_category': 'LandingPage_Engagement',
+                'event_label': 'Hero Section Scrolled Past',
+                'value': 1
+              });
+            } else {
+              console.log("gtag not defined - scroll_past_hero event");
+            }
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of hero is still visible
+      }
+    );
+
+    // Observe the hero section (first section on the page)
+    const heroSection = document.querySelector('section');
+    if (heroSection) {
+      heroObserver.observe(heroSection);
+    }
+
     return () => {
       document.removeEventListener('click', handleLinkClick);
       observer.disconnect();
+      heroObserver.disconnect();
     };
   }, []);
 
