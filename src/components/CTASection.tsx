@@ -20,6 +20,7 @@ const CTASection = () => {
   const [pms, setPms] = useState('');
   const [willCodesign, setWillCodesign] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailFocusTracked, setEmailFocusTracked] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,6 +45,16 @@ const CTASection = () => {
         duration: 5000,
       });
     } else {
+      // Track successful conversion for Google Ads
+      if (window.gtag) {
+        window.gtag('event', 'generate_lead', {
+          form_id: 'waitlist',
+          method: 'submit'
+        });
+      } else {
+        console.log("gtag not defined - generate_lead event");
+      }
+
       toast({
         title: 'Thank you!',
         description: 'We\'ve received your request - check your inbox soon.',
@@ -75,6 +86,20 @@ const CTASection = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  onFocus={() => {
+                    if (!emailFocusTracked) {
+                      setEmailFocusTracked(true);
+                      if (window.gtag) {
+                        window.gtag('event', 'cta_email_input_focus', {
+                          'event_category': 'LandingPage_Engagement',
+                          'event_label': 'CTA Email Input Clicked',
+                          'value': 1
+                        });
+                      } else {
+                        console.log("gtag not defined - cta_email_input_focus event");
+                      }
+                    }
+                  }}
                   placeholder="claire@ritzparis.com"
                   required
                   className="bg-navy/50 border-gray/30 text-white placeholder:text-gray-500"
