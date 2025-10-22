@@ -16,7 +16,7 @@ const productFaqs = [
   {
     question: "How do you avoid walkouts or guest friction?",
     answer:
-      "Safety by design: default no-walk policy, upgrade fallback rules, and VIP/family protection. You can cap levels per date/room type, add buffers for events/groups, and pause with an instant off switch. All changes are logged."
+      "Safety by design: default no-walk policy, upgrade fallback rules, and VIP/family room protection. You can cap levels per date/room type, add buffers for events/groups, and pause with an instant off switch. All changes are logged."
   },
   {
     question: "Can I cap or override recommendations?",

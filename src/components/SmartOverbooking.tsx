@@ -71,7 +71,7 @@ const SmartOverbooking = () => {
           <FeatureCard
             icon={Shield}
             title="Guardrails by Design"
-            description="Built-in no-walk policy with automatic upgrading fallback, and VIP/family protection to ensure guest safety."
+            description="Built-in no-walk policy with automatic upgrading fallback, and VIP/family room protection to ensure guest safety."
           />
           <FeatureCard
             icon={Network}

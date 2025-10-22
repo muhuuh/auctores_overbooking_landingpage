@@ -68,7 +68,7 @@ export default function ProblemSection() {
                   
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Valuable rooms go empty due to last-minute cancellations and no-shows.</span>
+                    <span className="text-sm text-navy/80 leading-relaxed">Rooms go empty due to last-minute cancellations and no-shows.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
@@ -77,10 +77,6 @@ export default function ProblemSection() {
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
                     <span className="text-sm text-navy/80 leading-relaxed">Manual tweaks take time and carry risk — occupancy optimization is complex.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">No single approach works for every property.</span>
                   </li>
                 </ul>
               </div>
@@ -105,20 +101,18 @@ export default function ProblemSection() {
                 <ul className="space-y-3 sm:space-y-3 flex-1">
                   <li className="flex items-start gap-3">
                     <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Mitigate and anticipate revenue loss with real time smart availability buffers.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Keep the benefits of OTAs without the risk of lost bookings.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Automatically adjust overbooking thresholds — no manual work required.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
                     <span className="text-sm text-navy/80 leading-relaxed">Tailors overbooking to your property’s unique patterns.</span>
                   </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
+                    <span className="text-sm text-navy/80 leading-relaxed">Mitigate and anticipate revenue loss with real time smart availability buffers.</span>
+                  </li>
+   
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
+                    <span className="text-sm text-navy/80 leading-relaxed">Overbooking levels auto-adjust daily; no manual spreadsheets or tweaks.</span>
+                  </li>
+
                 </ul>
               </div>
             </article>

@@ -19,7 +19,7 @@ const SafetyBand = () => {
         <div className="flex flex-wrap gap-3 sm:gap-4 items-center justify-center">
           <SafetyChip icon={<Shield className="w-4 h-4" />}>No-walk policy (default)</SafetyChip>
           <SafetyChip icon={<ArrowUp className="w-4 h-4" />}>Upgrade fallback</SafetyChip>
-          <SafetyChip icon={<Users className="w-4 h-4" />}>VIP/family protection</SafetyChip>
+          <SafetyChip icon={<Users className="w-4 h-4" />}>VIP/family room protection</SafetyChip>
           <SafetyChip icon={<FileText className="w-4 h-4" />}>Full audit log</SafetyChip>
           <SafetyChip icon={<PowerOff className="w-4 h-4" />}>Instant off switch</SafetyChip>
         </div>

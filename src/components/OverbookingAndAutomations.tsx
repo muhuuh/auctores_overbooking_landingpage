@@ -27,7 +27,7 @@ const SmartOverbooking = () => {
               </div>
               <ul className="space-y-3">
                 <Bullet>Dynamic Levels — per date & room type; learns cancel/no‑show patterns.</Bullet>
-                <Bullet>Guardrails by Design — no‑walk policy, upgrade fallback, VIP/family protection.</Bullet>
+                <Bullet>Guardrails by Design — no‑walk policy, upgrade fallback, VIP/family room protection.</Bullet>
                 <Bullet>OTA‑Aware — different cancellation profiles handled safely.</Bullet>
                 <Bullet>Live Monitoring — deviation alerts, quick nudges, full audit log.</Bullet>
               </ul>

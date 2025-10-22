@@ -15,7 +15,7 @@ const HowItWorks = () => {
     {
       number: "02",
       title: "Set Guardrails",
-      description: "Define upgrade fallback, VIP/family protection, and target occupancy — safe by design.",
+      description: "Define upgrade fallback, VIP/family room protection, and target occupancy — safe by design.",
       icon: <Target className="text-champagne w-7 h-7" />
     },
     {
