@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Checkbox } from './ui/checkbox';
@@ -6,13 +6,20 @@ import { Label } from './ui/label';
 import { useToast } from './ui/use-toast';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { supabase } from '../lib/supabaseClient';
-import { Info } from 'lucide-react';
+import { Info, CheckCircle } from 'lucide-react';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const CTASection = () => {
   const { toast } = useToast();
@@ -21,6 +28,57 @@ const CTASection = () => {
   const [willCodesign, setWillCodesign] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailFocusTracked, setEmailFocusTracked] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  // Handle URL changes for Google Ads conversion tracking
+  useEffect(() => {
+    if (showSuccessModal) {
+      // Change URL to /success for GA4 tracking
+      window.history.pushState({ modal: 'success' }, '', '/success');
+
+      // Fire a GA4 page_view for the virtual success page
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_title: 'Waitlist Success',
+          page_location: `${window.location.origin}/success`,
+          page_path: '/success',
+        });
+      } else {
+        console.log("gtag not defined - page_view /success");
+      }
+    } else {
+      // Restore the main URL when the modal closes
+      window.history.pushState({ modal: 'closed' }, '', '/');
+
+      // Optional: Fire a GA4 page_view back to the root
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_title: document.title,
+          page_location: `${window.location.origin}/`,
+          page_path: '/',
+        });
+      }
+    }
+
+    // Back/forward navigation should reflect the modal state
+    const handlePopState = () => {
+      if (window.location.pathname === '/success') {
+        setShowSuccessModal(true);
+      } else {
+        setShowSuccessModal(false);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [showSuccessModal]);
+
+  // If user lands on /success directly, open the modal
+  useEffect(() => {
+    if (window.location.pathname === '/success') {
+      setShowSuccessModal(true);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -45,21 +103,20 @@ const CTASection = () => {
         duration: 5000,
       });
     } else {
-      // Track successful conversion for Google Ads
+      // Track successful lead in GA4 (recommended event)
       if (window.gtag) {
         window.gtag('event', 'generate_lead', {
           form_id: 'waitlist',
-          method: 'submit'
+          method: 'submit',
+          value: 1,
         });
       } else {
         console.log("gtag not defined - generate_lead event");
       }
 
-      toast({
-        title: 'Thank you!',
-        description: 'We\'ve received your request - check your inbox soon.',
-        duration: 5000,
-      });
+      // Show success modal instead of toast
+      setShowSuccessModal(true);
+
       // Reset form on success
       setEmail('');
       setPms('');
@@ -160,6 +217,33 @@ const CTASection = () => {
           </form>
         </div>
       </div>
+
+      {/* Success Modal */}
+      <Dialog open={showSuccessModal} onOpenChange={setShowSuccessModal}>
+        <DialogContent className="bg-navy border-champagne/20 text-white max-w-md">
+          <DialogHeader className="text-center">
+            <div className="flex justify-center mb-4">
+              <CheckCircle className="h-16 w-16 text-champagne" />
+            </div>
+            <DialogTitle className="text-2xl font-bold text-champagne">
+              Thank You!
+            </DialogTitle>
+            <DialogDescription className="text-gray-300 text-base">
+              We've received your request and you're now on our early access waiting list.
+              <br /><br />
+              Check your inbox soon - we'll be in touch with next steps and your exclusive early access details.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-center mt-6">
+            <Button
+              onClick={() => setShowSuccessModal(false)}
+              className="bg-champagne hover:bg-champagne/90 text-black font-semibold px-8"
+            >
+              Got it!
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
