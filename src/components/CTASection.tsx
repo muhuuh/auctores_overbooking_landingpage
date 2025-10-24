@@ -216,6 +216,18 @@ const CTASection = () => {
             </Button>
           </form>
         </div>
+
+        <div className="mt-6 sm:mt-8 text-center">
+          <p className="text-gray-400 text-sm">
+            Have questions? Reach out to us at{' '}
+            <a
+              href="mailto:valentin@autores.ai"
+              className="text-champagne hover:text-champagne/80 underline transition-colors"
+            >
+              valentin@autores.ai
+            </a>
+          </p>
+        </div>
       </div>
 
       {/* Success Modal */}

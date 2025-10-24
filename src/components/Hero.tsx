@@ -23,7 +23,7 @@ const Hero = () => {
                 <span className="block">Stay in control.</span>
               </h1>
               <p className="text-xl sm:text-xl text-white/80 font-semibold leading-snug mb-2">
-              Auctores Smart Overbooking maximizes occupancy and revenue without risk.
+              Auctores Smart Overbooking automatically maximizes occupancy and revenue without risk.
               </p>
               <p className="text-xl sm:text-xl text-white/80 mb-8 font-semibold">
                Stop losing revenue to cancellations and no-shows.
@@ -52,7 +52,7 @@ const Hero = () => {
                     variant="outline"
                     className="w-full bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base font-medium transition-all duration-300"
                   >
-                    See Overbooking Features
+                    How it works
                   </Button>
                 </a>
               </div>
