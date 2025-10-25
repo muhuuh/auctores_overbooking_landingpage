@@ -1,0 +1,193 @@
+{
+  "navbar": {
+    "whyOverbooking": "Why Overbooking",
+    "overbooking": "Overbooking",
+    "security": "Security",
+    "pricing": "Pricing",
+    "earlyAccess": "Early Access"
+  },
+  "hero": {
+    "headline1": "Overbook smarter.",
+    "headline2": "Fill more rooms.",
+    "headline3": "Stay in control.",
+    "sub1": "Auctores Smart Overbooking automatically maximizes occupancy and revenue without risk.",
+    "sub2": "Stop losing revenue to cancellations and no-shows.",
+    "cta": "Activate Smart Overbooking",
+    "secondary": "How it works"
+  },
+  "problem": {
+    "title": "Turn Cancellations Into Revenue",
+    "subtitle": "Optimize occupancy, minimize revenue loss, and maintain control without guesswork or risk.",
+    "kpis": {
+      "cancel": "Revenue lost on\ncancellation",
+      "walked": "walked guest\ndon't return"
+    },
+    "today": {
+      "title": "Empty Rooms. Lost Revenue.",
+      "points": [
+        "Rooms go empty due to last-minute cancellations and no-shows.",
+        "Up to half of OTA bookings never show, leaving revenue on the table.",
+        "Manual tweaks take time and carry risk — occupancy optimization is complex."
+      ]
+    },
+    "tomorrow": {
+      "title": "Advanced Overbooking, Without the Headache",
+      "points": [
+        "Tailors overbooking to your property’s unique patterns.",
+        "Mitigate and anticipate revenue loss with real time smart availability buffers.",
+        "Overbooking levels auto-adjust daily; no manual spreadsheets or tweaks."
+      ]
+    },
+    "seeHowItWorks": "SEE HOW IT WORKS"
+  },
+  "trust": {
+    "euPrivacyFirst": "EU privacy first",
+    "backedByIncubator": "Backed by leading incubator",
+    "pilotHotels": "Pilot hotels onboarding"
+  },
+  "smartOverbooking": {
+    "title": "Auctores Smart Overbooking",
+    "lead": "Activate Smart Overbooking in just a 2 minutes and a few clicks. Start recovering revenue you're already losing.",
+    "highlight": "Our system automatically adjusts overbooking levels to match your property's real cancellation patterns, maximizing occupancy while protecting every guest's experience.",
+    "features": [
+      { "title": "Ready from Day 1", "description": "Starts with your existing reservation history and improves continuously." },
+      { "title": "Adaptive Levels", "description": "Adjusts overbooking thresholds per date and room type, balancing occupancy and risk automatically." },
+      { "title": "Guardrails by Design", "description": "Built-in no-walk policy with automatic upgrading fallback, and VIP/family room protection to ensure guest safety." },
+      { "title": "Channel‑Aware", "description": "Safely handles different cancellation behaviors across channels, rate plans, and room types." }
+    ],
+    "cta": "Activate Smart Overbooking",
+    "seeSafety": "See Safety & Guardrails"
+  },
+  "safety": {
+    "title": "Safety by default.",
+    "subtitle": "Configured once, applied daily; full audit log.",
+    "chips": {
+      "noWalk": "No-walk policy (default)",
+      "upgradeFallback": "Upgrade fallback",
+      "vipProtection": "VIP/family room protection",
+      "auditLog": "Full audit log",
+      "instantOff": "Instant off switch"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works.",
+    "subtitle": "Connect. Set guardrails. Automate — limitless power in just a few clicks.",
+    "steps": [
+      { "number": "01", "title": "Connect PMS", "description": "Simply leverage the secure OAuth connection or enter your own API keys. Only 1-2 clicks, that's it." },
+      { "number": "02", "title": "Set Guardrails", "description": "Define upgrade fallback, VIP/family room protection, and target occupancy — safe by design." },
+      { "number": "03", "title": "Activate Smart Overbooking", "description": "Activate in 1 click. Daily recommendations apply automatically with full visibility and control." }
+    ],
+    "tagline": "Simple. Yet remarkably powerful."
+  },
+  "security": {
+    "title": "Built for enterprise-grade privacy.",
+    "lead1": "Auctores prioritizes privacy, encouraging you to control your data and AI.",
+    "lead2": "Host on your servers or our secure EU cloud, and use your own self-hosted LLMs — the choice is yours.",
+    "lead3": "Our team fully supports your journey to maximum privacy and compliance, ensuring you decide the ideal level of control.",
+    "groupTitles": {
+      "product": "Overbooking & Product",
+      "privacy": "Privacy, Security & Compliance"
+    },
+    "productFaqs": [
+      {
+        "question": "What exactly does Smart Overbooking optimize?",
+        "answer": "Auctores’ proprietary ML predicts same-day cancels/no-shows and recommends the optimal overbooking level per date and room type. It’s OTA-aware (different cancellation patterns by channel) and adapts to live demand."
+      },
+      {
+        "question": "How do you avoid walkouts or guest friction?",
+        "answer": "Safety by design: default no-walk policy, upgrade fallback rules, and VIP/family room protection. You can cap levels per date/room type, add buffers for events/groups, and pause with an instant off switch. All changes are logged."
+      },
+      {
+        "question": "Can I cap or override recommendations?",
+        "answer": "Yes. Set global and date/room-type caps, switch to conservative mode when needed, and apply manual overrides at any time. Overrides are respected and recorded in the audit log."
+      },
+      {
+        "question": "What happens if the model is wrong?",
+        "answer": "Guardrails prevent worst-case outcomes (e.g., walkouts). When confidence is low we default to conservative recommendations."
+      },
+      {
+        "question": "How fast is setup and when do results start?",
+        "answer": "Setup takes minutes: connect PMS, set guardrails, activate. Impact begins with the next booking wave—no PMS changes required."
+      }
+    ],
+    "privacyFaqs": [
+      {
+        "question": "GDPR roles & data location — are you controller or processor and where is data stored?",
+        "answer": "We act as controller for your account/profile/authentication and essential service logs, and as processor for data accessed from connected tools (e.g., PMS) to optimize overbooking/automations. We target EU regions for processing and storage; if transfers outside the EEA/UK are unavoidable we rely on SCCs with appropriate safeguards."
+      },
+      {
+        "question": "What personal data do you process, how long do you keep it, and how can users exercise their rights?",
+        "answer": "We minimize PII: account/contact details, connector metadata and encrypted access tokens, and limited operational records from the PMS required to provide the service. Connector credentials persist while a connection is active and are deleted on disconnection or account deletion. Minimal operational logs are retained up to ~90 days for security/troubleshooting unless law requires longer. To exercise access/rectification/erasure/restriction/portability/objection, email valentin@auctores.ai."
+      },
+      {
+        "question": "How are secrets and infrastructure protected? What’s your incident approach?",
+        "answer": "User secrets are KMS-encrypted at rest and decrypted only to perform authorized API calls; database storage is encrypted with RBAC and RLS. System secrets are managed in a secrets manager with least-privilege IAM and audit logging. Transport is TLS 1.2+, infra is isolated with monitoring and access logging, and we maintain audit trails and an incident response process."
+      },
+      {
+        "question": "Do you train models on our data? Can we bring our own/self-hosted LLM?",
+        "answer": "We do not train models on your guest PII. Overbooking optimization uses our proprietary ML on operational signals; LLMs (if used) power workflows/explanations. You can bring your own/self-hosted LLM or use our EU setup."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Pricing for Founding Partners.",
+    "subtitle": "We believe in providing maximum value through flexible pricing tailored to your specific needs.",
+    "cards": [
+      { "title": "Early Partner Discount", "description": "Lock in a lifetime 50% discount as an early adopter." },
+      { "title": "Value-Based Pricing", "description": "Pay only for the capabilities you need, based on your number of rooms." },
+      { "title": "Personalized Quote", "description": "Let's discuss your specific needs and tailor a plan. Reach out via the form below." }
+    ]
+  },
+  "cta": {
+    "title": "Secure Your Early Access.",
+    "subtitle": "Early access participants lock-in <1>lifetime 50% discount</1> and direct influence on the roadmap. Drop your email address and we will reach out to you to set up the privileged early access.",
+    "emailLabel": "Work Email",
+    "emailRequiredAsterisk": "*",
+    "emailPlaceholder": "claire@ritzparis.com",
+    "pmsLabel": "Current PMS (optional)",
+    "pmsPlaceholder": "Select your PMS",
+    "pmsItems": {
+      "apaleo": "Apaleo",
+      "mews": "Mews",
+      "couldbeds": "Couldbeds",
+      "other": "Other"
+    },
+    "codesignLabel": "I'd like to co-design features as an alpha partner",
+    "codesignTooltip": "Being an Alpha Partner means collaborating closely with us to finalize features and fine-tune them to precisely meet your needs. It's an opportunity for a close partnership to ensure Auctores perfectly fits your workflows, tools, and processes.",
+    "submit": "Secure Early Access",
+    "submitting": "Processing...",
+    "helpLine": "Have questions? Reach out to us at",
+    "helpEmail": "valentin@autores.ai",
+    "success": {
+      "title": "Thank You!",
+      "body": "We've received your request and you're now on our early access waiting list.\n\nCheck your inbox soon - we'll be in touch with next steps and your exclusive early access details.",
+      "button": "Got it!"
+    }
+  },
+  "cookie": {
+    "message": "This website uses cookies to enhance the user experience. See our <1>Privacy Policy</1> for details.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "ariaAccept": "Accept cookies",
+    "ariaDecline": "Decline cookies"
+  },
+  "footer": {
+    "product": "Product",
+    "features": "Features",
+    "pricing": "Pricing",
+    "security": "Security",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "impressum": "Impressum",
+    "contact": "Contact",
+    "contactEmail": "valentin@auctores.ai",
+    "cookieSettings": "Cookie Settings",
+    "copyright": "© 2025 Auctores — built in Munich"
+  },
+  "mobileStickyBar": {
+    "cta": "Activate Smart Overbooking"
+  }
+}
+
+

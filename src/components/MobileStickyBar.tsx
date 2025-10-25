@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
+import { useTranslation } from 'react-i18next';
 
 const MobileStickyBar = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,13 +26,14 @@ const MobileStickyBar = () => {
     };
   }, []);
 
+  const { t } = useTranslation();
   if (!isMobile || !isVisible) return null;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-t border-champagne/20 p-4 shadow-lg md:hidden">
       <a href="/#cta" className="block">
         <Button className="w-full bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-6 py-4 rounded-md text-base shadow-lg font-medium">
-          Activate Smart Overbooking
+          {t('mobileStickyBar.cta')}
         </Button>
       </a>
     </div>

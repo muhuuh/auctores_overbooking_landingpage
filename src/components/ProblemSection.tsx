@@ -2,12 +2,14 @@
 import React from 'react';
 import TrustBand from './TrustBand';
 import { AlertTriangle, CheckCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 /* -------------------------------------------------------------------------- */
 /*                                 COMPONENT                                  */
 /* -------------------------------------------------------------------------- */
 
 export default function ProblemSection() {
+  const { t } = useTranslation();
   return (
     <section
       id="why-overbooking"
@@ -23,22 +25,22 @@ export default function ProblemSection() {
         {/* Headline */}
         <header className="mb-12 sm:mb-16 md:mb-20 text-center">
           <h2 className="mx-auto max-w-3xl font-display text-2xl sm:text-3xl font-bold tracking-tight text-navy lg:text-4xl">
-          Turn Cancellations Into Revenue
+            {t('problem.title')}
           </h2>
           <p className="mx-auto mt-4 sm:mt-6 max-w-xl text-base font-light text-navy/70 md:max-w-2xl lg:text-lg">
-          Optimize occupancy, minimize revenue loss, and maintain control without guesswork or risk.
+            {t('problem.subtitle')}
           </p>
           
           {/* KPIs */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 mt-8 sm:mt-10">
             <div className="flex flex-col items-center">
               <div className="text-2xl sm:text-3xl font-bold text-navy mb-1">35%</div>
-              <div className="text-sm text-navy/70 text-center">Revenue lost on<br />cancellation</div>
+              <div className="text-sm text-navy/70 text-center">{t('problem.kpis.cancel')}</div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-champagne/30"></div>
             <div className="flex flex-col items-center">
               <div className="text-2xl sm:text-3xl font-bold text-navy mb-1">78%</div>
-              <div className="text-sm text-navy/70 text-center">walked guest<br />don't return</div>
+              <div className="text-sm text-navy/70 text-center">{t('problem.kpis.walked')}</div>
             </div>
           </div>
         </header>
@@ -61,23 +63,16 @@ export default function ProblemSection() {
                   <div className="flex items-center justify-center mb-3">
                     <AlertTriangle className="w-6 h-6 text-champagne/80" />
                   </div>
-                  <h3 className="text-center text-xl font-bold text-navy md:text-2xl">Empty Rooms. Lost Revenue.</h3>
+                  <h3 className="text-center text-xl font-bold text-navy md:text-2xl">{t('problem.today.title')}</h3>
                 </div>
                 {/* Pain points list */}
                 <ul className="space-y-3 sm:space-y-3 flex-1 justify-between">
-                  
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Rooms go empty due to last-minute cancellations and no-shows.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Up to half of OTA bookings never show, leaving revenue on the table.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Manual tweaks take time and carry risk — occupancy optimization is complex.</span>
-                  </li>
+                  {(t('problem.today.points', { returnObjects: true }) as string[]).map((point, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
+                      <span className="text-sm text-navy/80 leading-relaxed">{point}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </article>
@@ -94,25 +89,17 @@ export default function ProblemSection() {
                   <div className="flex items-center justify-center mb-3">
                     <CheckCircle className="w-6 h-6 text-champagne/80" />
                   </div>
-                  <h3 className="text-center text-xl font-bold text-navy md:text-2xl">Advanced Overbooking, Without the Headache</h3>
+                  <h3 className="text-center text-xl font-bold text-navy md:text-2xl">{t('problem.tomorrow.title')}</h3>
                 </div>
 
                 {/* Benefits list */}
                 <ul className="space-y-3 sm:space-y-3 flex-1">
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Tailors overbooking to your property’s unique patterns.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Mitigate and anticipate revenue loss with real time smart availability buffers.</span>
-                  </li>
-   
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
-                    <span className="text-sm text-navy/80 leading-relaxed">Overbooking levels auto-adjust daily; no manual spreadsheets or tweaks.</span>
-                  </li>
-
+                  {(t('problem.tomorrow.points', { returnObjects: true }) as string[]).map((point, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <div className="mt-1.5 h-2 w-2 rounded-full bg-champagne/60 flex-shrink-0"></div>
+                      <span className="text-sm text-navy/80 leading-relaxed">{point}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </article>
@@ -125,7 +112,7 @@ export default function ProblemSection() {
             href="/#how-it-works"
             className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest text-navy transition hover:text-champagne"
           >
-            SEE&nbsp;HOW&nbsp;IT&nbsp;WORKS
+            {t('problem.seeHowItWorks')}
             <span className="animate-bounce">↓</span>
           </a>
         </div>

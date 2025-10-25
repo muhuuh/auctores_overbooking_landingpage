@@ -1,32 +1,21 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Percent, Gem, MessageSquareQuote } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const PricingSection = () => {
-  const pricingPoints = [
-    {
-      title: "Early Partner Discount",
-      description: "Lock in a lifetime 50% discount as an early adopter.",
-      icon: <Percent className="text-champagne w-8 h-8" />
-    },
-    {
-      title: "Value-Based Pricing",
-      description: "Pay only for the capabilities you need, based on your number of rooms.",
-      icon: <Gem className="text-champagne w-8 h-8" />
-    },
-    {
-      title: "Personalized Quote",
-      description: "Let's discuss your specific needs and tailor a plan. Reach out via the form below.",
-      icon: <MessageSquareQuote className="text-champagne w-8 h-8" />
-    }
-  ];
+  const { t } = useTranslation();
+  const pricingPoints = (t('pricing.cards', { returnObjects: true }) as { title: string; description: string }[]).map((p, idx) => ({
+    ...p,
+    icon: idx === 0 ? <Percent className="text-champagne w-8 h-8" /> : idx === 1 ? <Gem className="text-champagne w-8 h-8" /> : <MessageSquareQuote className="text-champagne w-8 h-8" />
+  }));
 
   return (
     <section id="pricing" className="py-16 sm:py-20 md:py-24 bg-offWhite">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6 text-center">Flexible Pricing for Founding Partners.</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6 text-center">{t('pricing.title')}</h2>
         <p className="text-base text-navy/80 mb-8 sm:mb-12 max-w-3xl mx-auto text-center px-4 sm:px-0">
-           We believe in providing maximum value through flexible pricing tailored to your specific needs.
+           {t('pricing.subtitle')}
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">

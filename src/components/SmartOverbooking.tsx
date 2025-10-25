@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { TrendingUp, Shield, Network, BarChart3, Zap, Target } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const FeatureCard = ({ 
   icon: Icon, 
@@ -34,15 +35,18 @@ const FeatureCard = ({
 );
 
 const SmartOverbooking = () => {
+  const { t } = useTranslation();
+  const features = t('smartOverbooking.features', { returnObjects: true }) as { title: string; description: string }[];
   return (
     <section id="features" className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-playfair text-2xl md:text-3xl font-bold text-navy mb-4">
-            Auctores Smart Overbooking
+            {t('smartOverbooking.title')}
           </h2>
           <p className="text-md md:text-lg font-medium text-navy/80 max-w-3xl mx-auto">
-          Activate Smart Overbooking in just a 2 minutes and a few clicks. Start recovering revenue you're already losing.          </p>
+            {t('smartOverbooking.lead')}
+          </p>
         </div>
 
         {/* Main description */}
@@ -50,7 +54,7 @@ const SmartOverbooking = () => {
           <div className="text-center">
             <div className="bg-gradient-to-r from-champagne/5 to-champagne/10 border border-champagne/20 rounded-lg p-6 shadow-sm">
               <p className="text-base text-navy font-medium">
-                Our system automatically adjusts overbooking levels to match your property's real cancellation patterns, maximizing occupancy while protecting every guest's experience.
+                {t('smartOverbooking.highlight')}
               </p>
             </div>
           </div>
@@ -58,26 +62,10 @@ const SmartOverbooking = () => {
 
         {/* Feature cards grid */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
-          <FeatureCard
-            icon={Target}
-            title="Ready from Day 1"
-            description="Starts with your existing reservation history and improves continuously."
-          />
-          <FeatureCard
-            icon={TrendingUp}
-            title="Adaptive Levels"
-            description="Adjusts overbooking thresholds per date and room type, balancing occupancy and risk automatically."
-          />
-          <FeatureCard
-            icon={Shield}
-            title="Guardrails by Design"
-            description="Built-in no-walk policy with automatic upgrading fallback, and VIP/family room protection to ensure guest safety."
-          />
-          <FeatureCard
-            icon={Network}
-            title="Channel‑Aware"
-            description="Safely handles different cancellation behaviors across channels, rate plans, and room types."
-          />
+          <FeatureCard icon={Target} title={features?.[0]?.title} description={features?.[0]?.description} />
+          <FeatureCard icon={TrendingUp} title={features?.[1]?.title} description={features?.[1]?.description} />
+          <FeatureCard icon={Shield} title={features?.[2]?.title} description={features?.[2]?.description} />
+          <FeatureCard icon={Network} title={features?.[3]?.title} description={features?.[3]?.description} />
         </div>
 
         {/* Call to action section */}
@@ -89,7 +77,7 @@ const SmartOverbooking = () => {
             className="inline-flex items-center gap-2 rounded-md bg-navy text-white px-8 py-4 text-sm font-medium border border-champagne/30 hover:border-champagne hover:bg-navy/90 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             <BarChart3 className="w-4 h-4" />
-            Activate Smart Overbooking
+            {t('smartOverbooking.cta')}
           </a>
 
           <div className="max-w-2xl mx-auto">
@@ -98,7 +86,7 @@ const SmartOverbooking = () => {
               href="/#safety" 
               className="text-sm text-champagne underline underline-offset-4 hover:text-champagne/80 transition-colors"
             >
-              See Safety & Guardrails
+              {t('smartOverbooking.seeSafety')}
             </a>
           </div>
         </div>

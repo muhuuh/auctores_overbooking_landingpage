@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from './ui/button';
 
 const Hero = () => {
   // demo/video modal removed per overbooking-first plan
   //        <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=2000')] bg-center bg-cover opacity-40"></div>
   // <div className="h-full w-full bg-[url('/images/hero_concierge2.png')] bg-center bg-cover opacity-40"></div>
+  const { t } = useTranslation();
   return (
     <>
       <section className="relative flex items-center min-h-screen pt-24 pb-16 px-6 md:px-12 lg:px-20 xl:px-24 overflow-hidden">
@@ -18,15 +20,15 @@ const Hero = () => {
           <div className="flex justify-start">
             <div className="flex flex-col animate-fade-in max-w-xl">
               <h1 className="mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                <span className="block">Overbook smarter.</span>
-                <span className="block">Fill more rooms.</span>
-                <span className="block">Stay in control.</span>
+                <span className="block">{t('hero.headline1')}</span>
+                <span className="block">{t('hero.headline2')}</span>
+                <span className="block">{t('hero.headline3')}</span>
               </h1>
               <p className="text-xl sm:text-xl text-white/80 font-semibold leading-snug mb-2">
-              Auctores Smart Overbooking automatically maximizes occupancy and revenue without risk.
+                {t('hero.sub1')}
               </p>
               <p className="text-xl sm:text-xl text-white/80 mb-8 font-semibold">
-               Stop losing revenue to cancellations and no-shows.
+                {t('hero.sub2')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-lg">
                 <a href="/#cta" className="w-full sm:w-auto">
@@ -44,7 +46,7 @@ const Hero = () => {
                        }
                      }}
                    >
-                    Activate Smart Overbooking
+                    {t('hero.cta')}
                    </Button>
                 </a>
                 <a href="/#features" className="w-full sm:w-auto">
@@ -52,7 +54,7 @@ const Hero = () => {
                     variant="outline"
                     className="w-full bg-transparent border border-champagne text-champagne hover:bg-champagne/10 px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base font-medium transition-all duration-300"
                   >
-                    How it works
+                    {t('hero.secondary')}
                   </Button>
                 </a>
               </div>

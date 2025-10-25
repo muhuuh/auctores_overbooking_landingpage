@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,6 +26,8 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <nav className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
@@ -44,32 +48,33 @@ const Navbar = () => {
             "hover:text-champagne transition-colors text-sm font-medium",
             isScrolled ? "text-gray" : "text-white/90"
           )}>
-            Why Overbooking
+            {t('navbar.whyOverbooking')}
           </a>
           <a href="/#features" className={cn(
             "hover:text-champagne transition-colors text-sm font-medium",
             isScrolled ? "text-gray" : "text-white/90"
           )}>
-            Overbooking
+            {t('navbar.overbooking')}
           </a>
           <a href="/#security" className={cn(
             "hover:text-champagne transition-colors text-sm font-medium",
             isScrolled ? "text-gray" : "text-white/90"
           )}>
-            Security
+            {t('navbar.security')}
           </a>
           <a href="/#pricing" className={cn(
             "hover:text-champagne transition-colors text-sm font-medium",
             isScrolled ? "text-gray" : "text-white/90"
           )}>
-            Pricing
+            {t('navbar.pricing')}
           </a>
+          <LanguageSwitcher />
           <a href="/#cta">
             <Button 
               variant="default" 
               className="bg-navy hover:bg-navy/90 text-white rounded-md px-6 py-3 text-sm font-medium"
             >
-              Early Access
+              {t('navbar.earlyAccess')}
             </Button>
           </a>
         </div>
@@ -88,35 +93,38 @@ const Navbar = () => {
               className="text-gray hover:text-champagne transition-colors text-sm font-medium"
               onClick={toggleMobileMenu}
             >
-              Why Overbooking
+              {t('navbar.whyOverbooking')}
             </a>
             <a
               href="/#features"
               className="text-gray hover:text-champagne transition-colors text-sm font-medium"
               onClick={toggleMobileMenu}
             >
-              Solution
+              {t('navbar.overbooking')}
             </a>
             <a 
               href="/#security" 
               className="text-gray hover:text-champagne transition-colors text-sm font-medium"
               onClick={toggleMobileMenu}
             >
-              Security
+              {t('navbar.security')}
             </a>
             <a 
               href="/#pricing" 
               className="text-gray hover:text-champagne transition-colors text-sm font-medium"
               onClick={toggleMobileMenu}
             >
-              Pricing
+              {t('navbar.pricing')}
             </a>
+            <div className="pt-2 pb-2">
+              <LanguageSwitcher compact />
+            </div>
             <a href="/#cta" onClick={toggleMobileMenu}>
               <Button 
                 variant="default" 
                 className="bg-navy hover:bg-navy/90 text-white rounded-md px-6 py-3 text-sm font-medium w-full"
               >
-                Early Access
+                {t('navbar.earlyAccess')}
               </Button>
             </a>
           </div>

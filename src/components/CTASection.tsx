@@ -20,9 +20,11 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { useTranslation, Trans } from 'react-i18next';
 
 const CTASection = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [pms, setPms] = useState('');
   const [willCodesign, setWillCodesign] = useState(false);
@@ -128,16 +130,18 @@ const CTASection = () => {
   return (
     <section id="cta" className="py-16 sm:py-20 md:py-24 bg-navy text-white">
       <div className="container max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Secure Your Early Access.</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">{t('cta.title')}</h2>
         <p className="text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0">
-          Early access participants lock-in <strong className="text-champagne font-semibold">lifetime 50% discount</strong> and direct influence on the roadmap. Drop your email address and we will reach out to you to set up the privileged early access.
+          <Trans i18nKey="cta.subtitle">
+            Early access participants lock-in <strong className="text-champagne font-semibold">lifetime 50% discount</strong> and direct influence on the roadmap. Drop your email address and we will reach out to you to set up the privileged early access.
+          </Trans>
         </p>
         
         <div className="bg-navyLight p-6 sm:p-8 rounded-lg shadow-xl">
           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             <div className="grid grid-cols-1 gap-4 sm:gap-6">
               <div className="text-left">
-                <Label htmlFor="email" className="text-gray-300 mb-2 block">Work Email <span className="text-red-400">*</span></Label>
+                <Label htmlFor="email" className="text-gray-300 mb-2 block">{t('cta.emailLabel')} <span className="text-red-400">{t('cta.emailRequiredAsterisk')}</span></Label>
                 <Input
                   id="email"
                   type="email"
@@ -157,22 +161,22 @@ const CTASection = () => {
                       }
                     }
                   }}
-                  placeholder="claire@ritzparis.com"
+                  placeholder={t('cta.emailPlaceholder')}
                   required
                   className="bg-navy/50 border-gray/30 text-white placeholder:text-gray-500"
                 />
               </div>
               <div className="text-left">
-                <Label htmlFor="pms" className="text-gray-300 mb-2 block">Current PMS (optional)</Label>
+                <Label htmlFor="pms" className="text-gray-300 mb-2 block">{t('cta.pmsLabel')}</Label>
                 <Select value={pms} onValueChange={setPms}>
                   <SelectTrigger className="bg-navy/50 border-gray/30 text-white">
-                    <SelectValue placeholder="Select your PMS" />
+                    <SelectValue placeholder={t('cta.pmsPlaceholder') as string} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="apaleo">Apaleo</SelectItem>
-                    <SelectItem value="mews">Mews</SelectItem>
-                    <SelectItem value="couldbeds">Couldbeds</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
+                    <SelectItem value="apaleo">{t('cta.pmsItems.apaleo')}</SelectItem>
+                    <SelectItem value="mews">{t('cta.pmsItems.mews')}</SelectItem>
+                    <SelectItem value="couldbeds">{t('cta.pmsItems.couldbeds')}</SelectItem>
+                    <SelectItem value="other">{t('cta.pmsItems.other')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -189,16 +193,14 @@ const CTASection = () => {
                     htmlFor="codesign" 
                     className="text-gray-300 text-sm flex items-center"
                   >
-                    I'd like to co-design features as an alpha partner
+                    {t('cta.codesignLabel')}
                     <TooltipProvider>
                       <Tooltip delayDuration={300}>
                         <TooltipTrigger asChild>
                           <Info className="ml-1.5 h-4 w-4 text-gray-400 hover:text-champagne cursor-help" />
                         </TooltipTrigger>
                         <TooltipContent className="bg-navyLight border-champagne/50 text-white max-w-xs p-3">
-                          <p className="text-sm">
-                            Being an Alpha Partner means collaborating closely with us to finalize features and fine-tune them to precisely meet your needs. It's an opportunity for a close partnership to ensure Auctores perfectly fits your workflows, tools, and processes.
-                          </p>
+                          <p className="text-sm">{t('cta.codesignTooltip')}</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
@@ -212,19 +214,19 @@ const CTASection = () => {
               className="w-full py-4 sm:py-6 bg-champagne hover:bg-champagne/90 text-black font-bold text-sm"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Processing..." : "Secure Early Access"}
+              {isSubmitting ? t('cta.submitting') : t('cta.submit')}
             </Button>
           </form>
         </div>
 
         <div className="mt-6 sm:mt-8 text-center">
           <p className="text-gray-400 text-sm">
-            Have questions? Reach out to us at{' '}
+            {t('cta.helpLine')} 
             <a
               href="mailto:valentin@autores.ai"
               className="text-champagne hover:text-champagne/80 underline transition-colors"
             >
-              valentin@autores.ai
+              {t('cta.helpEmail')}
             </a>
           </p>
         </div>
@@ -238,12 +240,15 @@ const CTASection = () => {
               <CheckCircle className="h-16 w-16 text-champagne" />
             </div>
             <DialogTitle className="text-2xl font-bold text-champagne">
-              Thank You!
+              {t('cta.success.title')}
             </DialogTitle>
             <DialogDescription className="text-gray-300 text-base">
-              We've received your request and you're now on our early access waiting list.
-              <br /><br />
-              Check your inbox soon - we'll be in touch with next steps and your exclusive early access details.
+              {(t('cta.success.body') as string).split('\n\n').map((paragraph, idx) => (
+                <span key={idx}>
+                  {paragraph}
+                  {idx === 0 && <><br /><br /></>}
+                </span>
+              ))}
             </DialogDescription>
           </DialogHeader>
           <div className="flex justify-center mt-6">
@@ -251,7 +256,7 @@ const CTASection = () => {
               onClick={() => setShowSuccessModal(false)}
               className="bg-champagne hover:bg-champagne/90 text-black font-semibold px-8"
             >
-              Got it!
+              {t('cta.success.button')}
             </Button>
           </div>
         </DialogContent>

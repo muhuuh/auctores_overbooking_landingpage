@@ -2,8 +2,10 @@ import * as CookieConsent from "react-cookie-consent";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Cookies from 'js-cookie'; 
+import { Trans, useTranslation } from 'react-i18next';
 
 const CookieBanner = () => {
+  const { t } = useTranslation();
   const [showBanner, setShowBanner] = useState(false);
   const [consentGiven, setConsentGiven] = useState<boolean | null>(() => {
     const consent = Cookies.get('CookieConsent');
@@ -66,8 +68,8 @@ const CookieBanner = () => {
   return (
     <CookieConsent.default
       location="bottom"
-      buttonText="Accept"
-      declineButtonText="Decline"
+      buttonText={t('cookie.accept')}
+      declineButtonText={t('cookie.decline')}
       enableDeclineButton
       cookieName="CookieConsent" // This name must match the one used in js-cookie
       expires={365}
@@ -121,21 +123,16 @@ const CookieBanner = () => {
       buttonWrapperClasses="flex justify-end w-full m-0 p-0"
       containerClasses="cookie-container"
       contentClasses="cookie-content"
-      ariaAcceptLabel="Accept cookies"
-      ariaDeclineLabel="Decline cookies"
+      ariaAcceptLabel={t('cookie.ariaAccept')}
+      ariaDeclineLabel={t('cookie.ariaDecline')}
       // Remove internal handlers if controlling externally
       // onAccept={() => {}}
       // onDecline={() => {}}
-    >
+      >
       <div style={{ paddingRight: "4px" }}>
-        This website uses cookies to enhance the user experience. See our{" "}
-        <Link
-          to="/privacy-policy"
-          style={{ color: "#60a5fa", textDecoration: "underline" }}
-        >
-          Privacy Policy
-        </Link>{" "}
-        for details.
+        <Trans i18nKey="cookie.message">
+          This website uses cookies to enhance the user experience. See our <Link to="/privacy-policy" style={{ color: "#60a5fa", textDecoration: "underline" }}>Privacy Policy</Link> for details.
+        </Trans>
       </div>
     </CookieConsent.default>
   );

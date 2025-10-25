@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
 
   const handleRevokeConsent = () => {
     Cookies.remove('CookieConsent');
@@ -14,26 +16,26 @@ const Footer = () => {
       <div className="container max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div>
-            <h4 className="font-medium mb-4">Product</h4>
+            <h4 className="font-medium mb-4">{t('footer.product')}</h4>
             <ul className="space-y-2 text-xs text-gray-700">
-              <li><a href="/#features" className="hover:text-champagne transition-colors">Features</a></li>
-              <li><a href="/#pricing" className="hover:text-champagne transition-colors">Pricing</a></li>
-              <li><a href="/#security" className="hover:text-champagne transition-colors">Security</a></li>
+              <li><a href="/#features" className="hover:text-champagne transition-colors">{t('footer.features')}</a></li>
+              <li><a href="/#pricing" className="hover:text-champagne transition-colors">{t('footer.pricing')}</a></li>
+              <li><a href="/#security" className="hover:text-champagne transition-colors">{t('footer.security')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-medium mb-4">Legal</h4>
+            <h4 className="font-medium mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-2 text-xs text-gray-700">
-              <li><a href="/privacy-policy" className="hover:text-champagne transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms-of-service" className="hover:text-champagne transition-colors">Terms of Service</a></li>
-              <li><a href="/impressum" className="hover:text-champagne transition-colors">Impressum</a></li>
+              <li><a href="/privacy-policy" className="hover:text-champagne transition-colors">{t('footer.privacyPolicy')}</a></li>
+              <li><a href="/terms-of-service" className="hover:text-champagne transition-colors">{t('footer.termsOfService')}</a></li>
+              <li><a href="/impressum" className="hover:text-champagne transition-colors">{t('footer.impressum')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-medium mb-4">Contact</h4>
-            <p className="text-xs text-gray-700">valentin@auctores.ai</p>
+            <h4 className="font-medium mb-4">{t('footer.contact')}</h4>
+            <p className="text-xs text-gray-700">{t('footer.contactEmail')}</p>
           </div>
           
           <div className="flex items-start sm:justify-end">
@@ -46,13 +48,13 @@ const Footer = () => {
               onClick={handleRevokeConsent}
               className="text-gray-400 hover:text-champagne transition-colors duration-200 cursor-pointer bg-transparent border-none py-2 px-1" // Added padding
             >
-              Cookie Settings
+              {t('footer.cookieSettings')}
             </button>
           </div>
         </div>
         
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-xs text-muted">
-          <p>© 2025 Auctores — built in Munich</p>
+          <p>{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

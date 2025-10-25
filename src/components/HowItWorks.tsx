@@ -1,40 +1,23 @@
 import { useState } from 'react';
 import { Plug, Target, CheckCircle } from 'lucide-react';
 // Demo button and VideoModal removed per plan
+import { useTranslation } from 'react-i18next';
 
 const HowItWorks = () => {
   // no demo modal
 
-  const steps = [
-    {
-      number: "01",
-      title: "Connect PMS",
-      description: "Simply leverage the secure OAuth connection or enter your own API keys. Only 1-2 clicks, that's it.",
-      icon: <Plug className="text-champagne w-7 h-7" />
-    },
-    {
-      number: "02",
-      title: "Set Guardrails",
-      description: "Define upgrade fallback, VIP/family room protection, and target occupancy — safe by design.",
-      icon: <Target className="text-champagne w-7 h-7" />
-    },
-    {
-      number: "03",
-      title: "Activate Smart Overbooking",
-      description: "Activate in 1 click. Daily recommendations apply automatically with full visibility and control.",
-      icon: <CheckCircle className="text-champagne w-7 h-7" />
-    }
-  ];
+  const { t } = useTranslation();
+  const steps = t('howItWorks.steps', { returnObjects: true }) as { number: string; title: string; description: string }[];
 
   return (
     <section id="how-it-works" className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* ---------- Headline ---------- */}
         <h2 className="text-center font-playfair text-2xl font-bold text-navy md:text-3xl mb-4">
-          How It Works.
+          {t('howItWorks.title')}
         </h2>
         <p className="mx-auto mb-8 sm:mb-12 max-w-4xl text-center text-base text-navy/70 px-4 sm:px-0">
-          Connect. Set guardrails. Automate — limitless power in just a few clicks.
+          {t('howItWorks.subtitle')}
         </p>
 
         {/* ---------- Three‑step grid ---------- */}
@@ -46,7 +29,7 @@ const HowItWorks = () => {
             >
               <div className="mb-4 sm:mb-6 flex w-full items-center justify-between">
                 <span className="font-playfair text-3xl sm:text-4xl text-gray opacity-25">{step.number}</span>
-                <div className="flex h-8 w-8 items-center justify-center">{step.icon}</div>
+                <div className="flex h-8 w-8 items-center justify-center">{index === 0 ? <Plug className="text-champagne w-7 h-7" /> : index === 1 ? <Target className="text-champagne w-7 h-7" /> : <CheckCircle className="text-champagne w-7 h-7" />}</div>
               </div>
               <div className="mt-auto">
                 <h3 className="mb-3 text-lg font-bold text-navy">{step.title}</h3>
@@ -58,7 +41,7 @@ const HowItWorks = () => {
 
         {/* ---------- Tagline ---------- */}
         <div className="mt-8 sm:mt-12 flex flex-col items-center gap-3 text-center px-4 sm:px-0">
-          <p className="max-w-4xl text-lg text-navy/70">Simple. Yet remarkably powerful.</p>
+          <p className="max-w-4xl text-lg text-navy/70">{t('howItWorks.tagline')}</p>
         </div>
       </div>
 
