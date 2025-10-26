@@ -1,11 +1,191 @@
 {
-  "_note": "Placeholder DE file; falls back to EN until translated.",
   "navbar": {
-    "whyOverbooking": "Why Overbooking",
-    "overbooking": "Overbooking",
-    "security": "Security",
-    "pricing": "Pricing",
-    "earlyAccess": "Early Access"
+    "whyOverbooking": "Warum Überbuchung",
+    "overbooking": "Überbuchung",
+    "security": "Sicherheit",
+    "pricing": "Preise",
+    "earlyAccess": "Früher Zugang"
+  },
+  "hero": {
+    "headline1": "Clever überbuchen.",
+    "headline2": "Mehr Zimmer füllen.",
+    "headline3": "Kontrolle behalten.",
+    "sub1": "Auctores Smart Overbooking maximiert Belegung und Umsatz automatisch – ohne Risiko.",
+    "sub2": "Verlieren Sie kein Geld mehr durch Stornierungen und No-Shows.",
+    "cta": "Smart Overbooking aktivieren",
+    "secondary": "So funktioniert's"
+  },
+  "problem": {
+    "title": "Stornierungen in Umsatz verwandeln",
+    "subtitle": "Belegung optimieren, Umsatzverluste minimieren und die Kontrolle ohne Rätselraten oder Risiko behalten.",
+    "kpis": {
+      "cancel": "Umsatzverlust durch\nStornierungen",
+      "walked": "Ausquartierte Gäste\nkehren nicht zurück"
+    },
+    "today": {
+      "title": "Leere Zimmer. Verlorener Umsatz.",
+      "points": [
+        "Zimmer bleiben wegen kurzfristiger Stornierungen und No-Shows leer.",
+        "Bis zur Hälfte der OTA-Buchungen erscheint nicht – Umsatz bleibt liegen.",
+        "Manuelle Anpassungen kosten Zeit und bergen Risiko – Belegungsoptimierung ist komplex."
+      ]
+    },
+    "tomorrow": {
+      "title": "Fortschrittliche Überbuchung – ohne Kopfschmerzen",
+      "points": [
+        "Passt die Überbuchung an die individuellen Muster Ihrer Unterkunft an.",
+        "Mindert und antizipiert Umsatzverluste mit intelligenten Verfügbarkeits-Puffern in Echtzeit.",
+        "Überbuchungslevel passen sich täglich automatisch an; keine Tabellen oder manuellen Tweaks."
+      ]
+    },
+    "seeHowItWorks": "SO FUNKTIONIERT'S"
+  },
+  "trust": {
+    "euPrivacyFirst": "EU-Datenschutz zuerst",
+    "backedByIncubator": "Unterstützt von führendem Inkubator",
+    "pilotHotels": "Pilot-Hotels im Onboarding"
+  },
+  "smartOverbooking": {
+    "title": "Auctores Smart Overbooking",
+    "lead": "Smart Overbooking in nur 2 Minuten und wenigen Klicks aktivieren. Holen Sie sich Umsatz zurück, den Sie heute schon verlieren.",
+    "highlight": "Unser System passt Überbuchungslevel automatisch an die tatsächlichen Stornierungsmuster Ihrer Unterkunft an – maximiert die Belegung und schützt gleichzeitig das Gästeerlebnis.",
+    "features": [
+      { "title": "Ab Tag 1 einsatzbereit", "description": "Startet mit Ihrer bestehenden Reservierungshistorie und verbessert sich kontinuierlich." },
+      { "title": "Adaptive Level", "description": "Passt Überbuchungs-Schwellen je Datum und Zimmertyp an und balanciert Belegung und Risiko automatisch." },
+      { "title": "Sicherheitsleitplanken von Haus aus", "description": "Integrierte No-Walk-Richtlinie mit automatischer Upgrade-Ausweichoption sowie Schutz für VIP-/Familienzimmer – für maximale Gästesicherheit." },
+      { "title": "Kanal-sensitiv", "description": "Handhabt unterschiedliche Stornierungsverhalten über Kanäle, Ratenpläne und Zimmertypen hinweg sicher." }
+    ],
+    "cta": "Smart Overbooking aktivieren",
+    "seeSafety": "Sicherheit & Leitplanken"
+  },
+  "safety": {
+    "title": "Sicherheit standardmäßig.",
+    "subtitle": "Einmal konfiguriert, täglich angewendet; vollständiges Audit-Log.",
+    "chips": {
+      "noWalk": "No-Walk-Richtlinie (Standard)",
+      "upgradeFallback": "Upgrade-Ausweichoption",
+      "vipProtection": "VIP-/Familienzimmer-Schutz",
+      "auditLog": "Vollständiges Audit-Log",
+      "instantOff": "Sofort-Aus-Schalter"
+    }
+  },
+  "howItWorks": {
+    "title": "So funktioniert's.",
+    "subtitle": "Verbinden. Leitplanken setzen. Automatisieren – volle Power in wenigen Klicks.",
+    "steps": [
+      { "number": "01", "title": "PMS verbinden", "description": "Einfach die sichere OAuth-Verbindung nutzen oder eigene API-Keys eingeben. Nur 1–2 Klicks, das war's." },
+      { "number": "02", "title": "Leitplanken festlegen", "description": "Upgrade-Fallback, VIP/Familienzimmer-Schutz und Zielbelegung definieren – Sicherheit by Design." },
+      { "number": "03", "title": "Smart Overbooking aktivieren", "description": "Mit einem Klick aktivieren. Tägliche Empfehlungen werden automatisch angewendet – mit voller Transparenz und Kontrolle." }
+    ],
+    "tagline": "Einfach. Und bemerkenswert leistungsstark."
+  },
+  "security": {
+    "title": "Für Datenschutz auf Enterprise-Niveau gebaut.",
+    "lead1": "Auctores priorisiert Datenschutz und gibt Ihnen die Kontrolle über Ihre Daten und Ihre KI.",
+    "lead2": "Hosten Sie auf Ihren Servern oder in unserer sicheren EU-Cloud und nutzen Sie Ihre eigenen selbst gehosteten LLMs – die Wahl liegt bei Ihnen.",
+    "lead3": "Unser Team unterstützt Sie umfassend auf dem Weg zu maximalem Datenschutz und Compliance – Sie bestimmen das gewünschte Kontrollniveau.",
+    "groupTitles": {
+      "product": "Überbuchung & Produkt",
+      "privacy": "Datenschutz, Sicherheit & Compliance"
+    },
+    "productFaqs": [
+      {
+        "question": "Was genau optimiert Smart Overbooking?",
+        "answer": "Die proprietäre ML von Auctores sagt Tages-Stornos/No-Shows voraus und empfiehlt das optimale Überbuchungslevel je Datum und Zimmertyp. OTA-bewusst (unterschiedliche Stornomuster je Kanal) und anpassungsfähig an Live-Nachfrage."
+      },
+      {
+        "question": "Wie vermeiden Sie Walkouts oder Gästefriction?",
+        "answer": "Safety by Design: Standard-No-Walk-Richtlinie, Upgrade-Fallback-Regeln sowie Schutz für VIP-/Familienzimmer. Sie können Level je Datum/Zimmertyp deckeln, Puffer für Events/Gruppen hinzufügen und mit einem Sofort-Aus-Schalter pausieren. Alle Änderungen werden protokolliert."
+      },
+      {
+        "question": "Kann ich Empfehlungen deckeln oder überschreiben?",
+        "answer": "Ja. Setzen Sie globale sowie Datum/Zimmertyp-Grenzen, schalten Sie bei Bedarf in den konservativen Modus und nehmen Sie jederzeit manuelle Overrides vor. Overrides werden respektiert und im Audit-Log erfasst."
+      },
+      {
+        "question": "Was passiert, wenn das Modell falsch liegt?",
+        "answer": "Leitplanken verhindern schlechteste Szenarien (z. B. Walkouts). Bei geringer Konfidenz empfehlen wir automatisch konservativer."
+      },
+      {
+        "question": "Wie schnell ist das Setup und wann starten Ergebnisse?",
+        "answer": "Setup in Minuten: PMS verbinden, Leitplanken setzen, aktivieren. Wirkung beginnt mit der nächsten Buchungswelle – ohne Änderungen am PMS."
+      }
+    ],
+    "privacyFaqs": [
+      {
+        "question": "DSGVO-Rollen & Datenstandort — seid ihr Verantwortlicher oder Auftragsverarbeiter und wo werden Daten gespeichert?",
+        "answer": "Wir sind Verantwortlicher für Konto/Profil/Authentifizierung und wesentliche Servicelogs und Auftragsverarbeiter für Daten aus verbundenen Tools (z. B. PMS) zur Optimierung von Überbuchung/Automationen. Wir verarbeiten und speichern bevorzugt in EU-Regionen; falls Übermittlungen außerhalb EWR/UK unvermeidbar sind, stützen wir uns auf SCCs mit angemessenen Schutzmaßnahmen."
+      },
+      {
+        "question": "Welche personenbezogenen Daten verarbeitet ihr, wie lange werden sie aufbewahrt und wie können Nutzende ihre Rechte ausüben?",
+        "answer": "Wir minimieren PII: Konto-/Kontaktdaten, Connector-Metadaten und verschlüsselte Zugriffstokens sowie begrenzte Betriebsdaten aus dem PMS, die zur Diensterbringung nötig sind. Connector-Zugangsdaten bestehen, solange eine Verbindung aktiv ist, und werden bei Trennung oder Kontolöschung entfernt. Minimale Betriebslogs bleiben bis ca. 90 Tage zu Sicherheits-/Fehlerzwecken, sofern rechtlich nicht länger erforderlich. Für Auskunft/Berichtigung/Löschung/Einschränkung/Portabilität/Widerspruch: E-Mail an valentin@auctores.ai."
+      },
+      {
+        "question": "Wie werden Secrets und Infrastruktur geschützt? Wie läuft Ihr Incident-Prozess?",
+        "answer": "Benutzer-Secrets sind per KMS im Ruhezustand verschlüsselt und werden nur für autorisierte API-Aufrufe entschlüsselt; Datenbank ist verschlüsselt mit RBAC und RLS. System-Secrets im Secrets-Manager, Least-Privilege-IAM und Audit-Logging. Transport via TLS 1.2+, isolierte Infrastruktur mit Monitoring/Access-Logs; wir führen Audit-Trails und besitzen einen Incident-Response-Prozess."
+      },
+      {
+        "question": "Trainiert ihr Modelle mit unseren Daten? Können wir unser eigenes/selbst gehostetes LLM mitbringen?",
+        "answer": "Wir trainieren keine Modelle auf Ihren Gäste-PII. Die Überbuchungsoptimierung nutzt unsere proprietäre ML auf operativen Signalen; LLMs (falls verwendet) unterstützen Workflows/Erklärungen. Sie können ein eigenes/selbst gehostetes LLM nutzen oder unser EU-Setup."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Preise für Gründungspartner.",
+    "subtitle": "Wir bieten maximalen Mehrwert durch flexible Preise, zugeschnitten auf Ihre Bedürfnisse.",
+    "cards": [
+      { "title": "Early-Partner-Rabatt", "description": "Als Early Adopter lebenslangen 50%-Rabatt sichern." },
+      { "title": "Wertorientierte Preisgestaltung", "description": "Zahlen Sie nur für benötigte Funktionen – basierend auf Ihrer Zimmeranzahl." },
+      { "title": "Individuelles Angebot", "description": "Besprechen wir Ihre Anforderungen und schnüren einen passenden Plan. Melden Sie sich über das Formular." }
+    ]
+  },
+  "cta": {
+    "title": "Sichern Sie sich den Early Access.",
+    "subtitle": "Teilnehmende am Early Access sichern sich einen <1>lebenslangen 50%-Rabatt</1> und direkten Einfluss auf die Roadmap. Geben Sie Ihre E-Mail-Adresse ein, wir melden uns mit Ihrem privilegierten Zugang.",
+    "emailLabel": "Geschäftliche E-Mail",
+    "emailRequiredAsterisk": "*",
+    "emailPlaceholder": "claire@ritzparis.com",
+    "pmsLabel": "Aktuelles PMS (optional)",
+    "pmsPlaceholder": "PMS auswählen",
+    "pmsItems": {
+      "apaleo": "Apaleo",
+      "mews": "Mews",
+      "couldbeds": "Cloudbeds",
+      "other": "Andere"
+    },
+    "codesignLabel": "Ich möchte als Alpha-Partner Funktionen mitgestalten",
+    "codesignTooltip": "Als Alpha-Partner arbeiten Sie eng mit uns zusammen, um Funktionen zu finalisieren und exakt auf Ihre Anforderungen zuzuschneiden – für einen perfekten Fit zu Ihren Abläufen, Tools und Prozessen.",
+    "submit": "Early Access sichern",
+    "submitting": "Wird verarbeitet...",
+    "helpLine": "Fragen? Schreiben Sie uns an",
+    "helpEmail": "valentin@autores.ai",
+    "success": {
+      "title": "Vielen Dank!",
+      "body": "Wir haben Ihre Anfrage erhalten – Sie stehen nun auf unserer Early-Access-Warteliste.\n\nBitte prüfen Sie bald Ihr Postfach – wir melden uns mit den nächsten Schritten und Ihren exklusiven Zugangsdaten.",
+      "button": "Verstanden!"
+    }
+  },
+  "cookie": {
+    "message": "Diese Website verwendet Cookies, um die Nutzererfahrung zu verbessern. Details finden Sie in unserer <1>Datenschutzerklärung</1>.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "ariaAccept": "Cookies akzeptieren",
+    "ariaDecline": "Cookies ablehnen"
+  },
+  "footer": {
+    "product": "Produkt",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "security": "Sicherheit",
+    "legal": "Rechtliches",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsOfService": "Nutzungsbedingungen",
+    "impressum": "Impressum",
+    "contact": "Kontakt",
+    "contactEmail": "valentin@auctores.ai",
+    "cookieSettings": "Cookie-Einstellungen",
+    "copyright": "© 2025 Auctores — entwickelt in München"
+  },
+  "mobileStickyBar": {
+    "cta": "Smart Overbooking aktivieren"
   }
 }
-

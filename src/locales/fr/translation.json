@@ -1,11 +1,191 @@
 {
-  "_note": "Placeholder FR file; falls back to EN until translated.",
   "navbar": {
-    "whyOverbooking": "Why Overbooking",
-    "overbooking": "Overbooking",
-    "security": "Security",
-    "pricing": "Pricing",
-    "earlyAccess": "Early Access"
+    "whyOverbooking": "Pourquoi le surbooking",
+    "overbooking": "Surbooking",
+    "security": "Sécurité",
+    "pricing": "Tarifs",
+    "earlyAccess": "Accès anticipé"
+  },
+  "hero": {
+    "headline1": "Surbookez plus intelligemment.",
+    "headline2": "Remplissez plus de chambres.",
+    "headline3": "Gardez le contrôle.",
+    "sub1": "Auctores Smart Overbooking maximise automatiquement l’occupation et le revenu, sans risque.",
+    "sub2": "Ne perdez plus de revenus à cause des annulations et des no-shows.",
+    "cta": "Activer Smart Overbooking",
+    "secondary": "Comment ça marche"
+  },
+  "problem": {
+    "title": "Transformer les annulations en revenus",
+    "subtitle": "Optimisez l’occupation, minimisez les pertes de revenus et gardez le contrôle, sans approximations ni risque.",
+    "kpis": {
+      "cancel": "Revenu perdu sur\nannulation",
+      "walked": "Les clients relogés\nne reviennent pas"
+    },
+    "today": {
+      "title": "Chambres vides. Revenu perdu.",
+      "points": [
+        "Des chambres restent vides à cause des annulations de dernière minute et des no-shows.",
+        "Jusqu’à la moitié des réservations OTA ne se présentent pas, laissant de l’argent sur la table.",
+        "Les ajustements manuels prennent du temps et sont risqués — l’optimisation de l’occupation est complexe."
+      ]
+    },
+    "tomorrow": {
+      "title": "Surbooking avancé, sans prise de tête",
+      "points": [
+        "Adapte le surbooking aux schémas propres à votre établissement.",
+        "Anticipe et atténue les pertes de revenus grâce à des tampons de disponibilité intelligents en temps réel.",
+        "Les niveaux de surbooking s’ajustent automatiquement chaque jour ; plus de tableurs ni de bidouillages."
+      ]
+    },
+    "seeHowItWorks": "VOIR LE FONCTIONNEMENT"
+  },
+  "trust": {
+    "euPrivacyFirst": "Confidentialité UE prioritaire",
+    "backedByIncubator": "Soutenu par un incubateur de premier plan",
+    "pilotHotels": "Hôtels pilotes en onboarding"
+  },
+  "smartOverbooking": {
+    "title": "Auctores Smart Overbooking",
+    "lead": "Activez Smart Overbooking en 2 minutes et quelques clics. Commencez à récupérer les revenus déjà perdus.",
+    "highlight": "Notre système ajuste automatiquement les niveaux de surbooking aux vrais schémas d’annulation de votre établissement, pour maximiser l’occupation tout en protégeant l’expérience de chaque client.",
+    "features": [
+      { "title": "Prêt dès le premier jour", "description": "Démarre avec votre historique de réservations et s’améliore en continu." },
+      { "title": "Niveaux adaptatifs", "description": "Ajuste les seuils de surbooking par date et type de chambre, en équilibrant automatiquement occupation et risque." },
+      { "title": "Garde-fous intégrés", "description": "Politique anti-relogement par défaut, repli par surclassement et protection des chambres VIP/famille pour garantir la sécurité des clients." },
+      { "title": "Sensible aux canaux", "description": "Gère en toute sécurité les comportements d’annulation différents selon les canaux, plans tarifaires et types de chambres." }
+    ],
+    "cta": "Activer Smart Overbooking",
+    "seeSafety": "Voir Sécurité & garde-fous"
+  },
+  "safety": {
+    "title": "La sécurité par défaut.",
+    "subtitle": "Configuré une fois, appliqué chaque jour ; journal d’audit complet.",
+    "chips": {
+      "noWalk": "Politique anti-relogement (par défaut)",
+      "upgradeFallback": "Repli par surclassement",
+      "vipProtection": "Protection des chambres VIP/famille",
+      "auditLog": "Journal d’audit complet",
+      "instantOff": "Interrupteur d’arrêt instantané"
+    }
+  },
+  "howItWorks": {
+    "title": "Comment ça marche.",
+    "subtitle": "Connecter. Définir des garde-fous. Automatiser — une puissance illimitée en quelques clics.",
+    "steps": [
+      { "number": "01", "title": "Connecter le PMS", "description": "Utilisez simplement la connexion OAuth sécurisée ou renseignez vos propres clés API. 1–2 clics, c’est tout." },
+      { "number": "02", "title": "Définir les garde-fous", "description": "Définissez le repli par surclassement, la protection VIP/famille et l’occupation cible — sécurité dès la conception." },
+      { "number": "03", "title": "Activer Smart Overbooking", "description": "Activer en 1 clic. Les recommandations quotidiennes s’appliquent automatiquement, avec visibilité et contrôle complets." }
+    ],
+    "tagline": "Simple. Et remarquablement puissant."
+  },
+  "security": {
+    "title": "Conçu pour une confidentialité de niveau entreprise.",
+    "lead1": "Auctores fait de la confidentialité une priorité et vous donne le contrôle de vos données et de votre IA.",
+    "lead2": "Hébergez sur vos serveurs ou sur notre cloud UE sécurisé, et utilisez vos propres LLM auto-hébergés — le choix vous appartient.",
+    "lead3": "Notre équipe vous accompagne vers un maximum de confidentialité et de conformité, afin que vous décidiez du niveau de contrôle idéal.",
+    "groupTitles": {
+      "product": "Surbooking & Produit",
+      "privacy": "Confidentialité, Sécurité & Conformité"
+    },
+    "productFaqs": [
+      {
+        "question": "Qu’optimise exactement Smart Overbooking ?",
+        "answer": "Le ML propriétaire d’Auctores prédit les annulations/no-shows du jour et recommande le niveau de surbooking optimal par date et type de chambre. Sensible aux OTA (schémas d’annulation différents selon le canal) et adaptatif à la demande en temps réel."
+      },
+      {
+        "question": "Comment évitez-vous les relogements ou la friction client ?",
+        "answer": "Sécurité dès la conception : politique anti-relogement par défaut, règles de repli par surclassement et protection VIP/famille. Vous pouvez plafonner les niveaux par date/type de chambre, ajouter des tampons pour événements/groupes et mettre en pause via un interrupteur d’arrêt instantané. Tous les changements sont journalisés."
+      },
+      {
+        "question": "Puis-je plafonner ou remplacer les recommandations ?",
+        "answer": "Oui. Définissez des plafonds globaux et par date/type de chambre, passez en mode conservateur si besoin et appliquez des remplacements manuels à tout moment. Les remplacements sont respectés et consignés dans le journal d’audit."
+      },
+      {
+        "question": "Que se passe-t-il si le modèle se trompe ?",
+        "answer": "Les garde-fous empêchent les pires scénarios (p. ex. relogements). En cas de faible confiance, nous privilégions des recommandations conservatrices."
+      },
+      {
+        "question": "Combien de temps dure l’installation et quand voit-on des résultats ?",
+        "answer": "Installation en quelques minutes : connecter le PMS, définir les garde-fous, activer. L’impact commence avec la prochaine vague de réservations — sans modification du PMS."
+      }
+    ],
+    "privacyFaqs": [
+      {
+        "question": "Rôles RGPD et localisation des données — êtes-vous responsable de traitement ou sous-traitant et où les données sont-elles stockées ?",
+        "answer": "Nous sommes responsables pour votre compte/profil/authentification et les journaux de service essentiels, et sous-traitants pour les données issues d’outils connectés (ex. PMS) afin d’optimiser le surbooking/les automatisations. Nous visons des régions UE pour le traitement et le stockage ; si des transferts hors EEE/Royaume-Uni sont inévitables, nous nous appuyons sur les clauses contractuelles types (SCC) avec garanties appropriées."
+      },
+      {
+        "question": "Quelles données personnelles traitez-vous, combien de temps les conservez-vous et comment exercer ses droits ?",
+        "answer": "PII minimisées : coordonnées de compte, métadonnées des connecteurs et jetons d’accès chiffrés, ainsi que des enregistrements opérationnels limités issus du PMS, nécessaires à la prestation. Les identifiants des connecteurs persistent tant que la connexion est active et sont supprimés lors de la déconnexion ou de la suppression du compte. Les journaux opérationnels minimaux sont conservés jusqu’à ~90 jours pour la sécurité/dépannage sauf obligation légale plus longue. Pour exercer accès/rectification/suppression/restriction/portabilité/opposition : valentin@auctores.ai."
+      },
+      {
+        "question": "Comment protégez-vous les secrets et l’infrastructure ? Quelle est votre approche d’incident ?",
+        "answer": "Les secrets utilisateurs sont chiffrés au repos via KMS et déchiffrés uniquement pour les appels API autorisés ; la base est chiffrée avec RBAC et RLS. Les secrets système sont gérés dans un gestionnaire de secrets avec IAM à moindre privilège et journal d’audit. Transport TLS 1.2+, infrastructure isolée avec supervision et journaux d’accès ; nous maintenons des pistes d’audit et un processus de réponse aux incidents."
+      },
+      {
+        "question": "Entraînez-vous des modèles sur nos données ? Pouvons-nous apporter notre propre LLM auto-hébergé ?",
+        "answer": "Nous n’entraînons pas de modèles sur les PII de vos clients. L’optimisation du surbooking utilise notre ML propriétaire sur des signaux opérationnels ; les LLM (le cas échéant) servent aux workflows/explications. Vous pouvez apporter votre LLM auto-hébergé ou utiliser notre configuration UE."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarifs flexibles pour les partenaires fondateurs.",
+    "subtitle": "Nous visons un maximum de valeur grâce à des tarifs flexibles adaptés à vos besoins.",
+    "cards": [
+      { "title": "Remise partenaire précoce", "description": "Bénéficiez d’une remise à vie de 50 % en tant qu’early adopter." },
+      { "title": "Tarification à la valeur", "description": "Ne payez que les capacités dont vous avez besoin, selon votre nombre de chambres." },
+      { "title": "Devis personnalisé", "description": "Discutons de vos besoins spécifiques et élaborons une offre. Contactez-nous via le formulaire ci-dessous." }
+    ]
+  },
+  "cta": {
+    "title": "Obtenez votre accès anticipé.",
+    "subtitle": "Les participants à l’accès anticipé bénéficient d’une <1>remise à vie de 50 %</1> et influencent directement la feuille de route. Indiquez votre e-mail et nous vous recontacterons pour mettre en place cet accès privilégié.",
+    "emailLabel": "E-mail professionnel",
+    "emailRequiredAsterisk": "*",
+    "emailPlaceholder": "claire@ritzparis.com",
+    "pmsLabel": "PMS actuel (optionnel)",
+    "pmsPlaceholder": "Sélectionnez votre PMS",
+    "pmsItems": {
+      "apaleo": "Apaleo",
+      "mews": "Mews",
+      "couldbeds": "Cloudbeds",
+      "other": "Autre"
+    },
+    "codesignLabel": "Je souhaite co-concevoir des fonctionnalités en tant que partenaire alpha",
+    "codesignTooltip": "Être Partenaire Alpha signifie collaborer étroitement avec nous pour finaliser les fonctionnalités et les adapter précisément à vos besoins. Une opportunité de partenariat rapproché pour garantir l’adéquation d’Auctores à vos flux, outils et processus.",
+    "submit": "Obtenir l’accès anticipé",
+    "submitting": "Traitement en cours...",
+    "helpLine": "Des questions ? Écrivez-nous à",
+    "helpEmail": "valentin@autores.ai",
+    "success": {
+      "title": "Merci !",
+      "body": "Nous avons bien reçu votre demande : vous êtes désormais sur la liste d’attente d’accès anticipé.\n\nSurveillez votre boîte de réception — nous vous enverrons bientôt les prochaines étapes et vos informations d’accès exclusives.",
+      "button": "J’ai compris"
+    }
+  },
+  "cookie": {
+    "message": "Ce site utilise des cookies pour améliorer l’expérience utilisateur. Voir notre <1>Politique de confidentialité</1> pour plus de détails.",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "ariaAccept": "Accepter les cookies",
+    "ariaDecline": "Refuser les cookies"
+  },
+  "footer": {
+    "product": "Produit",
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "security": "Sécurité",
+    "legal": "Juridique",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d’utilisation",
+    "impressum": "Mentions légales",
+    "contact": "Contact",
+    "contactEmail": "valentin@auctores.ai",
+    "cookieSettings": "Paramètres des cookies",
+    "copyright": "© 2025 Auctores — conçu à Munich"
+  },
+  "mobileStickyBar": {
+    "cta": "Activer Smart Overbooking"
   }
 }
-
