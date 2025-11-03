@@ -14,13 +14,13 @@ const Impressum = () => (
 
         <section>
           <h2 className="text-xl font-semibold text-navy mt-4 mb-2">Provider</h2>
-          <p className="text-navy/90">Valentin Hornung, Leo Dubois & Lucas Dema</p>
+          <p className="text-navy/90">Valentin Hornung, Leo Dubois &amp; Luka Dema</p>
           <p>Operating the Auctores pilot as natural persons (pre-incorporation).</p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-navy mt-4 mb-2">Service Address</h2>
-          <p>Wilhelm-Hertz-Str. 31<br/>Germany</p>
+          <p>Wilhelm-Hertz-Str. 31<br/>80805 Munich, Germany</p>
         </section>
 
         <section>
@@ -45,9 +45,7 @@ const Impressum = () => (
 
         <section>
           <h2 className="text-xl font-semibold text-navy mt-4 mb-2">Dispute Resolution</h2>
-          <p>
-            We are not willing or obligated to participate in dispute resolution proceedings before a consumer arbitration board (§ 36 VSBG).
-          </p>
+          <p>We are not willing or obligated to participate in dispute resolution proceedings before a consumer arbitration board (§ 36 VSBG).</p>
         </section>
       </div>
     </main>
