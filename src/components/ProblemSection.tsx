@@ -32,7 +32,7 @@ export default function ProblemSection() {
           {/* KPIs */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 mt-8 sm:mt-10">
             <div className="flex flex-col items-center">
-              <div className="text-2xl sm:text-3xl font-bold text-navy mb-1">35%</div>
+              <div className="text-2xl sm:text-3xl font-bold text-navy mb-1">5-10%</div>
               <div className="text-sm text-navy/70 text-center">Revenue lost on<br />cancellation</div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-champagne/30"></div>

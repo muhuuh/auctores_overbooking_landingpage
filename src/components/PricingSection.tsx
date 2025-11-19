@@ -24,11 +24,26 @@ const PricingSection = () => {
   return (
     <section id="pricing" className="py-16 sm:py-20 md:py-24 bg-offWhite">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6 text-center">Flexible Pricing for Founding Partners.</h2>
-        <p className="text-base text-navy/80 mb-8 sm:mb-12 max-w-3xl mx-auto text-center px-4 sm:px-0">
-           We believe in providing maximum value through flexible pricing tailored to your specific needs.
-        </p>
-        
+        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6 text-center">Pricing</h2>
+
+
+        {/* Basic Overbooking Feature */}
+        <div className="mb-12 sm:mb-16">
+          <div className="bg-white rounded-2xl border border-champagne/10 p-8 sm:p-10 text-center max-w-2xl mx-auto shadow-sm">
+            <h3 className="text-xl sm:text-2xl font-bold text-navy mb-4">Smart Overbooking Feature</h3>
+            <div className="text-3xl sm:text-4xl font-bold text-navy mb-2">3€<span className="text-lg font-normal">/room/month</span></div>
+            <p className="text-base text-navy/70 mb-4">Includes all features and capabilities of Auctores Smart Overbooking.</p>
+          </div>
+        </div>
+
+        {/* Founding Partners Section */}
+        <div className="mb-8">
+          <h3 className="text-xl md:text-2xl font-bold text-navy mb-4 text-center">Flexible Pricing for Founding Partners</h3>
+          <p className="text-base text-navy/80 mb-8 sm:mb-12 max-w-3xl mx-auto text-center px-4 sm:px-0">
+             We believe in providing maximum value through flexible pricing tailored to your specific needs.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {pricingPoints.map((point, index) => (
             <Card key={index} className="luxury-card border border-champagne/10 overflow-hidden hover:shadow-lg transition-all duration-300 bg-white text-center">

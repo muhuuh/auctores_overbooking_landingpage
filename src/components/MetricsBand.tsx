@@ -31,7 +31,7 @@ const MetricsBand = () => {
             <h4 className="text-base font-bold text-navy mb-4">OTA & overbooking reality</h4>
             <div className="space-y-3">
               <MetricItem value="42% vs 18%" label="cancellation rate: OTA vs direct." />
-              <MetricItem value="Up to 35%" label="of on‑the‑books revenue lost to cancellations." />
+              <MetricItem value="5-10%" label="of on‑the‑books revenue lost to cancellations." />
               <MetricItem value="78%" label="of walked guests don’t return — guardrails matter." />
             </div>
           </div>

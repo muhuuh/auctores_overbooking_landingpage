@@ -22,11 +22,9 @@ const Hero = () => {
                 <span className="block">Fill more rooms.</span>
                 <span className="block">Stay in control.</span>
               </h1>
-              <p className="text-xl sm:text-xl text-white/80 font-semibold leading-snug mb-2">
-              Auctores Smart Overbooking automatically maximizes occupancy and revenue without risk.
-              </p>
-              <p className="text-xl sm:text-xl text-white/80 mb-8 font-semibold">
-               Stop losing revenue to cancellations and no-shows.
+              <p className="text-xl sm:text-xl text-white/80 font-semibold leading-snug mb-8">
+              Best practice from airlines, for hotels. Auctores Smart<br />
+              Overbooking maximizes occupancy and increases revenue.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-lg">
                 <a href="/#cta" className="w-full sm:w-auto">
