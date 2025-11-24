@@ -28,22 +28,22 @@ const Hero = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-lg">
                 <a href="/#cta" className="w-full sm:w-auto">
-                   <Button 
-                     className="w-full bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
-                     onClick={() => {
-                       if (window.gtag) {
+                  <Button 
+                    className="w-full bg-navy hover:bg-navy/80 text-white border border-champagne/30 hover:border-champagne px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-md text-sm sm:text-base shadow-lg hover:shadow-champagne/10 transition-all duration-300 font-medium"
+                    onClick={() => {
+                      if (window.gtag) {
                         window.gtag('event', 'primary_cta_overbooking', { 
-                           'event_category': 'LandingPage_MVP', 
-                          'event_label': 'Activate Smart Overbooking', 
-                           'value': 1 
-                         });
-                       } else {
-                         console.log("gtag not defined");
-                       }
-                     }}
-                   >
+                          event_category: 'LandingPage_MVP', 
+                          event_label: 'Activate Smart Overbooking', 
+                          value: 1 
+                        });
+                      } else {
+                        console.log("gtag not defined");
+                      }
+                    }}
+                  >
                     Activate Smart Overbooking
-                   </Button>
+                  </Button>
                 </a>
                 <a href="/#features" className="w-full sm:w-auto">
                   <Button
@@ -71,6 +71,18 @@ const Hero = () => {
 
             </div>
           </div>
+        </div>
+        
+        {/* Certification Badge - absolute positioned at bottom left */}
+        <div className="absolute bottom-8 left-6 md:left-12 lg:left-20 xl:left-24 z-20 flex flex-col items-start gap-1">
+          <img
+            src="/images/apaleo-icon.png"
+            alt="Apaleo"
+            className="h-7 w-auto object-contain opacity-80"
+          />
+          <span className="text-[10px] text-white/60 font-medium tracking-wide uppercase">
+            Apaleo Certified
+          </span>
         </div>
       </section>
       {/* Demo modal removed */}
