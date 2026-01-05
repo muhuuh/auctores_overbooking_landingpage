@@ -96,31 +96,18 @@ const OnboardingSOP = () => {
                 <strong className="text-navy">Choose parameters (you're in control):</strong>
                 <ul className="list-disc pl-6 space-y-1 mt-2">
                   <li>
-                    <strong>Timeframe</strong> to optimize (e.g., next 30–90
-                    days)
+                    <strong>Timeframe:</strong> Select a <strong>Rolling Window</strong> (e.g., next 30 days) or <strong>Fixed Dates</strong> for specific events.
                   </li>
                   <li>
-                    <strong>Room categories</strong> to include
+                    <strong>Strategy:</strong> Set your <strong>Overbooking Aggressiveness</strong> and choose to analyze the <strong>entire hotel</strong> or specific room categories.
                   </li>
                   <li>
-                    <strong>Overbooking strategy</strong> and{" "}
-                    <strong>risk caps</strong> (hard maximums per
-                    date/category)
+                    <strong>Mode:</strong> Choose between <strong>Advisory</strong> (manual apply) or <strong>Auto-apply</strong> (autopilot) for specific target categories.
                   </li>
                 </ul>
-              </li>
-              <li>
-                <strong className="text-navy">Pick your mode:</strong>
-                <ul className="list-disc pl-6 space-y-1 mt-2">
-                  <li>
-                    <strong>Advisory (Review &amp; apply):</strong> See daily
-                    recommendations; you apply changes in Apaleo.
-                  </li>
-                  <li>
-                    <strong>Auto-apply:</strong> Auctores updates the
-                    overbooking buffer in Apaleo for you every day.
-                  </li>
-                </ul>
+                <p className="mt-3 text-sm italic">
+                  💡 For step-by-step configuration, see the <button onClick={() => {setIsDetailedSetupOpen(true); setTimeout(() => {document.getElementById('detailed-strategy-sop')?.scrollIntoView({behavior: 'smooth'})}, 100)}} className="text-navy underline font-medium hover:text-navy/70">Detailed strategy SOP</button> below.
+                </p>
               </li>
               <li>
                 <strong className="text-navy">Click Activate.</strong> Your{" "}
@@ -173,7 +160,7 @@ const OnboardingSOP = () => {
                 When comfortable with the recommendation, toggle{" "}
                 <strong className="text-navy">Auto-apply</strong> and set conservative{" "}
                 <strong className="text-navy">risk caps</strong> to get it handled by Auctores
-                "Hands-off-the-wheel". Simply review the logs to understand the
+                \"Hands-off-the-wheel\". Simply review the logs to understand the
                 adjustments made.
               </li>
               <li>
@@ -263,189 +250,188 @@ const OnboardingSOP = () => {
             </button>
             
             {isDetailedSetupOpen && (
-            <div className="px-6 pb-6 space-y-6">
-            <p className="text-navy/70 italic">
-              This section gives concrete UI steps and URLs to make onboarding
-              fast and clear.
-            </p>
-
-            <div className="bg-white rounded-md p-5 border border-navy/20">
-              <h3 className="text-xl font-bold text-navy mb-3">Step 1: Authentication (Login / Signup)</h3>
-              <p className="text-sm text-navy/70 mb-3">
-                <strong className="text-navy">URL:</strong>{" "}
-                <code className="bg-navy/10 px-2 py-1 rounded text-navy font-mono text-xs">/overbooking/login?scope=Apaleo</code>
-              </p>
-
-              <div className="mb-4">
-                <p className="font-semibold text-navy mb-2">
-                  New users (Sign up):
+              <div className="px-6 pb-6 space-y-6">
+                <p className="text-navy/70 italic">
+                  This section gives concrete UI steps and URLs to make onboarding
+                  fast and clear.
                 </p>
-                <ul className="list-disc pl-6 space-y-1 text-navy/80">
-              <li>
-                Enter <strong className="text-navy">Email</strong>, <strong className="text-navy">Password</strong> (min 8
-                chars incl. uppercase, lowercase, number, symbol), and{" "}
-                <strong className="text-navy">Confirm password</strong>. <br />
-                Click <strong className="text-navy">Create account</strong> → a verification email is
-                sent → verify before proceeding.
-              </li>
-            </ul>
-              </div>
 
-              <div>
-                <p className="font-semibold text-navy mb-2">
-                  Existing users (Sign in):
-                </p>
-                <ul className="list-disc pl-6 space-y-1 text-navy/80">
+                <div className="bg-white rounded-md p-5 border border-navy/20">
+                  <h3 className="text-xl font-bold text-navy mb-3">Step 1: Authentication (Login / Signup)</h3>
+                  <p className="text-sm text-navy/70 mb-3">
+                    <strong className="text-navy">URL:</strong>{" "}
+                    <code className="bg-navy/10 px-2 py-1 rounded text-navy font-mono text-xs">/overbooking/login?scope=Apaleo</code>
+                  </p>
+
+                  <div className="mb-4">
+                    <p className="font-semibold text-navy mb-2">
+                      New users (Sign up):
+                    </p>
+                    <ul className="list-disc pl-6 space-y-1 text-navy/80">
                   <li>
-                    Enter <strong className="text-navy">Email</strong> and <strong className="text-navy">Password</strong>.
+                    Enter <strong className="text-navy">Email</strong>, <strong className="text-navy">Password</strong> (min 8
+                    chars incl. uppercase, lowercase, number, symbol), and{" "}
+                    <strong className="text-navy">Confirm password</strong>. <br />
+                    Click <strong className="text-navy">Create account</strong> → a verification email is
+                    sent → verify before proceeding.
                   </li>
                 </ul>
-              </div>
-            </div>
+                  </div>
 
-            <div className="bg-white rounded-md p-5 border border-navy/20">
-              <h3 className="text-xl font-bold text-navy mb-3">Step 2 — Profile setup</h3>
-              <p className="text-sm text-navy/70 mb-3">
-                <strong className="text-navy">URL:</strong>{" "}
-                <code className="bg-navy/10 px-2 py-1 rounded text-navy font-mono text-xs">/overbooking/onboarding?scope=Apaleo</code>
-              </p>
-              <p className="text-navy/80">
-                Fill in required fields: Preferred language (EN/DE/FR/ES/IT),
-                Hotel name, Address line 1, ZIP, City, Country. <br />
-                Click <strong className="text-navy">Save profile</strong> → onboarding step marked
-                complete → auto-redirect to the connection page.
-              </p>
-            </div>
+                  <div>
+                    <p className="font-semibold text-navy mb-2">
+                      Existing users (Sign in):
+                    </p>
+                    <ul className="list-disc pl-6 space-y-1 text-navy/80">
+                      <li>
+                        Enter <strong className="text-navy">Email</strong> and <strong className="text-navy">Password</strong>.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
 
-            <div className="bg-white rounded-md p-5 border border-navy/20">
-              <h3 className="text-xl font-bold text-navy mb-3">Step 3 — Connect your PMS (Apaleo OAuth)</h3>
-              <p className="text-sm text-navy/70 mb-3">
-                <strong className="text-navy">URL:</strong>{" "}
-                <code className="bg-navy/10 px-2 py-1 rounded text-navy font-mono text-xs">/overbooking/connect?scope=Apaleo</code>
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-navy/80">
-              <li>
-                <strong className="text-navy">Connect Apaleo</strong> page is pre-selected.
-              </li>
-              <li>
-                Click <strong className="text-navy">Connect Apaleo</strong> → you're redirected to
-                Apaleo's secure OAuth screen.
-              </li>
-              <li>
-                Approve permissions for Auctores to{" "}
-                <strong className="text-navy">read availability &amp; reservations</strong> and{" "}
-                <strong className="text-navy">manage overbooking buffers</strong> (optional, only if
-                you want auto-apply).
-              </li>
-              <li>
-                Callback to <code className="bg-navy/10 px-1.5 py-0.5 rounded text-navy font-mono text-xs">/api/auth/Apaleo/callback</code>{" "}
-                stores the OAuth token and returns you to the dashboard.
-              </li>
-            </ul>
-            </div>
+                <div className="bg-white rounded-md p-5 border border-navy/20">
+                  <h3 className="text-xl font-bold text-navy mb-3">Step 2 — Profile setup</h3>
+                  <p className="text-sm text-navy/70 mb-3">
+                    <strong className="text-navy">URL:</strong>{" "}
+                    <code className="bg-navy/10 px-2 py-1 rounded text-navy font-mono text-xs">/overbooking/onboarding?scope=Apaleo</code>
+                  </p>
+                  <p className="text-navy/80">
+                    Fill in required fields: Preferred language (EN/DE/FR/ES/IT),
+                    Hotel name, Address line 1, ZIP, City, Country. <br />
+                    Click <strong className="text-navy">Save profile</strong> → onboarding step marked
+                    complete → auto-redirect to the connection page.
+                  </p>
+                </div>
 
-            <div className="bg-white rounded-md p-5 border border-navy/20">
-              <h3 className="text-xl font-bold text-navy mb-3">Step 4 — Configure &amp; activate</h3>
-              <p className="text-sm text-navy/70 mb-3">
-                <strong className="text-navy">URL:</strong>{" "}
-                <code className="bg-navy/10 px-2 py-1 rounded text-navy font-mono text-xs">/overbooking?scope=Apaleo</code>
-              </p>
-              <ol className="list-decimal pl-6 space-y-2 text-navy/80">
-              <li>
-                <strong className="text-navy">Open configuration</strong> (click <strong className="text-navy">Configure</strong>).
-              </li>
-              <li>
-                <strong className="text-navy">Schedule:</strong> choose when the engine should run:
-                <ul className="list-disc pl-6 space-y-1 mt-1">
+                <div className="bg-white rounded-md p-5 border border-navy/20">
+                  <h3 className="text-xl font-bold text-navy mb-3">Step 3 — Connect your PMS (Apaleo OAuth)</h3>
+                  <p className="text-sm text-navy/70 mb-3">
+                    <strong className="text-navy">URL:</strong>{" "}
+                    <code className="bg-navy/10 px-2 py-1 rounded text-navy font-mono text-xs">/overbooking/connect?scope=Apaleo</code>
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2 text-navy/80">
                   <li>
-                    Hourly: every <em>X</em> hours (default <strong className="text-navy">6h</strong>)
+                    <strong className="text-navy">Connect Apaleo</strong> page is pre-selected.
                   </li>
                   <li>
-                    Daily: specific time (default <strong className="text-navy">07:00</strong>)
+                    Click <strong className="text-navy">Connect Apaleo</strong> → you're redirected to
+                    Apaleo's secure OAuth screen.
                   </li>
                   <li>
-                    Weekly: weekday + time (default <strong className="text-navy">Mon 07:00</strong>)
+                    Approve permissions for Auctores to{" "}
+                    <strong className="text-navy">read availability &amp; reservations</strong> and{" "}
+                    <strong className="text-navy">manage overbooking buffers</strong> (optional, only if
+                    you want auto-apply).
+                  </li>
+                  <li>
+                    Callback to <code className="bg-navy/10 px-1.5 py-0.5 rounded text-navy font-mono text-xs">/api/auth/Apaleo/callback</code>{" "}
+                    stores the OAuth token and returns you to the dashboard.
                   </li>
                 </ul>
-              </li>
-              <li>
-                <strong className="text-navy">Room types</strong> (⚠️ required): fetch from Apaleo and
-                select at least one room type.
-              </li>
-              <li>
-                <strong className="text-navy">Parameters:</strong> set timeframe, overbooking
-                strategy, and <strong className="text-navy">risk caps</strong>.
-              </li>
-              <li>
-                <strong className="text-navy">Save configuration.</strong>
-              </li>
-            </ol>
+                </div>
 
-            <div className="bg-navy/5 rounded-md p-4 mt-4 border-l-4 border-navy">
-              <p className="text-navy/80">
-                Click <strong className="text-navy">Activate</strong> → success modal confirms{" "}
-                <strong className="text-navy">"Your AI Overbooking Engine is live."</strong> <br />
-                Message:{" "}
-                <em>
-                  "Our AI is processing your historical data and will begin
-                  adjusting overbooking levels within ~5–10 minutes."
-                </em>{" "}
-                <br />
-                Click <strong className="text-navy">View dashboard</strong>.
-              </p>
-            </div>
+                <div id="detailed-strategy-sop" className="bg-white rounded-md p-5 border border-navy/20">
+                  <h3 className="text-xl font-bold text-navy mb-3">Step 4 — Configure &amp; activate</h3>
+                  <p className="text-sm text-navy/70 mb-3">
+                    <strong className="text-navy">URL:</strong>{" "}
+                    <code className="bg-navy/10 px-2 py-1 rounded text-navy font-mono text-xs">/overbooking/tasks/manage</code>
+                  </p>
+                  
+                  <div className="space-y-4 text-navy/80">
+                    <div>
+                      <p className="font-semibold text-navy">1. Set the Schedule</p>
+                      <p className="text-sm">Choose how often the Task runs (e.g., <strong>Daily at 07:00</strong>). Analysis and optional auto-apply happen during these runs.</p>
+                    </div>
 
-            <h4 className="text-lg font-semibold text-navy mt-4 mb-2">Post-activation dashboard:</h4>
-            <ul className="list-disc pl-6 space-y-1 text-navy/80">
-              <li>
-                <strong className="text-navy">Status:</strong> Active (green) and <strong className="text-navy">Next run</strong>{" "}
-                time.
-              </li>
-              <li>
-                <strong className="text-navy">Logs:</strong> agent execution history &amp; changes.
-              </li>
-              <li>
-                <strong className="text-navy">Controls:</strong> pause/resume, edit schedule, update
-                room types/parameters.
-              </li>
-            </ul>
+                    <div>
+                      <p className="font-semibold text-navy">2. Configure the Strategy</p>
+                      <ul className="list-disc pl-6 space-y-2 text-sm">
+                        <li>
+                          <strong className="text-navy">Analysis Timeframe:</strong> <strong>Rolling Window</strong> (moving window into the future) or <strong>Fixed Dates</strong> (e.g., specific event dates).
+                        </li>
+                        <li>
+                          <strong className="text-navy">Overbooking Aggressiveness:</strong> Choose your risk profile (e.g., <strong>Moderate/Balanced</strong>).
+                        </li>
+                        <li>
+                          <strong className="text-navy">Analyze All Room Types:</strong> Toggle ON to include the whole hotel, or OFF to pick <strong>Analysis Room Types</strong> manually.
+                        </li>
+                        <li>
+                          <strong className="text-navy">Auto-Apply to PMS (Autopilot):</strong> Toggle ON to automatically write recommendations back to Apaleo (requires write permissions).
+                        </li>
+                      </ul>
+                    </div>
 
-            <h4 className="text-lg font-semibold text-navy mt-4 mb-2">Monitoring &amp; controls</h4>
-            <ul className="list-disc pl-6 space-y-1 text-navy/80">
-              <li>Real-time status, next scheduled run, and history.</li>
-              <li>
-                Optional <strong className="text-navy">Advisory vs Auto-apply</strong> switch at any
-                time. Audit trail of suggested and applied changes.
-              </li>
-            </ul>
+                    <div>
+                      <p className="font-semibold text-navy">3. Room Configuration</p>
+                      <ul className="list-disc pl-6 space-y-2 text-sm">
+                        <li>
+                          <strong className="text-navy">Excluded Room Categories:</strong> Ignore specific types like high-end suites or test rooms.
+                        </li>
+                        <li>
+                          <strong className="text-navy">Target Overbooking Room:</strong> (If Auto-Apply is ON) Select the specific category in Apaleo where supply should be added.
+                        </li>
+                      </ul>
+                    </div>
 
-            <h4 className="text-lg font-semibold text-navy mt-4 mb-2">Error handling &amp; validation</h4>
-            <ul className="list-disc pl-6 space-y-1 text-navy/80">
-              <li>
-                <strong className="text-navy">"Connect PMS required"</strong> → complete Step 3.
-              </li>
-              <li>
-                <strong className="text-navy">"Select at least one room type"</strong> → open{" "}
-                <strong className="text-navy">Configuration</strong> → choose room types →{" "}
-                <strong className="text-navy">Save</strong>.
-              </li>
-              <li>
-                <strong className="text-navy">OAuth failed</strong> → retry, confirm Apaleo
-                credentials/permissions.
-              </li>
-              <li>
-                <strong className="text-navy">Email verification pending</strong> → check inbox and
-                complete verification.
-              </li>
-            </ul>
-            </div>
+                    <div className="bg-navy/5 rounded-md p-3 border-l-4 border-navy text-sm">
+                      <p>
+                        Click <strong className="text-navy">Save Changes</strong> and then <strong className="text-navy">Activate</strong>. Your AI Overbooking Engine will process historical data and begin adjustments within ~5–10 minutes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-            <div className="bg-gradient-to-r from-navy/10 to-navy/5 rounded-md p-4 mt-4 border border-navy/30">
-              <p className="text-navy font-semibold text-center">
-                🚀 Ready to start? Connect Auctores to Apaleo and activate smart overbooking in minutes.
-              </p>
-            </div>
-            </div>
+                <h4 className="text-lg font-semibold text-navy mt-4 mb-2">Post-activation dashboard:</h4>
+                <ul className="list-disc pl-6 space-y-1 text-navy/80">
+                  <li>
+                    <strong className="text-navy">Status:</strong> Active (green) and <strong className="text-navy">Next run</strong>{" "}
+                    time.
+                  </li>
+                  <li>
+                    <strong className="text-navy">Logs:</strong> agent execution history &amp; changes.
+                  </li>
+                  <li>
+                    <strong className="text-navy">Controls:</strong> pause/resume, edit schedule, update
+                    room types/parameters.
+                  </li>
+                </ul>
+
+                <h4 className="text-lg font-semibold text-navy mt-4 mb-2">Monitoring &amp; controls</h4>
+                <ul className="list-disc pl-6 space-y-1 text-navy/80">
+                  <li>Real-time status, next scheduled run, and history.</li>
+                  <li>
+                    Optional <strong className="text-navy">Advisory vs Auto-apply</strong> switch at any
+                    time. Audit trail of suggested and applied changes.
+                  </li>
+                </ul>
+
+                <h4 className="text-lg font-semibold text-navy mt-4 mb-2">Error handling &amp; validation</h4>
+                <ul className="list-disc pl-6 space-y-1 text-navy/80">
+                  <li>
+                    <strong className="text-navy">\"Connect PMS required\"</strong> → complete Step 3.
+                  </li>
+                  <li>
+                    <strong className="text-navy">\"Select at least one room type\"</strong> → open{" "}
+                    <strong className="text-navy">Configuration</strong> → choose room types →{" "}
+                    <strong className="text-navy">Save</strong>.
+                  </li>
+                  <li>
+                    <strong className="text-navy">OAuth failed</strong> → retry, confirm Apaleo
+                    credentials/permissions.
+                  </li>
+                  <li>
+                    <strong className="text-navy">Email verification pending</strong> → check inbox and
+                    complete verification.
+                  </li>
+                </ul>
+
+                <div className="bg-gradient-to-r from-navy/10 to-navy/5 rounded-md p-4 mt-4 border border-navy/30">
+                  <p className="text-navy font-semibold text-center">
+                    🚀 Ready to start? Connect Auctores to Apaleo and activate smart overbooking in minutes.
+                  </p>
+                </div>
+              </div>
             )}
           </section>
         </div>
