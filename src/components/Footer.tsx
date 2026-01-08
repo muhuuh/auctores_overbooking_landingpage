@@ -31,9 +31,10 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
+          <div className="space-y-2">
             <h4 className="font-medium mb-4">Contact</h4>
             <p className="text-xs text-gray-700">valentin@auctores.ai</p>
+            <p className="text-xs text-gray-700">leo@auctores.ai</p>
           </div>
           
           <div className="flex items-start sm:justify-end">
@@ -52,7 +53,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-xs text-muted">
-          <p>© 2025 Auctores — built in Munich</p>
+          <p>© 2025 Auctores Technologies OÜ — built in Munich</p>
         </div>
       </div>
     </footer>
