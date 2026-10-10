@@ -2,6 +2,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/onboarding/apaleo",
+      "destination": "https://app.auctores.ai/training/getting-started",
+      "permanent": true
+    },
+    {
       "source": "/",
       "has": [{ "type": "host", "value": "overbooking.auctores.ai" }],
       "destination": "https://www.auctores.ai/",
@@ -27,7 +32,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/onboarding/apaleo", "destination": "/index.html" },
     { "source": "/privacy-policy", "destination": "/index.html" },
     { "source": "/terms-of-service", "destination": "/index.html" },
     { "source": "/impressum", "destination": "/index.html" }
