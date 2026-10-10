@@ -128,9 +128,9 @@ const CTASection = () => {
   return (
     <section id="cta" className="py-16 sm:py-20 md:py-24 bg-navy text-white">
       <div className="container max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Secure Your Early Access.</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Get started with Auctores.</h2>
         <p className="text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0">
-          Early access participants lock-in <strong className="text-champagne font-semibold">lifetime 50% discount</strong> and direct influence on the roadmap. Drop your email address and we will reach out to you to set up the privileged early access.
+          Share your hotel name and PMS through our <a href="https://www.auctores.ai/contact?intent=setup" className="text-champagne font-semibold underline">current setup page</a>. We will send access and instructions. You only pay 7% of recovered room revenue; if none is recovered, you pay nothing.
         </p>
         
         <div className="bg-navyLight p-6 sm:p-8 rounded-lg shadow-xl">

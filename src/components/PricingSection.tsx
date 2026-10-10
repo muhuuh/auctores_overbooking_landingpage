@@ -5,18 +5,18 @@ import { Percent, Gem, MessageSquareQuote } from 'lucide-react';
 const PricingSection = () => {
   const pricingPoints = [
     {
-      title: "Early Partner Discount",
-      description: "Lock in a lifetime 50% discount as an early adopter.",
+      title: "Keep 93%",
+      description: "Your hotel keeps 93% of the room revenue recovered through Auctores Smart Overbooking.",
       icon: <Percent className="text-champagne w-8 h-8" />
     },
     {
-      title: "Value-Based Pricing",
-      description: "Pay only for the capabilities you need, based on your number of rooms.",
+      title: "You only pay if it works",
+      description: "Our fee is 7% of recovered room revenue. If no revenue is recovered, you pay nothing.",
       icon: <Gem className="text-champagne w-8 h-8" />
     },
     {
-      title: "Personalized Quote",
-      description: "Let's discuss your specific needs and tailor a plan. Reach out via the form below.",
+      title: "Get started",
+      description: "Tell us your hotel name and PMS. We will send access and setup instructions; a walkthrough is optional.",
       icon: <MessageSquareQuote className="text-champagne w-8 h-8" />
     }
   ];
@@ -31,16 +31,17 @@ const PricingSection = () => {
         <div className="mb-12 sm:mb-16">
           <div className="bg-white rounded-2xl border border-champagne/10 p-8 sm:p-10 text-center max-w-2xl mx-auto shadow-sm">
             <h3 className="text-xl sm:text-2xl font-bold text-navy mb-4">Smart Overbooking Feature</h3>
-            <div className="text-3xl sm:text-4xl font-bold text-navy mb-2">3€<span className="text-lg font-normal">/room/month</span></div>
-            <p className="text-base text-navy/70 mb-4">Includes all features and capabilities of Auctores Smart Overbooking.</p>
+            <div className="text-3xl sm:text-4xl font-bold text-navy mb-2">You only pay if it works.</div>
+            <p className="text-base text-navy/70 mb-4">Keep 93% of recovered room revenue. Auctores charges 7%. No recovery means no fee.</p>
+            <a href="https://www.auctores.ai/pricing" className="text-navy underline">See current pricing details</a>
           </div>
         </div>
 
         {/* Founding Partners Section */}
         <div className="mb-8">
-          <h3 className="text-xl md:text-2xl font-bold text-navy mb-4 text-center">Flexible Pricing for Founding Partners</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-navy mb-4 text-center">Pricing linked to recovered revenue</h3>
           <p className="text-base text-navy/80 mb-8 sm:mb-12 max-w-3xl mx-auto text-center px-4 sm:px-0">
-             We believe in providing maximum value through flexible pricing tailored to your specific needs.
+             The fee applies to recovered room revenue, not your hotel's total revenue, forecasts or future booking pipeline.
           </p>
         </div>
 
@@ -62,4 +63,4 @@ const PricingSection = () => {
   );
 };
 
-export default PricingSection; 
+export default PricingSection;
