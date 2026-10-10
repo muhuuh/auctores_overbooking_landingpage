@@ -1,8 +1,35 @@
 {
-  "rewrites": [
+  "trailingSlash": false,
+  "redirects": [
     {
-      "source": "/((?!api/).*)",
-      "destination": "/index.html"
+      "source": "/",
+      "has": [{ "type": "host", "value": "overbooking.auctores.ai" }],
+      "destination": "https://www.auctores.ai/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "has": [{ "type": "host", "value": "overbooking.auctores.ai" }],
+      "destination": "https://app.auctores.ai/overbooking/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-service",
+      "has": [{ "type": "host", "value": "overbooking.auctores.ai" }],
+      "destination": "https://app.auctores.ai/overbooking/terms",
+      "permanent": true
+    },
+    {
+      "source": "/impressum",
+      "has": [{ "type": "host", "value": "overbooking.auctores.ai" }],
+      "destination": "https://app.auctores.ai/overbooking/impressum",
+      "permanent": true
     }
+  ],
+  "rewrites": [
+    { "source": "/onboarding/apaleo", "destination": "/index.html" },
+    { "source": "/privacy-policy", "destination": "/index.html" },
+    { "source": "/terms-of-service", "destination": "/index.html" },
+    { "source": "/impressum", "destination": "/index.html" }
   ]
 }

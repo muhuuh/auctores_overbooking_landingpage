@@ -218,7 +218,7 @@ const OnboardingSOP = () => {
                 <strong className="text-navy">Support:</strong> <a href="mailto:valentin@auctores.ai" className="text-navy underline hover:text-navy/70">valentin@auctores.ai</a>
               </li>
               <li>
-                <strong className="text-navy">Pricing:</strong> 3€/room/month
+                <strong className="text-navy">Pricing:</strong> 7% of room revenue recovered through Auctores Smart Overbooking. Your hotel keeps 93%. If no revenue is recovered, you pay nothing. <a href="https://www.auctores.ai/pricing" className="text-navy underline hover:text-navy/70">See current pricing details</a>.
               </li>
             </ul>
           </section>
